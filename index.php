@@ -28,7 +28,7 @@
             background-image: url(./img/cover.jpg);
           }
         </style>
-        <i class="prev-arrow fas fa-chevron-left slick-arrow" style=""></i>
+        <i class="prev-arrow fas fa-chevron-left slick-arrow"></i>
         <div class="slick-list draggable" style="height: 750px">
           <div class="slick-track" style="opacity: 1; width: 4047px">
             <div class="slide slick-bg bg-1 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
@@ -125,8 +125,8 @@
         <!-- Slide 2 End -->
 
         <!-- Slide 3 End -->
-        <i class="next-arrow fas fa-chevron-right slick-arrow" style=""></i>
-        <ul class="slick-dots" style="" role="tablist">
+        <i class="next-arrow fas fa-chevron-right slick-arrow"></i>
+        <ul class="slick-dots" role="tablist">
           <li class="slick-active" role="presentation">
             <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button>
           </li>
