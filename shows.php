@@ -43,8 +43,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 2; transition-duration: 0ms"></div>
@@ -70,8 +70,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-19.9852%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9778%, 0px, 0px) scale(0.700222)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0.999259; transition-duration: 0ms"></div>
@@ -97,8 +97,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -125,8 +125,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -153,8 +153,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -181,8 +181,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -209,8 +209,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -237,8 +237,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -264,8 +264,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-show.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/shows.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="shows" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -309,17 +309,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -327,7 +327,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Box</a></h2>
+                            <h2 class="video-title"><a href="single">The Box</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -342,17 +342,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -360,7 +360,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The price</a></h2>
+                            <h2 class="video-title"><a href="single">The price</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -375,17 +375,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -393,7 +393,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Sand</a></h2>
+                            <h2 class="video-title"><a href="single">The Sand</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -408,17 +408,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -426,7 +426,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The sky</a></h2>
+                            <h2 class="video-title"><a href="single">The sky</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -441,17 +441,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -459,7 +459,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">the border</a></h2>
+                            <h2 class="video-title"><a href="single">the border</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -474,17 +474,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -492,7 +492,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">A happy life</a></h2>
+                            <h2 class="video-title"><a href="single">A happy life</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -507,17 +507,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -525,7 +525,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">A mirage</a></h2>
+                            <h2 class="video-title"><a href="single">A mirage</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -540,17 +540,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -558,7 +558,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Box</a></h2>
+                            <h2 class="video-title"><a href="single">The Box</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -573,17 +573,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -591,7 +591,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The price</a></h2>
+                            <h2 class="video-title"><a href="single">The price</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -606,17 +606,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -624,7 +624,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Sand</a></h2>
+                            <h2 class="video-title"><a href="single">The Sand</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -639,17 +639,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -657,7 +657,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The sky</a></h2>
+                            <h2 class="video-title"><a href="single">The sky</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -672,17 +672,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -690,7 +690,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">the border</a></h2>
+                            <h2 class="video-title"><a href="single">the border</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -705,17 +705,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -723,7 +723,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">A happy life</a></h2>
+                            <h2 class="video-title"><a href="single">A happy life</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -738,17 +738,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -756,7 +756,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">A mirage</a></h2>
+                            <h2 class="video-title"><a href="single">A mirage</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -771,17 +771,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -789,7 +789,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Box</a></h2>
+                            <h2 class="video-title"><a href="single">The Box</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -804,17 +804,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -822,7 +822,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The price</a></h2>
+                            <h2 class="video-title"><a href="single">The price</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -837,17 +837,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="shows"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="shows"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -855,7 +855,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Sand</a></h2>
+                            <h2 class="video-title"><a href="single">The Sand</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-seasons">4 Season</span>
@@ -900,17 +900,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/01(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/01(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -918,7 +918,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">the border</a></h2>
+                  <h2 class="video-title"><a href="single">the border</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -932,17 +932,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/02(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/02(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -950,7 +950,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">life or death</a></h2>
+                  <h2 class="video-title"><a href="single">life or death</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -964,17 +964,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/03(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/03(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -982,7 +982,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">Out of life</a></h2>
+                  <h2 class="video-title"><a href="single">Out of life</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -996,17 +996,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/04(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/04(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1014,7 +1014,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">A thousand months</a></h2>
+                  <h2 class="video-title"><a href="single">A thousand months</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1028,17 +1028,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/05(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/05(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1046,7 +1046,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Great Journey</a></h2>
+                  <h2 class="video-title"><a href="single">The Great Journey</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1060,17 +1060,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/06(1).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/06(1).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1078,7 +1078,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">Sheets gone</a></h2>
+                  <h2 class="video-title"><a href="single">Sheets gone</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1109,17 +1109,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/01(3).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/01(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1127,7 +1127,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The End</a></h2>
+                  <h2 class="video-title"><a href="single">The End</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1141,17 +1141,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/02(3).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/02(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1159,7 +1159,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">the beginning</a></h2>
+                  <h2 class="video-title"><a href="single">the beginning</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1173,17 +1173,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/03(3).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/03(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1191,7 +1191,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Search</a></h2>
+                  <h2 class="video-title"><a href="single">The Search</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1205,17 +1205,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/04(3).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/04(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1223,7 +1223,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">The Treasures</a></h2>
+                  <h2 class="video-title"><a href="single">The Treasures</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1237,17 +1237,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/05(3).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/05(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1255,7 +1255,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">Problems</a></h2>
+                  <h2 class="video-title"><a href="single">Problems</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>
@@ -1269,17 +1269,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/shows.html#"><img class="img-fluid" src="./img/06(2).jpg" alt="" /></a>
+                  <a href="shows"><img class="img-fluid" src="./img/06(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-show.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows.html#"><i class="fas fa-plus"></i></a>
+                        <a href="shows"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/shows-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1287,7 +1287,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/shows-single.html">life is Beautiful</a></h2>
+                  <h2 class="video-title"><a href="single">life is Beautiful</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-seasons">4 Season</span>

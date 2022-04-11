@@ -43,8 +43,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 2; transition-duration: 0ms"></div>
@@ -70,8 +70,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-19.9852%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9778%, 0px, 0px) scale(0.700222)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0.999259; transition-duration: 0ms"></div>
@@ -97,8 +97,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -125,8 +125,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -153,8 +153,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -181,8 +181,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -209,8 +209,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -237,8 +237,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -264,8 +264,8 @@
             <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
               type specimen book.</span>
             <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="https://excellencetheme.com/templates/avastream/watch-movie.html" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="https://excellencetheme.com/templates/avastream/movies.html#" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
+              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
             </div>
           </div>
           <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -309,17 +309,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -327,7 +327,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Verbal messages</a></h2>
+                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -343,17 +343,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -361,7 +361,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">hard life</a></h2>
+                            <h2 class="video-title"><a href="single">hard life</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -377,17 +377,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -395,7 +395,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Destiny</a></h2>
+                            <h2 class="video-title"><a href="single">Destiny</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -411,17 +411,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -429,7 +429,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Paper hero</a></h2>
+                            <h2 class="video-title"><a href="single">Paper hero</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -445,17 +445,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -463,7 +463,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The gang</a></h2>
+                            <h2 class="video-title"><a href="single">The gang</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -479,17 +479,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -497,7 +497,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">A dam wind</a></h2>
+                            <h2 class="video-title"><a href="single">A dam wind</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -513,17 +513,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -531,7 +531,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">the message</a></h2>
+                            <h2 class="video-title"><a href="single">the message</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -547,17 +547,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -565,7 +565,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Verbal messages</a></h2>
+                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -581,17 +581,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -599,7 +599,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">hard life</a></h2>
+                            <h2 class="video-title"><a href="single">hard life</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -615,17 +615,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -633,7 +633,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Destiny</a></h2>
+                            <h2 class="video-title"><a href="single">Destiny</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -649,17 +649,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -667,7 +667,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Paper hero</a></h2>
+                            <h2 class="video-title"><a href="single">Paper hero</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -683,17 +683,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/07.jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -701,7 +701,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The gang</a></h2>
+                            <h2 class="video-title"><a href="single">The gang</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -717,17 +717,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -735,7 +735,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">A dam wind</a></h2>
+                            <h2 class="video-title"><a href="single">A dam wind</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -751,17 +751,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/02(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -769,7 +769,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">the message</a></h2>
+                            <h2 class="video-title"><a href="single">the message</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -785,17 +785,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/03(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -803,7 +803,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Verbal messages</a></h2>
+                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -819,17 +819,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/04(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -837,7 +837,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">hard life</a></h2>
+                            <h2 class="video-title"><a href="single">hard life</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -853,17 +853,17 @@
                       <div class="item">
                         <div class="video-block">
                           <div class="video-thumb position-relative thumb-overlay">
-                            <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
+                            <a href="movies"><img class="img-fluid" src="./img/05(1).jpg" alt="" /></a>
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                                  <a href="movies"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -871,7 +871,7 @@
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Destiny</a></h2>
+                            <h2 class="video-title"><a href="single">Destiny</a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
                               <span class="video-age">+18</span>
@@ -915,17 +915,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/01(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/01(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -933,7 +933,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The Colors</a></h2>
+                  <h2 class="video-title"><a href="single">The Colors</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -948,17 +948,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/02(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/02(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -966,7 +966,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The Devastation</a></h2>
+                  <h2 class="video-title"><a href="single">The Devastation</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -981,17 +981,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/03(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/03(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -999,7 +999,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The Beauty</a></h2>
+                  <h2 class="video-title"><a href="single">The Beauty</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1014,17 +1014,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/04(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/04(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1032,7 +1032,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The Silence</a></h2>
+                  <h2 class="video-title"><a href="single">The Silence</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1047,17 +1047,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/05(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/05(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1065,7 +1065,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">the door is open</a></h2>
+                  <h2 class="video-title"><a href="single">the door is open</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1080,17 +1080,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/06(1).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/06(1).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1098,7 +1098,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The Great Journey</a></h2>
+                  <h2 class="video-title"><a href="single">The Great Journey</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1128,17 +1128,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/01(3).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/01(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1146,7 +1146,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Freedom</a></h2>
+                  <h2 class="video-title"><a href="single">Freedom</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1161,17 +1161,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/02(3).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/02(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1179,7 +1179,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">the world</a></h2>
+                  <h2 class="video-title"><a href="single">the world</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1194,17 +1194,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/03(3).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/03(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1212,7 +1212,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">The gang</a></h2>
+                  <h2 class="video-title"><a href="single">The gang</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1227,17 +1227,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/04(3).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/04(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1245,7 +1245,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">World of war</a></h2>
+                  <h2 class="video-title"><a href="single">World of war</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1260,17 +1260,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/05(3).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/05(3).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1278,7 +1278,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">Happy holiday</a></h2>
+                  <h2 class="video-title"><a href="single">Happy holiday</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>
@@ -1293,17 +1293,17 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="https://excellencetheme.com/templates/avastream/movies.html#"><img class="img-fluid" src="./img/06(2).jpg" alt="" /></a>
+                  <a href="movies"><img class="img-fluid" src="./img/06(2).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movies.html#"><i class="fas fa-plus"></i></a>
+                        <a href="movies"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="https://excellencetheme.com/templates/avastream/movie-single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -1311,7 +1311,7 @@
                 </div>
                 <!-- Video Thumb End -->
                 <div class="video-content">
-                  <h2 class="video-title"><a href="https://excellencetheme.com/templates/avastream/movie-single.html">weekend</a></h2>
+                  <h2 class="video-title"><a href="single">weekend</a></h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span>
                     <span class="video-age">+18</span>

@@ -36,7 +36,7 @@
           <div class="row">
             <div class="col-lg-12">
               <!-- Start Form -->
-              <form id="signup-form" action="https://excellencetheme.com/templates/avastream/sign-up.html#" method="post">
+              <form id="signup-form" action="sign-up" method="post">
                 <div class="error-container"></div>
                 <div class="row">
                   <div class="col-md-6">
@@ -96,13 +96,13 @@
                 </div>
                 <div class="form-group">
                   <label class="checkbox-inline mb-3" style="width: 100%"><input type="checkbox" required="required" /> I accept the
-                    <a href="https://excellencetheme.com/templates/avastream/terms.html">Terms of Use</a> &amp;
-                    <a href="https://excellencetheme.com/templates/avastream/privacy.html">Privacy Policy</a>.</label>
+                    <a href="terms">Terms of Use</a> &amp;
+                    <a href="privacy">Privacy Policy</a>.</label>
                   <button class="btn hvr-sweep-to-right" type="submit">Sign Up</button>
                 </div>
               </form>
               <!-- Form End -->
-              <div class="text-center">Already have an account? <a href="https://excellencetheme.com/templates/avastream/login.html">Login here</a></div>
+              <div class="text-center">Already have an account? <a href="login">Login here</a></div>
             </div>
             <!-- Col End -->
           </div>

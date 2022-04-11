@@ -30,23 +30,23 @@
               <div class="content-settings">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link active" data-toggle="pill" href="https://excellencetheme.com/templates/avastream/account-settings.html#pills-profile" role="tab" aria-selected="true">Profile Settings</a>
+                    <a class="nav-link active" data-toggle="pill" href="account-settings" role="tab" aria-selected="true">Profile Settings</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-toggle="pill" href="https://excellencetheme.com/templates/avastream/account-settings.html#pills-account" role="tab" aria-selected="false">Account Settings</a>
+                    <a class="nav-link" data-toggle="pill" href="account-settings" role="tab" aria-selected="false">Account Settings</a>
                   </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
                   <div id="pills-profile" class="tab-pane animated fadeInRight show active">
                     <!-- Start Form -->
-                    <form id="profile-settings-form" action="https://excellencetheme.com/templates/avastream/account-settings.html#" method="post">
+                    <form id="profile-settings-form" action="account-settings" method="post">
                       <div class="error-container"></div>
                       <div class="row">
                         <div class="col-md-2">
                           <div class="form-group">
                             <div class="settings-avatar">
                               <img src="./img/user.jpg" class="img-fluid d-block mx-auto mb-3" alt="User avatar" />
-                              <div class="change-avatar"><a href="https://excellencetheme.com/templates/avastream/account-settings.html#">Edit</a></div>
+                              <div class="change-avatar"><a href="account-settings">Edit</a></div>
                             </div>
                           </div>
                         </div>
@@ -151,8 +151,8 @@
                       </div>
                       <!-- Row End -->
                       <div class="form-group d-flex align-items-center mt-3">
-                        <a href="https://excellencetheme.com/templates/avastream/account-settings.html#" class="hvr-sweep-to-right btn btn-primary">Save</a>
-                        <a href="https://excellencetheme.com/templates/avastream/account-settings.html#" class="hvr-sweep-to-right btn btn-primary ml-3">Cancel</a>
+                        <a href="account-settings" class="hvr-sweep-to-right btn btn-primary">Save</a>
+                        <a href="account-settings" class="hvr-sweep-to-right btn btn-primary ml-3">Cancel</a>
                       </div>
                     </form>
                     <!-- Form End -->
@@ -160,7 +160,7 @@
                   <!-- Tap pane 1 End -->
                   <div id="pills-account" class="tab-pane animated fadeInRight">
                     <!-- Start Form -->
-                    <form id="account-settings-form" action="https://excellencetheme.com/templates/avastream/account-settings.html#" method="post">
+                    <form id="account-settings-form" action="account-settings" method="post">
                       <h5 class="mb-3 mt-3 pb-3 section-border">Change Plan</h5>
                       <div class="row">
                         <div class="col-md-12">
@@ -203,8 +203,8 @@
                       </div>
                       <!-- Row End -->
                       <div class="form-group d-flex align-items-center mt-3">
-                        <a href="https://excellencetheme.com/templates/avastream/account-settings.html#" class="btn hvr-sweep-to-right">Save</a>
-                        <a href="https://excellencetheme.com/templates/avastream/account-settings.html#" class="btn hvr-sweep-to-right ml-3">Cancel</a>
+                        <a href="account-settings" class="btn hvr-sweep-to-right">Save</a>
+                        <a href="account-settings" class="btn hvr-sweep-to-right ml-3">Cancel</a>
                       </div>
                     </form>
                     <!-- Form End -->

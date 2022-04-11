@@ -36,7 +36,7 @@
               <!-- Error Message end -->
               <div class="error-body">
                 <p>Try using the button below to go to main page of the site</p>
-                <a href="https://excellencetheme.com/templates/avastream/index.html" class="btn hvr-sweep-to-right">Back to Home Page</a>
+                <a href="index" class="btn hvr-sweep-to-right">Back to Home Page</a>
               </div>
               <!-- Error Body end -->
             </div>

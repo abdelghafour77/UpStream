@@ -30,10 +30,10 @@
               <ol class="breadcrumb">
                 <li>
                   <i class="fa fa-home"></i>
-                  <a href="https://excellencetheme.com/templates/avastream/about.html#">Home</a>
+                  <a href="about">Home</a>
                   <i class="fa fa-angle-right"></i>
                 </li>
-                <li><a href="https://excellencetheme.com/templates/avastream/about.html#">About Us</a></li>
+                <li><a href="about">About Us</a></li>
               </ol>
             </nav>
             <!-- Breadcrumb End -->

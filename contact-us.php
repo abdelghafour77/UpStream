@@ -30,10 +30,10 @@
               <ol class="breadcrumb">
                 <li>
                   <i class="fa fa-home"></i>
-                  <a href="https://excellencetheme.com/templates/avastream/contacts.html#">Home</a>
+                  <a href="contact-us">Home</a>
                   <i class="fa fa-angle-right"></i>
                 </li>
-                <li><a href="https://excellencetheme.com/templates/avastream/contacts.html#">Contact Us</a></li>
+                <li><a href="contact-us">Contact Us</a></li>
               </ol>
             </nav>
             <!-- Breadcrumb End -->
@@ -58,7 +58,7 @@
           </div>
           <div class="row">
             <div class="col-lg-12">
-              <form class="contact__form" method="post" action="https://excellencetheme.com/templates/avastream/mail.php">
+              <form class="contact__form" method="post" action="">
                 <!-- form message -->
                 <div class="row">
                   <div class="col-12">

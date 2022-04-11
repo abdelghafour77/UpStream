@@ -48,7 +48,7 @@
                         the 1500s.
                       </p>
                       <div class="slider-buttons d-flex align-items-center fadeInUp animated" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 1; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                         the 1500s.
                       </p>
                       <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="-1"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -106,7 +106,7 @@
                         the 1500s.
                       </p>
                       <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="-1"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -172,13 +172,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -187,7 +187,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Iron door</a>
+                            <a href="single">Iron door</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -207,13 +207,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -222,7 +222,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">The Earth</a>
+                            <a href="single">The Earth</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -242,13 +242,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -257,7 +257,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">City dreams</a>
+                            <a href="single">City dreams</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -277,13 +277,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -292,7 +292,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Divine hand</a>
+                            <a href="single">Divine hand</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -312,13 +312,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -327,7 +327,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Deceived</a>
+                            <a href="single">Deceived</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -347,13 +347,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -362,7 +362,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Heaven is now</a>
+                            <a href="single">Heaven is now</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -388,13 +388,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -403,7 +403,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">A dam wind</a>
+                            <a href="single">A dam wind</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -423,13 +423,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -438,7 +438,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">the message</a>
+                            <a href="single">the message</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -458,13 +458,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -473,7 +473,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Verbal messages</a>
+                            <a href="single">Verbal messages</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -493,13 +493,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -508,7 +508,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">hard life</a>
+                            <a href="single">hard life</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -528,13 +528,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -543,7 +543,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Destiny</a>
+                            <a href="single">Destiny</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -563,13 +563,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -578,7 +578,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="single.html">Paper hero</a>
+                            <a href="single">Paper hero</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -604,13 +604,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -619,7 +619,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">the border</a>
+                            <a href="single">the border</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -638,13 +638,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -653,7 +653,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">life or death</a>
+                            <a href="single">life or death</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -672,13 +672,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -687,7 +687,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Out of life</a>
+                            <a href="single">Out of life</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -706,13 +706,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -721,7 +721,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Month</a>
+                            <a href="single">The Month</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -740,13 +740,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -755,7 +755,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Journey</a>
+                            <a href="single">The Journey</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -774,13 +774,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -789,7 +789,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Sheets gone</a>
+                            <a href="single">Sheets gone</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -846,13 +846,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -861,7 +861,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The thug</a>
+                              <a href="single">The thug</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -882,13 +882,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -897,7 +897,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">Terrifying night</a>
+                              <a href="single">Terrifying night</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -918,13 +918,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -933,7 +933,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The Winter</a>
+                              <a href="single">The Winter</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -954,13 +954,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -969,7 +969,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the fear</a>
+                              <a href="single">the fear</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -990,13 +990,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1005,7 +1005,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the love</a>
+                              <a href="single">the love</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1026,13 +1026,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1041,7 +1041,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the land of fear</a>
+                              <a href="single">the land of fear</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1062,13 +1062,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1077,7 +1077,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">Criminal</a>
+                              <a href="single">Criminal</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1098,13 +1098,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1113,7 +1113,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The thug</a>
+                              <a href="single">The thug</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1134,13 +1134,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1149,7 +1149,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">Terrifying night</a>
+                              <a href="single">Terrifying night</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1170,13 +1170,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1185,7 +1185,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The Winter</a>
+                              <a href="single">The Winter</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1206,13 +1206,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1221,7 +1221,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the fear</a>
+                              <a href="single">the fear</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1242,13 +1242,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1257,7 +1257,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the love</a>
+                              <a href="single">the love</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1278,13 +1278,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1293,7 +1293,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">the land of fear</a>
+                              <a href="single">the land of fear</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1314,13 +1314,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1329,7 +1329,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">Criminal</a>
+                              <a href="single">Criminal</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1350,13 +1350,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1365,7 +1365,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The thug</a>
+                              <a href="single">The thug</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1386,13 +1386,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1401,7 +1401,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">Terrifying night</a>
+                              <a href="single">Terrifying night</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1422,13 +1422,13 @@
                             <div class="box-content">
                               <ul class="icon">
                                 <li>
-                                  <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                                  <a href="watching"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
                                   <a href="./#"><i class="fas fa-plus"></i></a>
                                 </li>
                                 <li>
-                                  <a href="single.html"><i class="fas fa-info"></i></a>
+                                  <a href="single"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -1437,7 +1437,7 @@
                           <!-- Video Thumb End -->
                           <div class="video-content">
                             <h2 class="video-title">
-                              <a href="single.html">The Winter</a>
+                              <a href="single">The Winter</a>
                             </h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year">2021</span>
@@ -1505,7 +1505,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1532,7 +1532,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-19.9826%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9739%, 0px, 0px) scale(0.700261)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1559,7 +1559,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1587,7 +1587,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1615,7 +1615,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1643,7 +1643,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1671,7 +1671,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1699,7 +1699,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1726,7 +1726,7 @@
                       <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
                         make a type specimen book.</span>
                       <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="./watch-movie.html" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
                         <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                       </div>
                     </div>
@@ -1763,13 +1763,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1778,7 +1778,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">Freedom</a>
+                        <a href="single">Freedom</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -1797,13 +1797,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1812,7 +1812,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">the world</a>
+                        <a href="single">the world</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -1831,13 +1831,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1846,7 +1846,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">The gang</a>
+                        <a href="single">The gang</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -1865,13 +1865,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1880,7 +1880,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">World of war</a>
+                        <a href="single">World of war</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -1899,13 +1899,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1914,7 +1914,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">Happy holiday</a>
+                        <a href="single">Happy holiday</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -1933,13 +1933,13 @@
                       <div class="box-content">
                         <ul class="icon">
                           <li>
-                            <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                            <a href="watching"><i class="fas fa-play"></i></a>
                           </li>
                           <li>
                             <a href="./#"><i class="fas fa-plus"></i></a>
                           </li>
                           <li>
-                            <a href="single.html"><i class="fas fa-info"></i></a>
+                            <a href="single"><i class="fas fa-info"></i></a>
                           </li>
                         </ul>
                       </div>
@@ -1948,7 +1948,7 @@
                     <!-- Video Thumb End -->
                     <div class="video-content">
                       <h2 class="video-title">
-                        <a href="single.html">weekend</a>
+                        <a href="single">weekend</a>
                       </h2>
                       <div class="video-info d-flex align-items-center">
                         <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2001,13 +2001,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2016,7 +2016,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">A happy life</a>
+                            <a href="single">A happy life</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2035,13 +2035,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2050,7 +2050,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">A mirage</a>
+                            <a href="single">A mirage</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2069,13 +2069,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2084,7 +2084,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Box</a>
+                            <a href="single">Box</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2103,13 +2103,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2118,7 +2118,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The price</a>
+                            <a href="single">The price</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2137,13 +2137,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2152,7 +2152,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Sand</a>
+                            <a href="single">Sand</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2171,13 +2171,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2186,7 +2186,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The sky</a>
+                            <a href="single">The sky</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2211,13 +2211,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2226,7 +2226,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The End</a>
+                            <a href="single">The End</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2245,13 +2245,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2260,7 +2260,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">the beginning</a>
+                            <a href="single">the beginning</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2279,13 +2279,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2294,7 +2294,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Search</a>
+                            <a href="single">The Search</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2313,13 +2313,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2328,7 +2328,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Treasures</a>
+                            <a href="single">The Treasures</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2347,13 +2347,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2362,7 +2362,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Problems</a>
+                            <a href="single">Problems</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2381,13 +2381,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2396,7 +2396,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">life is Beautiful</a>
+                            <a href="single">life is Beautiful</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2421,13 +2421,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2436,7 +2436,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">End of Sorrows</a>
+                            <a href="single">End of Sorrows</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2455,13 +2455,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2470,7 +2470,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">the thief</a>
+                            <a href="single">the thief</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2489,13 +2489,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2504,7 +2504,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Millionaire</a>
+                            <a href="single">Millionaire</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2523,13 +2523,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2538,7 +2538,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Dreams</a>
+                            <a href="single">The Dreams</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2557,13 +2557,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2572,7 +2572,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">Black Color</a>
+                            <a href="single">Black Color</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2591,13 +2591,13 @@
                           <div class="box-content">
                             <ul class="icon">
                               <li>
-                                <a href="./watch-show.html"><i class="fas fa-play"></i></a>
+                                <a href="watching"><i class="fas fa-play"></i></a>
                               </li>
                               <li>
                                 <a href="./#"><i class="fas fa-plus"></i></a>
                               </li>
                               <li>
-                                <a href="./shows-single.html"><i class="fas fa-info"></i></a>
+                                <a href="single"><i class="fas fa-info"></i></a>
                               </li>
                             </ul>
                           </div>
@@ -2606,7 +2606,7 @@
                         <!-- Video Thumb End -->
                         <div class="video-content">
                           <h2 class="video-title">
-                            <a href="./shows-single.html">The Ocean</a>
+                            <a href="single">The Ocean</a>
                           </h2>
                           <div class="video-info d-flex align-items-center">
                             <span class="video-year">2021</span>
@@ -2650,13 +2650,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2665,7 +2665,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">The Colors</a>
+                    <a href="single">The Colors</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2684,13 +2684,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2699,7 +2699,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">The Devastation</a>
+                    <a href="single">The Devastation</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2718,13 +2718,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2733,7 +2733,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">The Beauty</a>
+                    <a href="single">The Beauty</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2752,13 +2752,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2767,7 +2767,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">The Silence</a>
+                    <a href="single">The Silence</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2786,13 +2786,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2801,7 +2801,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">the door is open</a>
+                    <a href="single">the door is open</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
@@ -2820,13 +2820,13 @@
                   <div class="box-content">
                     <ul class="icon">
                       <li>
-                        <a href="./watch-movie.html"><i class="fas fa-play"></i></a>
+                        <a href="watching"><i class="fas fa-play"></i></a>
                       </li>
                       <li>
                         <a href="./#"><i class="fas fa-plus"></i></a>
                       </li>
                       <li>
-                        <a href="single.html"><i class="fas fa-info"></i></a>
+                        <a href="single"><i class="fas fa-info"></i></a>
                       </li>
                     </ul>
                   </div>
@@ -2835,7 +2835,7 @@
                 <!-- Video Thumb End -->
                 <div class="video-content">
                   <h2 class="video-title">
-                    <a href="single.html">The Journey</a>
+                    <a href="single">The Journey</a>
                   </h2>
                   <div class="video-info d-flex align-items-center">
                     <span class="video-year">2021</span> <span class="video-age">+18</span>
