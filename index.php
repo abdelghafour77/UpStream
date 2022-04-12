@@ -24,9 +24,7 @@
     <div class="main-slider" id="main-slider">
       <div class="slider big-slider slider-wrap slick-initialized slick-slider slick-dotted">
         <style>
-          .slick-bg.bg-1 {
-            background-image: url(./img/cover.jpg);
-          }
+
         </style>
         <i class="prev-arrow fas fa-chevron-left slick-arrow"></i>
         <div class="slick-list draggable" style="height: 750px">
@@ -1486,7 +1484,7 @@
               <div class="swiper-container pt-0 swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab">
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-861.75px, 0px, 0px); perspective-origin: 1436.25px 50%">
                   <div class="swiper-slide swiper-bg swiper-slide-duplicate" style="
-                        background-image: url('images/movies/04.jpg');
+                        background-image: url('img/04.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(100deg);
@@ -1513,7 +1511,7 @@
                     <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
                   </div>
                   <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-prev" style="
-                        background-image: url('images/movies/05.jpg');
+                        background-image: url('img/05.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -99.913px) rotateX(0deg) rotateY(49.9565deg);
@@ -1540,7 +1538,7 @@
                     <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
                   </div>
                   <div class="swiper-slide swiper-bg swiper-slide-active" style="
-                        background-image: url('images/movies/01.jpg');
+                        background-image: url('img/01.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
@@ -1568,7 +1566,7 @@
                   </div>
                   <!-- Slide 1 End -->
                   <div class="swiper-slide swiper-bg swiper-slide-next" style="
-                        background-image: url('images/movies/02.jpg');
+                        background-image: url('img/02.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -100.087px) rotateX(0deg) rotateY(-50.0435deg);
@@ -1596,7 +1594,7 @@
                   </div>
                   <!-- Slide 2 End -->
                   <div class="swiper-slide swiper-bg" style="
-                        background-image: url('images/movies/03.jpg');
+                        background-image: url('img/03.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(-100deg);
@@ -1624,7 +1622,7 @@
                   </div>
                   <!-- Slide 3 End -->
                   <div class="swiper-slide swiper-bg" style="
-                        background-image: url('images/movies/04.jpg');
+                        background-image: url('img/04.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -300.087px) rotateX(0deg) rotateY(-150.044deg);
@@ -1652,7 +1650,7 @@
                   </div>
                   <!-- Slide 4 End -->
                   <div class="swiper-slide swiper-bg swiper-slide-duplicate-prev" style="
-                        background-image: url('images/movies/05.jpg');
+                        background-image: url('img/05.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(-200deg);
@@ -1680,7 +1678,7 @@
                   </div>
                   <!-- Slide 5 End -->
                   <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-active" style="
-                        background-image: url('images/movies/01.jpg');
+                        background-image: url('img/01.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -500.087px) rotateX(0deg) rotateY(-250.044deg);
@@ -1707,7 +1705,7 @@
                     <div class="swiper-slide-shadow-right" style="opacity: 5.00087; transition-duration: 0ms"></div>
                   </div>
                   <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-next" style="
-                        background-image: url('images/movies/02.jpg');
+                        background-image: url('img/02.jpg');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(-300deg);
@@ -1971,7 +1969,7 @@
       <!-- Trending Section End -->
       <!-- Start Last Seasons Section -->
       <section class="last-seasons pb-0">
-        <div class="last-season" style="background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 90%)), url(images/parallax/best-series.jpg)">
+        <div class="last-season" style="background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 90%)), url(img/best-series.jpg)">
           <div class="container-fluid">
             <div class="season-header text-center">
               <h5 class="mb-4">featured</h5>

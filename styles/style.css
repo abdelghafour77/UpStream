@@ -32,25 +32,25 @@
 ============================ */
 @font-face {
     font-family: "Poppins";
-    src: url("../fonts/Poppins-Light.woff");
+    src: url("../fonts/Poppins-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url("../fonts/Poppins-Regular.woff");
+    src: url("../fonts/Poppins-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url("../fonts/Poppins-SemiBold.woff");
+    src: url("../fonts/Poppins-SemiBold.ttf");
     font-weight: 600;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url("../fonts/Poppins-Bold.woff");
+    src: url("../fonts/Poppins-Bold.ttf");
     font-weight: 700;
 }
 
@@ -458,16 +458,16 @@ ul.list-check li:before {
 
 /* banner images background */
 .banner-bg.show-bg {
-    background-image: url(../images/shows/01.jpg);
+    background-image: url(../img/01.jpg);
 }
 
 .banner-bg.movie-bg {
-    background-image: url(../images/movies/01.jpg);
+    background-image: url(../img/01.jpg);
 }
 
 /* Sub header */
 .sub-header {
-    background-image: linear-gradient(to right, rgb(12, 21, 26), rgba(0, 0, 0, 0.69)), url(../images/parallax/sub-header.jpg);
+    background-image: linear-gradient(to right, rgb(12, 21, 26), rgba(0, 0, 0, 0.69)), url(../img/sub-header.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -533,7 +533,7 @@ ul.list-check li:before {
 /*  Section Parallax  */
 .section-parallax {
     padding: 80px 0;
-    background-image: linear-gradient(to right, rgb(12, 21, 26), rgba(0, 0, 0, 0.69)), url(../images/parallax/about.jpg);
+    background-image: linear-gradient(to right, rgb(12, 21, 26), rgba(0, 0, 0, 0.69)), url(../img/about.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -1564,15 +1564,15 @@ ul.navbar-nav > li.active a::before {
 
 /* Slider Images Background */
 .slick-bg.bg-1 {
-    background-image: url(../images/slider/slider1.jpg);
+    background-image: url(../img/slider1.jpg);
 }
 
 .slick-bg.bg-2 {
-    background-image: url(../images/slider/slider2.jpg);
+    background-image: url(../img/slider2.jpg);
 }
 
 .slick-bg.bg-3 {
-    background-image: url(../images/slider/slider3.jpg);
+    background-image: url(../img/slider3.jpg);
 }
 
 /* Slider Content */

@@ -24,7 +24,7 @@
     <div class="swiper-container swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab">
       <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1011.75px, 0px, 0px); perspective-origin: 1686.25px 50%">
         <div class="swiper-slide swiper-bg swiper-slide-duplicate" style="
-              background-image: url('images/shows/04.jpg');
+              background-image: url('img/04.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(100deg);
@@ -51,7 +51,7 @@
           <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
         </div>
         <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-prev" style="
-              background-image: url('images/shows/05.jpg');
+              background-image: url('img/05.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -99.9259px) rotateX(0deg) rotateY(49.9629deg);
@@ -78,7 +78,7 @@
           <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
         </div>
         <div class="swiper-slide swiper-bg swiper-slide-active" style="
-              background-image: url('images/shows/01.jpg');
+              background-image: url('img/01.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
@@ -106,7 +106,7 @@
         </div>
         <!-- Slide 1 End -->
         <div class="swiper-slide swiper-bg swiper-slide-next" style="
-              background-image: url('images/shows/02.jpg');
+              background-image: url('img/02.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -100.074px) rotateX(0deg) rotateY(-50.0371deg);
@@ -134,7 +134,7 @@
         </div>
         <!-- Slide 2 End -->
         <div class="swiper-slide swiper-bg" style="
-              background-image: url('images/shows/03.jpg');
+              background-image: url('img/03.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(-100deg);
@@ -162,7 +162,7 @@
         </div>
         <!-- Slide 3 End -->
         <div class="swiper-slide swiper-bg" style="
-              background-image: url('images/shows/04.jpg');
+              background-image: url('img/04.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -300.074px) rotateX(0deg) rotateY(-150.037deg);
@@ -190,7 +190,7 @@
         </div>
         <!-- Slide 4 End -->
         <div class="swiper-slide swiper-bg swiper-slide-duplicate-prev" style="
-              background-image: url('images/shows/05.jpg');
+              background-image: url('img/05.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(-200deg);
@@ -218,7 +218,7 @@
         </div>
         <!-- Slide 5 End -->
         <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-active" style="
-              background-image: url('images/shows/01.jpg');
+              background-image: url('img/01.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -500.074px) rotateX(0deg) rotateY(-250.037deg);
@@ -245,7 +245,7 @@
           <div class="swiper-slide-shadow-right" style="opacity: 5.00074; transition-duration: 0ms"></div>
         </div>
         <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-next" style="
-              background-image: url('images/shows/02.jpg');
+              background-image: url('img/02.jpg');
               width: 674.5px;
               transition-duration: 0ms;
               transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(-300deg);
