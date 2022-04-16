@@ -14,9 +14,9 @@ $allCategory = $getCategory->getCategory();
 $getAllMovie = new MovieView();
 $allMovieName = $getAllMovie->getMovieName();
 
-$getMovie = new MovieView();
-$resultMovie = $getMovie->getMovie(6);
-die(var_dump($resultMovie));
+// $getMovie = new MovieView();
+// $resultMovie = $getMovie->getMovie(6);
+// die(var_dump($resultMovie));
 
 
 if (isset($_POST['submit-movie'])) {

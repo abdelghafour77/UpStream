@@ -42,7 +42,7 @@ if (isset($_POST["id_movie"])) {
                     if ($output[$i]['id_category'] == $category['id_category'])
                         echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
                     else
-                        echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
+                        echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
                 }
             }
             ?>
