@@ -39,11 +39,20 @@ if (isset($_POST["id_movie"])) {
             foreach ($allCategory as $category) {
 
                 for ($i = 1; $i < count($output); $i++) {
-                    if ($output[$i]['id_category'] == $category['id_category'])
-                        echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
-                    else
-                        echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
+                    $v = "";
+                    if ($output[$i]['name'] == $category['name']) {
+                        $v = "selected";
+                    }
                 }
+                echo '<option value="' . $category['id_category'] . '" ' . $v . '>' . $category['name'] . '</option>';
+
+                // for ($i = 1; $i < count($output); $i++) {
+                //     if ($output[$i]['name'] == $category['name']) {
+                //         echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
+                //     } else {
+                //         echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
+                //     }
+                // }
             }
             ?>
         </select>
