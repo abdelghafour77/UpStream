@@ -1,3 +1,70 @@
+<?php
+session_start();
+require_once('../controller/movieController.php');
+require_once '../view/categoryView.php';
+require_once '../view/movieView.php';
+
+$getMovie = new MovieView();
+$resultMovie = $getMovie->getMovie(6);
+// die(var_dump($resultMovie));
+
+$getCategory = new CategoryView();
+$allCategory = $getCategory->getCategory();
+if (isset($_POST['submit-movie'])) {
+
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $date = $_POST['date'];
+    $category[] = $_POST['category'];
+    $language = $_POST['language'];
+    $trailer = $_POST['trailer'];
+    // $user = $_SESSION['id'];
+    $user = 1;
+    if ($_FILES['movie_file']['name'] != "") {
+        $fileName = $_FILES['movie_file']['name'];
+        $fileTmpName = $_FILES['movie_file']['tmp_name'];
+        $fileSize = $_FILES['movie_file']['size'];
+        $fileError = $_FILES['movie_file']['error'];
+        $fileType = $_FILES['movie_file']['type'];
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+        $allowed = array('MKV', 'mkv', 'mp4', 'MP4', 'h264', 'H264', 'AVI', 'avi', 'MOV', 'mov', 'M4V', 'm4v', 'AVC', 'avc');
+
+        if (in_array($fileActualExt, $allowed)) {
+            if ($fileError === 0) {
+                if ($fileSize < 4572864000) {  // 4500MB
+                    $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
+                    $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
+                    $movie_file = "../uploads/movie/" . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $movie_file);
+
+                    $MovieAdd = new MovieController();
+                    $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
+                    if ($res == '1') {
+                        header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                        die;
+                    }
+                } else {
+                    $_SESSION['message'] = "Le fichier est trop grand";
+                    header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                    die;
+                }
+            } else {
+                $_SESSION['message'] = "Erreur de téléchargement de fichier";
+                header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                die;
+            }
+        } else {
+            $_SESSION['message'] = "Erreur";
+            header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+            die;
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,18 +80,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css" rel="stylesheet">
 
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!--========== bootstrap ==========-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <!--========== CSS ==========-->
     <link rel="stylesheet" href="../styles/style1.css" />
     <link rel="stylesheet" href="../styles/style2.css" />
+    <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-
-    <title>Modifier movie</title>
+    <title>Créer movie</title>
 </head>
 
 
@@ -46,12 +111,17 @@
     <div class="nav" id="navbar">
         <nav class="nav__container">
             <div>
-                <a href="../index" class="nav__link nav__logo navbar-brand">
-                    <img src="../img/logo.png" alt="logo bts hassan 2 " width="160" height="40" />
+                <a href="../index" class="nav__link nav__logo">
+                    <!-- <i class='bx bxs-disc nav__icon'></i> -->
+                    <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" />
+                    <span class="nav__logo-name">UpStream</span>
+
+                    <!-- <span class="nav__logo-name">HASSAN II</span> -->
                 </a>
 
                 <div class="nav__list">
                     <div class="nav__items">
+                        <!-- <h3 class="nav__subtitle">Profile</h3> -->
                         <a href="../index" class="nav__link ">
                             <i class="bx bx-home nav__icon"></i>
                             <span class="nav__name">Accueil</span>
@@ -69,9 +139,9 @@
 
                             <div class="nav__dropdown-collapse">
                                 <div class="nav__dropdown-content">
-                                    <a href="../movie/create" class="nav__dropdown-item">Ajouter</a>
-                                    <a href="../movie/update" class="nav__dropdown-item">Modifier</a>
-                                    <a href="../movie/delete" class="nav__dropdown-item">Supprimer</a>
+                                    <a href="../movie/create" class="nav__dropdown-item">Add</a>
+                                    <a href="../movie/update" class="nav__dropdown-item">Update</a>
+                                    <a href="../movie/delete" class="nav__dropdown-item">Delete</a>
                                 </div>
                             </div>
                         </div>
@@ -90,41 +160,64 @@
 
     <!--========== CONTENTS ==========-->
     <main>
-
         <div class="container">
-            <h3>Modifier movie</h3>
-            <form method="post" action="" class="text-center" onsubmit="return updatemovie()">
+            <h3>Update movie</h3>
 
-                <select id="cours" name="cours" class="form-control me-4 my-4">
-
-                    <option value disabled selected>-- Cours --</option>
-                    <?php foreach ($result as $output) { ?>
-                        <option value="<?php echo $output["id_cours"]; ?>"><?php echo $output["titre"]; ?></option>
-                    <?php } ?>
+            <form method="post" action="" class="text-center" enctype="multipart/form-data">
+                <input class="form-control me-4 my-4" type="text" name="title" id="title" placeholder="title" required />
+                <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description"></textarea>
+                <select id="date" name="date" class="form-control me-4 my-4" required>
+                    <option value disabled selected>-- Date --</option>
+                    <?php
+                    for ($i = 2000; $i <= date('Y'); $i++) {
+                        echo '<option value="' . $i . '">' . $i . '</option>';
+                    }
+                    ?>
                 </select>
-
-                <select id="movie" name="movie" class="form-control me-4 my-4">
-                    <option value disabled selected>-- movie --</option>
+                <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
+                    <?php
+                    foreach ($allCategory as $category) {
+                        echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
+                    }
+                    ?>
                 </select>
-                <div id="section">
-                    <textarea class="form-control me-4 my-4" rows="5" name="description" id="description" placeholder="Description"></textarea>
-                    <textarea name="contenu" class=" text-start me-4 my-4 editor" rows="10" cols="80"></textarea>
+                <select id="language" name="language" class="form-control me-4 my-4" required>
+                    <option value disabled selected>-- Language --</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="italian">Italian</option>
+                    <option value="japonese">Japonese</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="german">German</option>
+                </select>
+                <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
+                <div class="input-group me-4 my-4">
+                    <input type="file" class="form-control" id="inputGroupFile02" name="movie_file" accept="video/mp4,video/x-m4v,video/*">
+                    <label class="input-group-text" for="inputGroupFile02">.mp4</label>
                 </div>
-                <button class="btn btn-outline-dark btn-bts me-4 my-4" type="submit" name="update-movie">Modifier</button>
+
+                <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Add</button>
+                <br>
             </form>
+
             <br>
         </div>
+
         <br>
+
     </main>
 
     <!--========== MAIN JS ==========-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
-    <script src="../ckeditor5/build/ckeditor.js"></script>
-    <script src="../js/ckeditor5.config.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
 </body>
+
+</html>

@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once('../controller/movieController.php');
+require_once '../view/categoryView.php';
+
+$getCategory = new CategoryView();
+$allCategory = $getCategory->getCategory();
 
 if (isset($_POST['submit-movie'])) {
 
@@ -55,8 +59,8 @@ if (isset($_POST['submit-movie'])) {
   }
 }
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -81,7 +85,7 @@ if (isset($_POST['submit-movie'])) {
   <link rel="stylesheet" href="../styles/style2.css" />
   <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Créer movie</title>
+  <title>Add movie</title>
 </head>
 
 
@@ -131,9 +135,9 @@ if (isset($_POST['submit-movie'])) {
 
               <div class="nav__dropdown-collapse">
                 <div class="nav__dropdown-content">
-                  <a href="../movie/create" class="nav__dropdown-item">Ajouter</a>
-                  <a href="../movie/update" class="nav__dropdown-item">Modifier</a>
-                  <a href="../movie/delete" class="nav__dropdown-item">Supprimer</a>
+                  <a href="../movie/create" class="nav__dropdown-item">Add</a>
+                  <a href="../movie/update" class="nav__dropdown-item">Update</a>
+                  <a href="../movie/delete" class="nav__dropdown-item">Delete</a>
                 </div>
               </div>
             </div>
@@ -153,7 +157,7 @@ if (isset($_POST['submit-movie'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Ajouter movie</h3>
+      <h3>Add movie</h3>
 
       <form method="post" action="" class="text-center" enctype="multipart/form-data">
         <input class="form-control me-4 my-4" type="text" name="title" id="title" placeholder="title" required />
@@ -167,15 +171,20 @@ if (isset($_POST['submit-movie'])) {
           ?>
         </select>
         <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
-          <option value="action">Action</option>
-          <option value="crime">Crime</option>
-          <option value="comedy">Comedy</option>
-          <option value="adventures">Adventures</option>
-          <option value="horror">Horror</option>
-          <option value="drama">Drama</option>
-          <option value="fantasia">Fantasia</option>
-          <option value="fiction">Fiction</option>
-          <option value="romantic">Romantic</option>
+          <?php
+          foreach ($allCategory as $category) {
+            echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
+          }
+          ?>
+          <!-- <option value="1">Action</option>
+          <option value="2">Crime</option>
+          <option value="3">Comedy</option>
+          <option value="4">Adventures</option>
+          <option value="5">Horror</option>
+          <option value="6">Drama</option>
+          <option value="7">Fantasia</option>
+          <option value="8">Fiction</option>
+          <option value="9">Romantic</option> -->
         </select>
         <select id="language" name="language" class="form-control me-4 my-4" required>
           <option value disabled selected>-- Language --</option>
@@ -194,7 +203,7 @@ if (isset($_POST['submit-movie'])) {
           <label class="input-group-text" for="inputGroupFile02">.mp4</label>
         </div>
 
-        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Ajouter</button>
+        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Add</button>
         <br>
       </form>
 
@@ -208,8 +217,7 @@ if (isset($_POST['submit-movie'])) {
   <!--========== MAIN JS ==========-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="../ckeditor5/build/ckeditor.js"></script>
-  <script src="../js/ckeditor5.config.js"></script>
+
   <script>
     $(document).ready(function() {
       $('.js-example-basic-multiple').select2();

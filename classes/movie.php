@@ -3,15 +3,66 @@
 include_once('cnx.php');
 class Movie extends Connection
 {
-
 	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $user)
 	{
+		// insert into movie table
 		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,id_user)values(?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $user]); // or die(print_r($stmt->errorInfo() ));
+		// insert into categorie
+		$sql = "SELECT id_movie FROM movie WHERE title = ? and movie_file =?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$title, $movie_file]);
+		$result = $stmt->fetch();
+		// die(print_r($category));
+		foreach ($category as $cat1) {
+			foreach ($cat1 as $cat2) {
+				$sql = "INSERT INTO contain(id_movie,id_category)values(?,?)";
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->execute([$result["id_movie"], $cat2]); // or die(print_r($stmt->errorInfo() ));
+			}
+		}
+
 		$_SESSION['message'] = 'ajouter';
 		return 1;
 	}
+
+	protected function getMovieDB($id_movie)
+	{
+		$sql = "SELECT 
+			title,
+			description,
+			date,
+			language,
+			link_trailer,
+			movie_file,
+			id_user
+		FROM 
+			movie 
+		where
+			id_movie = ?";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result1 = $stmt->fetchAll();
+
+		$sql = "SELECT
+			ca.id_category ,
+			ca.name 
+		FROM
+			contain co ,category ca 
+		WHERE
+			co.id_category =ca.id_category
+			and
+			co.id_movie = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result2 = $stmt->fetchAll();
+
+		$result = array_merge($result1, $result2);
+		return $result;
+	}
+
 	// protected function addCoursDB1($titre, $module, $description, $auteur)
 	// {
 	// 	$sql = "INSERT INTO cours(titre,id_module,description,id_auteur)values(?,?,?,?)";
@@ -21,16 +72,7 @@ class Movie extends Connection
 	// 	return 1;
 	// }
 
-	// protected function getCoursDB($auteur)
-	// {
-	// 	$sql = "SELECT * FROM cours where id_auteur = ?";
 
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$auteur]);
-	// 	$result = $stmt->fetchAll();
-
-	// 	return $result;
-	// }
 	// protected function getCoursDB0()
 	// {
 	// 	$sql = "SELECT * FROM cours  ";

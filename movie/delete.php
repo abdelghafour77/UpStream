@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="../styles/style1.css" />
   <link rel="stylesheet" href="../styles/style2.css" />
 
-  <title>Supprimer movie</title>
+  <title>Delete movie</title>
 </head>
 
 <script>
@@ -85,9 +85,9 @@
 
               <div class="nav__dropdown-collapse">
                 <div class="nav__dropdown-content">
-                  <a href="../movie/create" class="nav__dropdown-item">Ajouter</a>
-                  <a href="../movie/update" class="nav__dropdown-item">Modifier</a>
-                  <a href="../movie/delete" class="nav__dropdown-item">Supprimer</a>
+                  <a href="../movie/create" class="nav__dropdown-item">Add</a>
+                  <a href="../movie/update" class="nav__dropdown-item">Update</a>
+                  <a href="../movie/delete" class="nav__dropdown-item">Delete</a>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Supprimer movie</h3>
+      <h3>Delete movie</h3>
 
 
       <form method="post" action="" class="text-center" onsubmit="return deletemovie()">
@@ -120,7 +120,7 @@
         <select id="movie" name="movie" class="form-control me-4 my-4">
           <option value disabled selected>-- movie --</option>
         </select>
-        <button class="btn btn-outline-dark btn-bts" type="submit" name="delete-movie">Supprimer</button>
+        <button class="btn btn-outline-dark btn-bts" type="submit" name="delete-movie">Delete</button>
 
       </form>
 
