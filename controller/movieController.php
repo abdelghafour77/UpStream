@@ -8,9 +8,13 @@ class MovieController extends Movie
     {
         return $this->addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
     }
-    public function updateMovie($title, $description, $date, $category, $language, $trailer, $user)
+    public function updateMovie($id_movie, $description, $date, $category, $language, $trailer, $user)
     {
-        return $this->updateMovieDB($title, $description, $date, $category, $language, $trailer, $user);
+        return $this->updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user);
+    }
+    public function deleteMovie($id_movie)
+    {
+        return $this->deleteMovieDB($id_movie);
     }
     // public function addCours1($titre, $module, $description, $auteur)
     // {
@@ -20,8 +24,5 @@ class MovieController extends Movie
     // {
     //     return $this->updateCoursDB($description, $id_cours);
     // }
-    // public function deleteCours($id_cours)
-    // {
-    //     return $this->deleteCoursDB($id_cours);
-    // }
+
 }

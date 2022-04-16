@@ -1,5 +1,31 @@
+<?php
+session_start();
+require_once('../controller/movieController.php');
+require_once '../view/movieView.php';
+
+$getAllMovie = new MovieView();
+$allMovieName = $getAllMovie->getMovieName();
+
+
+if (isset($_POST['submit-movie'])) {
+
+  $id_movie = $_POST['title'];
+
+  // $user = $_SESSION['id'];
+  $user = 1;
+
+  $MovieDelete = new MovieController();
+  $res = $MovieDelete->deleteMovie($id_movie);
+  if ($res == '1') {
+    header('Location:' . $_SERVER['PHP_SELF']);
+    die;
+  }
+}
+
+?>
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="eng">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,36 +39,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css" rel="stylesheet">
 
-
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <!--========== bootstrap ==========-->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
   <!--========== CSS ==========-->
   <link rel="stylesheet" href="../styles/style1.css" />
   <link rel="stylesheet" href="../styles/style2.css" />
+  <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Delete movie</title>
+  <title>Créer movie</title>
 </head>
 
-<script>
-  $(document).ready(function() {
-    $('#cours').on('change', function() {
-      var id_cours1 = $(this).val();
-      if (id_cours1) {
-        $.ajax({
-          type: 'POST',
-          url: '../configs/ajax.php',
-          data: 'id_cours1=' + id_cours1,
-          success: function(html) {
-            $('#movie').html(html);
-          }
-        });
-      } else {
-        $('#movie').html('<option value="">Select cours first</option>');
-      }
-    });
-  });
-</script>
 
 <body>
   <!--========== HEADER ==========-->
@@ -62,12 +70,17 @@
   <div class="nav" id="navbar">
     <nav class="nav__container">
       <div>
-        <a href="../index" class="nav__link nav__logo navbar-brand">
-          <img src="../img/logo.png" alt="Up Stream" width="160" height="40" />
+        <a href="../index" class="nav__link nav__logo">
+          <!-- <i class='bx bxs-disc nav__icon'></i> -->
+          <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" />
+          <span class="nav__logo-name">UpStream</span>
+
+          <!-- <span class="nav__logo-name">HASSAN II</span> -->
         </a>
 
         <div class="nav__list">
           <div class="nav__items">
+            <!-- <h3 class="nav__subtitle">Profile</h3> -->
             <a href="../index" class="nav__link ">
               <i class="bx bx-home nav__icon"></i>
               <span class="nav__name">Accueil</span>
@@ -109,19 +122,18 @@
     <div class="container">
       <h3>Delete movie</h3>
 
-
-      <form method="post" action="" class="text-center" onsubmit="return deletemovie()">
-        <select id="cours" name="cours" class="form-control me-4 my-4">
-          <option value disabled selected>-- Cours --</option>
-          <?php foreach ($result as $output) { ?>
-            <option value="<?php echo $output["id_cours"]; ?>"><?php echo $output["titre"]; ?></option>
-          <?php } ?>
+      <form method="post" action="" class="text-center" enctype="multipart/form-data">
+        <select id="title" name="title" class="form-control me-4 my-4" required>
+          <option value disabled selected>-- Movie --</option>
+          <?php
+          foreach ($allMovieName as $movie) {
+            echo '<option value="' . $movie['id_movie'] . '">' . $movie['title'] . '</option>';
+          }
+          ?>
         </select>
-        <select id="movie" name="movie" class="form-control me-4 my-4">
-          <option value disabled selected>-- movie --</option>
-        </select>
-        <button class="btn btn-outline-dark btn-bts" type="submit" name="delete-movie">Delete</button>
 
+        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Delete</button>
+        <br>
       </form>
 
       <br>
@@ -132,6 +144,8 @@
   </main>
 
   <!--========== MAIN JS ==========-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
 
 </body>
 

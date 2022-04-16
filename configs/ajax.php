@@ -37,9 +37,9 @@ if (isset($_POST["id_movie"])) {
         <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
             <?php
             foreach ($allCategory as $category) {
-
+                $v = "";
                 for ($i = 1; $i < count($output); $i++) {
-                    $v = "";
+
                     if ($output[$i]['name'] == $category['name']) {
                         $v = "selected";
                     }

@@ -72,13 +72,22 @@ class Movie extends Connection
 
 		return $result;
 	}
-	protected function updateMovieDB($title, $description, $date, $category, $language, $trailer, $user)
+	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user)
 	{
 
-		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?   WHERE title = ? ; ";
+		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?   WHERE id_movie = ? ; ";
 
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$description, $date, $language, $trailer, $user, $title]);
+		$stmt->execute([$description, $date, $language, $trailer, $user, $id_movie]);
+		$_SESSION['message'] = 'modifier';
+
+		return 1;
+	}
+	protected function deleteMovieDB($id_movie)
+	{
+		$sql = "DELETE from movie WHERE id_movie = ? ; ";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
 		$_SESSION['message'] = 'modifier';
 
 		return 1;

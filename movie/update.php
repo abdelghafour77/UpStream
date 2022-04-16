@@ -41,7 +41,7 @@ if (isset($_POST['submit-movie'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="eng">
 
 <head>
     <meta charset="UTF-8" />
@@ -168,13 +168,13 @@ if (isset($_POST['submit-movie'])) {
                         <option value disabled selected>-- Language --</option>
                         <?php
                         foreach ($allLanguage as $language) {
-                            echo '<option value="' . $language['language'] . '">' . $language['name'] . '</option>';
+                            echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
                         }
                         ?>
                     </select>
                     <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
                 </div>
-                <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Add</button>
+                <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Update</button>
                 <br>
             </form>
 
