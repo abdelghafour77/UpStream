@@ -86,7 +86,7 @@
                 <ul class="nav d-flex align-items-center list-inline m-0 float-right">
                     <li class="nav-item">
                         <div class="nav-search">
-                            <a class="nav-link modal-popup" href="index#search-popup"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a class="nav-link modal-popup" href="index.php#search-popup"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </div>
                         <!-- Search Icon End -->
                     </li>

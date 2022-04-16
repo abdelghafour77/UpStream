@@ -66,7 +66,7 @@ jQuery(function ($) {
 
     // Slick Slider - Main Slider
 
-    $('.big-slider').slick({
+    $('.main-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -79,7 +79,7 @@ jQuery(function ($) {
         prevArrow: '<i class="prev-arrow fas fa-chevron-left"></i>',
     });
 
-    $('.big-slider').slickAnimation();
+    $('.main-slider').slickAnimation();
 
 
     // Owl Slider - Trending Slider

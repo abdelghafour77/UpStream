@@ -23,9 +23,6 @@
     <!-- Start Main Slider -->
     <div class="main-slider" id="main-slider">
       <div class="slider big-slider slider-wrap slick-initialized slick-slider slick-dotted">
-        <style>
-
-        </style>
         <i class="prev-arrow fas fa-chevron-left slick-arrow"></i>
         <div class="slick-list draggable" style="height: 750px">
           <div class="slick-track" style="opacity: 1; width: 4047px">

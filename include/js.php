@@ -9,7 +9,8 @@
   <!-- jQuery Owl Carousel -->
   <script src="./js/owl.carousel.min.js"></script>
   <!-- jQuery Slick Slider -->
-  <script src="./js/slick.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+  <script src="./js/slick.js"></script>
   <!-- jQuery Slick Animation -->
   <script src="./js/slick-animation.min.js"></script>
   <!-- jQuery Pop-up Search -->
