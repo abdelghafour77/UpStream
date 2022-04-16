@@ -2,7 +2,6 @@
 session_start();
 require_once('../controller/movieController.php');
 
-
 if (isset($_POST['submit-movie'])) {
 
   $title = $_POST['title'];
@@ -13,10 +12,6 @@ if (isset($_POST['submit-movie'])) {
   $trailer = $_POST['trailer'];
   // $user = $_SESSION['id'];
   $user = 1;
-  // $MovieAdd = new MovieController();
-  // $movie_file = "222";
-  // $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
-
   if ($_FILES['movie_file']['name'] != "") {
     $fileName = $_FILES['movie_file']['name'];
     $fileTmpName = $_FILES['movie_file']['tmp_name'];
@@ -26,7 +21,7 @@ if (isset($_POST['submit-movie'])) {
 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
-    $allowed = array('MKV', 'mkv', 'mp4', 'MP4');
+    $allowed = array('MKV', 'mkv', 'mp4', 'MP4', 'h264', 'H264', 'AVI', 'avi', 'MOV', 'mov', 'M4V', 'm4v', 'AVC', 'avc');
 
     if (in_array($fileActualExt, $allowed)) {
       if ($fileError === 0) {
