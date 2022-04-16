@@ -2,14 +2,23 @@
 session_start();
 require_once('../controller/movieController.php');
 require_once '../view/categoryView.php';
+require_once '../view/languageView.php';
 require_once '../view/movieView.php';
 
-$getMovie = new MovieView();
-$resultMovie = $getMovie->getMovie(6);
-// die(var_dump($resultMovie));
+$getLanguage = new LanguageView();
+$allLanguage = $getLanguage->getLanguage();
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
+
+$getAllMovie = new MovieView();
+$allMovieName = $getAllMovie->getMovieName();
+
+$getMovie = new MovieView();
+$resultMovie = $getMovie->getMovie(6);
+die(var_dump($resultMovie));
+
+
 if (isset($_POST['submit-movie'])) {
 
     $title = $_POST['title'];
@@ -20,46 +29,12 @@ if (isset($_POST['submit-movie'])) {
     $trailer = $_POST['trailer'];
     // $user = $_SESSION['id'];
     $user = 1;
-    if ($_FILES['movie_file']['name'] != "") {
-        $fileName = $_FILES['movie_file']['name'];
-        $fileTmpName = $_FILES['movie_file']['tmp_name'];
-        $fileSize = $_FILES['movie_file']['size'];
-        $fileError = $_FILES['movie_file']['error'];
-        $fileType = $_FILES['movie_file']['type'];
 
-        $fileExt = explode('.', $fileName);
-        $fileActualExt = strtolower(end($fileExt));
-        $allowed = array('MKV', 'mkv', 'mp4', 'MP4', 'h264', 'H264', 'AVI', 'avi', 'MOV', 'mov', 'M4V', 'm4v', 'AVC', 'avc');
-
-        if (in_array($fileActualExt, $allowed)) {
-            if ($fileError === 0) {
-                if ($fileSize < 4572864000) {  // 4500MB
-                    $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
-                    $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
-                    $movie_file = "../uploads/movie/" . $fileNameNew;
-                    move_uploaded_file($fileTmpName, $movie_file);
-
-                    $MovieAdd = new MovieController();
-                    $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
-                    if ($res == '1') {
-                        header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
-                        die;
-                    }
-                } else {
-                    $_SESSION['message'] = "Le fichier est trop grand";
-                    header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
-                    die;
-                }
-            } else {
-                $_SESSION['message'] = "Erreur de téléchargement de fichier";
-                header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
-                die;
-            }
-        } else {
-            $_SESSION['message'] = "Erreur";
-            header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
-            die;
-        }
+    $MovieUpdate = new MovieController();
+    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user);
+    if ($res == '1') {
+        header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+        die;
     }
 }
 
@@ -164,40 +139,41 @@ if (isset($_POST['submit-movie'])) {
             <h3>Update movie</h3>
 
             <form method="post" action="" class="text-center" enctype="multipart/form-data">
-                <input class="form-control me-4 my-4" type="text" name="title" id="title" placeholder="title" required />
-                <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description"></textarea>
-                <select id="date" name="date" class="form-control me-4 my-4" required>
-                    <option value disabled selected>-- Date --</option>
+                <select id="title" name="title" class="form-control me-4 my-4" required>
+                    <option value disabled selected>-- Movie --</option>
                     <?php
-                    for ($i = 2000; $i <= date('Y'); $i++) {
-                        echo '<option value="' . $i . '">' . $i . '</option>';
+                    foreach ($allMovieName as $movie) {
+                        echo '<option value="' . $movie['id_movie'] . '">' . $movie['title'] . '</option>';
                     }
                     ?>
                 </select>
-                <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
-                    <?php
-                    foreach ($allCategory as $category) {
-                        echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
-                    }
-                    ?>
-                </select>
-                <select id="language" name="language" class="form-control me-4 my-4" required>
-                    <option value disabled selected>-- Language --</option>
-                    <option value="arabic">Arabic</option>
-                    <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="french">French</option>
-                    <option value="italian">Italian</option>
-                    <option value="japonese">Japonese</option>
-                    <option value="chinese">Chinese</option>
-                    <option value="german">German</option>
-                </select>
-                <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
-                <div class="input-group me-4 my-4">
-                    <input type="file" class="form-control" id="inputGroupFile02" name="movie_file" accept="video/mp4,video/x-m4v,video/*">
-                    <label class="input-group-text" for="inputGroupFile02">.mp4</label>
+                <div id="movie">
+                    <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description"></textarea>
+                    <select id="date" name="date" class="form-control me-4 my-4" required>
+                        <option value disabled selected>-- Date --</option>
+                        <?php
+                        for ($i = 2000; $i <= date('Y'); $i++) {
+                            echo '<option value="' . $i . '">' . $i . '</option>';
+                        }
+                        ?>
+                    </select>
+                    <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
+                        <?php
+                        foreach ($allCategory as $category) {
+                            echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                    <select id="language" name="language" class="form-control me-4 my-4" required>
+                        <option value disabled selected>-- Language --</option>
+                        <?php
+                        foreach ($allLanguage as $language) {
+                            echo '<option value="' . $language['language'] . '">' . $language['name'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                    <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
                 </div>
-
                 <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Add</button>
                 <br>
             </form>
@@ -216,6 +192,23 @@ if (isset($_POST['submit-movie'])) {
     <script>
         $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
+        });
+
+        $(document).ready(function() {
+            $('#title').on('change', function() {
+                var id_movie = $(this).val();
+                if (id_movie) {
+                    $.post(
+                        "../configs/ajax.php", {
+                            id_movie: id_movie
+                        },
+                        function(data) {
+                            $('#movie').html(data);
+                        }
+                    );
+                } else {}
+            });
+
         });
     </script>
 </body>

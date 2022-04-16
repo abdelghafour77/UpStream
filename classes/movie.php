@@ -62,7 +62,27 @@ class Movie extends Connection
 		$result = array_merge($result1, $result2);
 		return $result;
 	}
+	protected function getMovieNameDB()
+	{
+		$sql = "SELECT id_movie , title FROM movie  ";
 
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+
+		return $result;
+	}
+	protected function updateMovieDB($title, $description, $date, $category, $language, $trailer, $user)
+	{
+
+		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?   WHERE title = ? ; ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$description, $date, $language, $trailer, $user, $title]);
+		$_SESSION['message'] = 'modifier';
+
+		return 1;
+	}
 	// protected function addCoursDB1($titre, $module, $description, $auteur)
 	// {
 	// 	$sql = "INSERT INTO cours(titre,id_module,description,id_auteur)values(?,?,?,?)";
@@ -73,16 +93,7 @@ class Movie extends Connection
 	// }
 
 
-	// protected function getCoursDB0()
-	// {
-	// 	$sql = "SELECT * FROM cours  ";
 
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute();
-	// 	$result = $stmt->fetchAll();
-
-	// 	return $result;
-	// }
 	// protected function getLastCoursDB()
 	// {
 	// 	$sql = "SELECT * FROM cours order by id_cours DESC limit 15 ";
@@ -148,17 +159,7 @@ class Movie extends Connection
 
 	// 	return $result;
 	// }
-	// protected function updateCoursDB($description, $id_cours)
-	// {
-
-	// 	$sql = "UPDATE cours SET description = ?  WHERE id_cours = ? ; ";
-
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$description, $id_cours]);
-	// 	$_SESSION['message'] = 'modifier';
-
-	// 	return 1;
-	// }
+	// 
 	// protected function deleteCoursDB($id_cours)
 	// {
 	// 	$sql = "SELECT * FROM cours WHERE id_cours = ? ; ";

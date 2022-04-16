@@ -2,9 +2,13 @@
 session_start();
 require_once('../controller/movieController.php');
 require_once '../view/categoryView.php';
+require_once '../view/languageView.php';
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
+
+$getLanguage = new LanguageView();
+$allLanguage = $getLanguage->getLanguage();
 
 if (isset($_POST['submit-movie'])) {
 
@@ -176,30 +180,18 @@ if (isset($_POST['submit-movie'])) {
             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
           }
           ?>
-          <!-- <option value="1">Action</option>
-          <option value="2">Crime</option>
-          <option value="3">Comedy</option>
-          <option value="4">Adventures</option>
-          <option value="5">Horror</option>
-          <option value="6">Drama</option>
-          <option value="7">Fantasia</option>
-          <option value="8">Fiction</option>
-          <option value="9">Romantic</option> -->
         </select>
         <select id="language" name="language" class="form-control me-4 my-4" required>
           <option value disabled selected>-- Language --</option>
-          <option value="arabic">Arabic</option>
-          <option value="english">English</option>
-          <option value="spanish">Spanish</option>
-          <option value="french">French</option>
-          <option value="italian">Italian</option>
-          <option value="japonese">Japonese</option>
-          <option value="chinese">Chinese</option>
-          <option value="german">German</option>
+          <?php
+          foreach ($allLanguage as $language) {
+            echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
+          }
+          ?>
         </select>
         <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
         <div class="input-group me-4 my-4">
-          <input type="file" class="form-control" id="inputGroupFile02" name="movie_file" accept="video/mp4,video/x-m4v,video/*">
+          <input type="file" class="form-control" id="inputGroupFile02" name="movie_file" accept="video/mp4,video/x-m4v,video/*" require>
           <label class="input-group-text" for="inputGroupFile02">.mp4</label>
         </div>
 
