@@ -64,7 +64,7 @@ if (isset($_POST['submit-movie'])) {
     <link rel="stylesheet" href="../styles/style2.css" />
     <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-    <title>Créer movie</title>
+    <title>Update movie</title>
 </head>
 
 
