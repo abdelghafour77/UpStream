@@ -6,7 +6,7 @@
                 <div class="footer-widget">
                     <div class="widget-content">
                         <div class="footer-logo">
-                            <img alt="" class="img-fluid" src="./img/footer-logo.png" />
+                            <img alt="" class="img-fluid" src="../img/footer-logo.png" />
                         </div>
                         <div class="footer-about-text">
                             <p class="text-muted">Here , write the complete address of the Registered office address along with telephone number.</p>

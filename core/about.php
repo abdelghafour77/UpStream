@@ -4,7 +4,7 @@
 <head>
   <title>About</title>
   <?php
-  require_once 'include/head.php';
+  require_once '../include/head.php';
   ?>
 </head>
 
@@ -18,7 +18,7 @@
   <!-- Preloader End -->
   <div class="main" id="main">
     <?php
-    require_once 'include/header.php';
+    require_once '../include/header.php';
     ?>
     <!-- Start Sub Header Section -->
     <div class="sub-header">
@@ -199,10 +199,10 @@
     </div>
     <!-- Main Content End -->
     <?php
-    require_once 'include/footer.php';
+    require_once '../include/footer.php';
     ?>
     <?php
-    require_once 'include/js.php';
+    require_once '../include/js.php';
     ?>
 </body>
 

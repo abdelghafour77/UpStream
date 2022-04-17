@@ -4,7 +4,7 @@
 <head>
   <title>404</title>
   <?php
-  require_once 'include/head.php';
+  require_once '../include/head.php';
   ?>
 </head>
 
@@ -18,7 +18,7 @@
   <!-- Preloader End -->
   <div class="main" id="main">
     <?php
-    require_once 'include/header.php';
+    require_once '../include/header.php';
     ?>
     <!-- Start Main Content -->
     <div class="main-content">
@@ -50,7 +50,7 @@
     </div>
     <!-- Main Content End -->
     <?php
-    require_once 'include/footer.php';
+    require_once '../include/footer.php';
     ?>
 
   </div>
@@ -72,10 +72,10 @@
   </div>
   <!-- End Search Modal -->
   <?php
-  require_once 'include/filter.php';
+  require_once '../include/filter.php';
   ?>
   <?php
-  require_once 'include/js.php';
+  require_once '../include/js.php';
   ?>
 </body>
 

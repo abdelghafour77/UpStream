@@ -4,7 +4,7 @@
 <head>
   <title>Shows</title>
   <?php
-  require_once 'include/head.php';
+  require_once '../include/head.php';
   ?>
 </head>
 
@@ -18,7 +18,7 @@
   <!-- Preloader End -->
   <div class="main" id="main">
     <?php
-    require_once 'include/header.php';
+    require_once '../include/header.php';
     ?>
     <!-- Start Swiper Slider -->
     <div class="swiper-container swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab">
@@ -1307,7 +1307,7 @@
     </div>
     <!-- Main Content End -->
     <?php
-    require_once 'include/footer.php';
+    require_once '../include/footer.php';
     ?>
   </div>
   <!-- Main Class End -->
@@ -1328,11 +1328,11 @@
   </div>
   <!-- End Search Modal -->
   <?php
-  require_once 'include/filter.php';
+  require_once '../include/filter.php';
   ?>
 
   <?php
-  require_once 'include/js.php';
+  require_once '../include/js.php';
   ?>
 </body>
 

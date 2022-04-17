@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mobile-logo text-center">
-                        <a href="./index"><img alt="" class="img-fluid" src="./img/header-logo.png" /></a>
+                        <a href="../index"><img alt="" class="img-fluid" src="../img/header-logo.png" /></a>
                     </div>
                 </div>
                 <!-- Logo Col End -->
@@ -24,7 +24,7 @@
             <div class="col-lg-9 pl-0">
                 <!-- Start Navigation -->
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="./index"><img alt="" class="img-fluid" src="./img/header-logo.png" /></a>
+                    <a class="navbar-brand" href="./index"><img alt="" class="img-fluid" src="../img/header-logo.png" /></a>
                     <!-- Logo End -->
                     <div class="site-nav-inner float-left">
                         <button aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
@@ -34,30 +34,30 @@
                         <div class="navbar-collapse navbar-responsive-collapse collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./index">Home</a>
+                                    <a class="nav-link active" href="../core/index">Home</a>
                                 </li>
                                 <!-- Nav Item 1 End -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./movies">Movies</a>
+                                    <a class="nav-link" href="../core/movies">Movies</a>
                                 </li>
                                 <!-- Nav Item 2 End -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./shows">Shows</a>
+                                    <a class="nav-link" href="../core/shows">Shows</a>
                                 </li>
                                 <!-- Nav Item 3 End -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">More <i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown-menu fade-up" role="menu">
                                         <li>
-                                            <a class="dropdown-item" href="./about">About Us</a>
+                                            <a class="dropdown-item" href="../core/about">About Us</a>
                                         </li>
                                         <!-- Sub Nav Item 1 End -->
                                         <li>
-                                            <a class="dropdown-item" href="./contact-us">Contact Us</a>
+                                            <a class="dropdown-item" href="../core/contact-us">Contact Us</a>
                                         </li>
                                         <!-- Sub Nav Item 2 End -->
                                         <li>
-                                            <a class="dropdown-item" href="./404">404</a>
+                                            <a class="dropdown-item" href="../core/404">404</a>
                                         </li>
                                         <!-- Sub Nav Item 3 End -->
                                         <!-- <li>
@@ -98,7 +98,7 @@
                                     <a class="dropdown-item" href="./#">
                                         <div class="notification-card media">
                                             <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="./img/thumb-1.jpg" />
+                                                <img alt="" class="img-fluid" src="../img/thumb-1.jpg" />
                                             </div>
                                             <!-- Notification thumb end -->
                                             <div class="notification-content media-body">
@@ -114,7 +114,7 @@
                                     <a class="dropdown-item" href="./#">
                                         <div class="notification-card media">
                                             <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="./img/thumb-2.jpg" />
+                                                <img alt="" class="img-fluid" src="../img/thumb-2.jpg" />
                                             </div>
                                             <!-- Notification thumb end -->
                                             <div class="notification-content media-body">
@@ -130,7 +130,7 @@
                                     <a class="dropdown-item" href="./#">
                                         <div class="notification-card media">
                                             <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="./img/thumb-3.jpg" />
+                                                <img alt="" class="img-fluid" src="../img/thumb-3.jpg" />
                                             </div>
                                             <!-- Notification thumb end -->
                                             <div class="notification-content media-body">
@@ -149,11 +149,23 @@
                     </li>
                     <!-- Nav Item 4 End -->
                     <li class="nav-item">
-                        <div class="nav-filter">
-                            <a class="nav-link openbtn" onclick="openNav()"><svg class="filter-animate" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 14v-4c-1.619 0-2.906.267-3.705-1.476-.697-1.663.604-2.596 1.604-3.596l-2.829-2.828c-1.033 1.033-1.908 2.307-3.666 1.575-1.674-.686-1.404-2.334-1.404-3.675h-4c0 1.312.278 2.985-1.404 3.675-1.761.733-2.646-.553-3.667-1.574l-2.829 2.828c1.033 1.033 2.308 1.909 1.575 3.667-.348.849-1.176 1.404-2.094 1.404h-1.581v4c1.471 0 2.973-.281 3.704 1.475.698 1.661-.604 2.596-1.604 3.596l2.829 2.829c1-1 1.943-2.282 3.667-1.575 1.673.687 1.404 2.332 1.404 3.675h4c0-1.244-.276-2.967 1.475-3.704 1.645-.692 2.586.595 3.596 1.604l2.828-2.829c-1-1-2.301-1.933-1.604-3.595l.03-.072c.687-1.673 2.332-1.404 3.675-1.404zm-12 2c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
-                                </svg></a>
-                        </div>
+                        <?php if (isset($_SESSION['admin'])) {
+                            if ($_SESSION['admin'] == 1) {
+                        ?>
+                                <div class="nav-filter">
+                                    <a class="nav-link openbtn" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button">
+                                        <svg class="filter-animate" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M24 14v-4c-1.619 0-2.906.267-3.705-1.476-.697-1.663.604-2.596 1.604-3.596l-2.829-2.828c-1.033 1.033-1.908 2.307-3.666 1.575-1.674-.686-1.404-2.334-1.404-3.675h-4c0 1.312.278 2.985-1.404 3.675-1.761.733-2.646-.553-3.667-1.574l-2.829 2.828c1.033 1.033 2.308 1.909 1.575 3.667-.348.849-1.176 1.404-2.094 1.404h-1.581v4c1.471 0 2.973-.281 3.704 1.475.698 1.661-.604 2.596-1.604 3.596l2.829 2.829c1-1 1.943-2.282 3.667-1.575 1.673.687 1.404 2.332 1.404 3.675h4c0-1.244-.276-2.967 1.475-3.704 1.645-.692 2.586.595 3.596 1.604l2.828-2.829c-1-1-2.301-1.933-1.604-3.595l.03-.072c.687-1.673 2.332-1.404 3.675-1.404zm-12 2c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
+                                        </svg>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right fade-up">
+                                        <li>
+                                            <a class="dropdown-item" href="../movie/create">Movie CRUD</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        <?php }
+                        } ?>
                         <!-- Sidebar Filter Button End -->
                     </li>
                     <!-- Nav Item 2 End -->
@@ -162,29 +174,29 @@
                             <div class="dropdown">
                                 <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button">
                                     <?php if (!isset($_SESSION['picture']) || $_SESSION['picture'] == '') { ?>
-                                        <img alt="" class="img-fluid user-icon rounded-circle" src="./img/user.jpg" />
+                                        <img alt="" class="img-fluid user-icon rounded-circle" src="../img/user.jpg" />
                                     <?php } else { ?>
-                                        <img alt="" class="img-fluid user-icon rounded-circle" src="./uploads/users/<?php echo $_SESSION['picture']; ?>" />
+                                        <img alt="" class="img-fluid user-icon rounded-circle" src="../uploads/users/<?php echo $_SESSION['picture']; ?>" />
                                     <?php  } ?>
                                 </div>
                                 <ul class="dropdown-menu dropdown-menu-right fade-up">
                                     <?php if (isset($_SESSION['id_user'])) {
                                     ?>
                                         <li>
-                                            <a class="dropdown-item" href="./user/account-settings">Account Settings</a>
+                                            <a class="dropdown-item" href="../user/account-settings">Account Settings</a>
                                         </li>
                                         <!-- Li 1 end -->
                                         <li>
-                                            <a class="dropdown-item" href="./user/logout">Logout</a>
+                                            <a class="dropdown-item" href="../user/logout">Logout</a>
                                         </li>
                                         <!-- Li 3 end -->
                                     <?php
                                     } else { ?>
                                         <li>
-                                            <a class="dropdown-item" href="./user/login">Login</a>
+                                            <a class="dropdown-item" href="../user/login">Login</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="./user/sign-up">Sign-up</a>
+                                            <a class="dropdown-item" href="../user/sign-up">Sign-up</a>
                                         </li>
                                     <?php } ?>
                                 </ul>
