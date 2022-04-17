@@ -16,8 +16,7 @@ if (isset($_POST['submit-movie'])) {
     $category[] = $_POST['category'];
     $language = $_POST['language'];
     $trailer = $_POST['trailer'];
-    // $user = $_SESSION['id'];
-    $user = 1;
+    $user = $_SESSION['id_user'];
 
     $MovieUpdate = new MovieController();
     $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user);

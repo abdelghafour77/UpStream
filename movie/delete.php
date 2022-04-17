@@ -11,8 +11,7 @@ if (isset($_POST['submit-movie'])) {
 
   $id_movie = $_POST['title'];
 
-  // $user = $_SESSION['id'];
-  $user = 1;
+  $user = $_SESSION['id_user'];
 
   $MovieDelete = new MovieController();
   $res = $MovieDelete->deleteMovie($id_movie);
