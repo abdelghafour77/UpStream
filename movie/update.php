@@ -151,8 +151,7 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
-                    <select class=" form-control " required disabled>
-                        <option value disabled selected>-- Category --</option>
+                    <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required disabled>
                         <?php
                         foreach ($allCategory as $category) {
                             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
@@ -186,7 +185,12 @@ if (isset($_POST['submit-movie'])) {
 
     <script>
         $(document).ready(function() {
-            $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-multiple').select2({
+                placeholder: {
+                    id: '-1', // the value of the option
+                    text: 'Category'
+                }
+            });
         });
 
         $(document).ready(function() {

@@ -74,7 +74,12 @@ if (isset($_POST["id_movie"])) {
 
     <script>
         $(document).ready(function() {
-            $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-multiple').select2({
+                placeholder: {
+                    id: '-1', // the value of the option
+                    text: 'Category'
+                }
+            });
         });
     </script>
 <?php
