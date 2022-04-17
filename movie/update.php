@@ -5,12 +5,6 @@ require_once '../view/categoryView.php';
 require_once '../view/languageView.php';
 require_once '../view/movieView.php';
 
-$getLanguage = new LanguageView();
-$allLanguage = $getLanguage->getLanguage();
-
-$getCategory = new CategoryView();
-$allCategory = $getCategory->getCategory();
-
 $getAllMovie = new MovieView();
 $allMovieName = $getAllMovie->getMovieName();
 
@@ -88,7 +82,7 @@ if (isset($_POST['submit-movie'])) {
             <div>
                 <a href="../index" class="nav__link nav__logo">
                     <!-- <i class='bx bxs-disc nav__icon'></i> -->
-                    <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" />
+                    <i class='bx bxs-camera-movie nav__icon'></i> <!-- <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" /> -->
                     <span class="nav__logo-name">UpStream</span>
 
                     <!-- <span class="nav__logo-name">HASSAN II</span> -->
@@ -148,8 +142,8 @@ if (isset($_POST['submit-movie'])) {
                     ?>
                 </select>
                 <div id="movie">
-                    <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description"></textarea>
-                    <select id="date" name="date" class="form-control me-4 my-4" required>
+                    <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description" disabled></textarea>
+                    <select id="date" name="date" class="form-control me-4 my-4" required disabled>
                         <option value disabled selected>-- Date --</option>
                         <?php
                         for ($i = 2000; $i <= date('Y'); $i++) {
@@ -157,14 +151,15 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
-                    <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
+                    <select class=" form-control " required disabled>
+                        <option value disabled selected>-- Category --</option>
                         <?php
                         foreach ($allCategory as $category) {
                             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
                         }
                         ?>
                     </select>
-                    <select id="language" name="language" class="form-control me-4 my-4" required>
+                    <select id="language" name="language" class="form-control me-4 my-4" required disabled>
                         <option value disabled selected>-- Language --</option>
                         <?php
                         foreach ($allLanguage as $language) {
@@ -172,7 +167,7 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
-                    <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
+                    <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required disabled />
                 </div>
                 <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Update</button>
                 <br>

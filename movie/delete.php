@@ -72,7 +72,8 @@ if (isset($_POST['submit-movie'])) {
       <div>
         <a href="../index" class="nav__link nav__logo">
           <!-- <i class='bx bxs-disc nav__icon'></i> -->
-          <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" />
+          <i class='bx bx-camera-movie nav__icon'></i>
+          <!-- <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" /> -->
           <span class="nav__logo-name">UpStream</span>
 
           <!-- <span class="nav__logo-name">HASSAN II</span> -->

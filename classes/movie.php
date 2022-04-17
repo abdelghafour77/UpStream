@@ -79,6 +79,18 @@ class Movie extends Connection
 
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$description, $date, $language, $trailer, $user, $id_movie]);
+
+
+		$sql = "DELETE from contain where id_movie = ? ;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]); // or die(print_r($stmt->errorInfo() ));
+		foreach ($category as $cat1) {
+			foreach ($cat1 as $cat2) {
+				$sql = "INSERT INTO contain(id_movie,id_category)values(?,?)";
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->execute([$id_movie, $cat2]); // or die(print_r($stmt->errorInfo() ));
+			}
+		}
 		$_SESSION['message'] = 'modifier';
 
 		return 1;
