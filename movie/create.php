@@ -20,30 +20,65 @@ if (isset($_POST['submit-movie'])) {
   $trailer = $_POST['trailer'];
   // $user = $_SESSION['id'];
   $user = 1;
-  if ($_FILES['movie_file']['name'] != "") {
-    $fileName = $_FILES['movie_file']['name'];
-    $fileTmpName = $_FILES['movie_file']['tmp_name'];
-    $fileSize = $_FILES['movie_file']['size'];
-    $fileError = $_FILES['movie_file']['error'];
-    $fileType = $_FILES['movie_file']['type'];
+  if ($_FILES['cover']['name'] != "") {
+    $fileName = $_FILES['cover']['name'];
+    $fileTmpName = $_FILES['cover']['tmp_name'];
+    $fileSize = $_FILES['cover']['size'];
+    $fileError = $_FILES['cover']['error'];
+    $fileType = $_FILES['cover']['type'];
 
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
-    $allowed = array('MKV', 'mkv', 'mp4', 'MP4', 'h264', 'H264', 'AVI', 'avi', 'MOV', 'mov', 'M4V', 'm4v', 'AVC', 'avc');
+    $allowed = array('jpg', 'png', 'jpeg');
 
     if (in_array($fileActualExt, $allowed)) {
       if ($fileError === 0) {
-        if ($fileSize < 4572864000) {  // 4500MB
+        if ($fileSize < 4572864) {  // 4,5MB
           $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
           $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
-          $movie_file = "../uploads/movie/" . $fileNameNew;
-          move_uploaded_file($fileTmpName, $movie_file);
+          $cover = "../uploads/cover/" . $fileNameNew;
+          move_uploaded_file($fileTmpName, $cover);
 
-          $MovieAdd = new MovieController();
-          $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
-          if ($res == '1') {
-            header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
-            die;
+          if ($_FILES['movie_file']['name'] != "") {
+            $fileName = $_FILES['movie_file']['name'];
+            $fileTmpName = $_FILES['movie_file']['tmp_name'];
+            $fileSize = $_FILES['movie_file']['size'];
+            $fileError = $_FILES['movie_file']['error'];
+            $fileType = $_FILES['movie_file']['type'];
+
+            $fileExt = explode('.', $fileName);
+            $fileActualExt = strtolower(end($fileExt));
+            $allowed = array('MKV', 'mkv', 'mp4', 'MP4', 'h264', 'H264', 'AVI', 'avi', 'MOV', 'mov', 'M4V', 'm4v', 'AVC', 'avc');
+
+            if (in_array($fileActualExt, $allowed)) {
+              if ($fileError === 0) {
+                if ($fileSize < 4572864000) {  // 4500MB
+                  $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
+                  $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
+                  $movie_file = "../uploads/movie/" . $fileNameNew;
+                  move_uploaded_file($fileTmpName, $movie_file);
+
+                  $MovieAdd = new MovieController();
+                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $cover, $user);
+                  if ($res == '1') {
+                    header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                    die;
+                  }
+                } else {
+                  $_SESSION['message'] = "Le fichier est trop grand";
+                  header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                  die;
+                }
+              } else {
+                $_SESSION['message'] = "Erreur de téléchargement de fichier";
+                header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+                die;
+              }
+            } else {
+              $_SESSION['message'] = "Erreur";
+              header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
+              die;
+            }
           }
         } else {
           $_SESSION['message'] = "Le fichier est trop grand";
@@ -191,8 +226,12 @@ if (isset($_POST['submit-movie'])) {
         </select>
         <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
         <div class="input-group me-4 my-4">
+          <input type="file" class="form-control" id="inputGroupFile02" name="cover" accept=" image/png, image/jpg, image/jpeg" require>
+          <label class=" input-group-text" for="inputGroupFile02">Cover</label>
+        </div>
+        <div class="input-group me-4 my-4">
           <input type="file" class="form-control" id="inputGroupFile02" name="movie_file" accept="video/mp4,video/x-m4v,video/*" require>
-          <label class="input-group-text" for="inputGroupFile02">.mp4</label>
+          <label class="input-group-text" for="inputGroupFile02">Movie file</label>
         </div>
 
         <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Add</button>

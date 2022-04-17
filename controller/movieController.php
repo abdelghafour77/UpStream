@@ -4,9 +4,9 @@ include_once('../classes/movie.php');
 class MovieController extends Movie
 {
 
-    public function addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $user)
+    public function addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $cover, $user)
     {
-        return $this->addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $user);
+        return $this->addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $cover, $user);
     }
     public function updateMovie($id_movie, $description, $date, $category, $language, $trailer, $user)
     {

@@ -3,12 +3,12 @@
 include_once('cnx.php');
 class Movie extends Connection
 {
-	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $user)
+	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $trailer, $cover, $user)
 	{
 		// insert into movie table
-		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,id_user)values(?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,cover,id_user)values(?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $user]); // or die(print_r($stmt->errorInfo() ));
+		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $cover, $user]); // or die(print_r($stmt->errorInfo() ));
 		// insert into categorie
 		$sql = "SELECT id_movie FROM movie WHERE title = ? and movie_file =?";
 		$stmt = $this->connect()->prepare($sql);
