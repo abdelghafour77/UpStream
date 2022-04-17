@@ -24,7 +24,7 @@
             <div class="col-lg-9 pl-0">
                 <!-- Start Navigation -->
                 <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="./index"><img alt="" class="img-fluid" src="../img/header-logo.png" /></a>
+                    <a class="navbar-brand" href="../index"><img alt="" class="img-fluid" src="../img/header-logo.png" /></a>
                     <!-- Logo End -->
                     <div class="site-nav-inner float-left">
                         <button aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
