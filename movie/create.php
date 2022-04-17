@@ -57,9 +57,14 @@ if (isset($_POST['submit-movie'])) {
                   $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
                   $movie_file = "../uploads/movie/" . $fileNameNew;
                   move_uploaded_file($fileTmpName, $movie_file);
+                  include_once('../getid3/getid3.php');
+                  $getID3 = new getID3;
+                  $duration = $getID3->analyze($movie_file);
+
+                  $duration = floatval($duration['playtime_seconds']);
 
                   $MovieAdd = new MovieController();
-                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $trailer, $cover, $user);
+                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user);
                   if ($res == '1') {
                     header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
                     die;
