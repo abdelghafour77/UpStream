@@ -4,10 +4,9 @@ require_once('cnx.php');
 
 class User extends Connection
 {
-	protected function addUserDB($name, $email, $password)
+	protected function addUserDB($username, $email, $picture, $password)
 	{
-
-		$sql = "SELECT name FROM user WHERE email = ? ";
+		$sql = "SELECT username FROM user WHERE email = ? ";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$email]);
 		$result = $stmt->fetch();
@@ -15,48 +14,46 @@ class User extends Connection
 			$_SESSION['message'] = " Email deja ajouter  ";
 			return 2;
 		}
-		$sql = "INSERT INTO user (name,email,password)values(?,?,?)";
+		$sql = "INSERT INTO user (username,email,picture,password)values(?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$name, $email, $password]);
+		$stmt->execute([$username, $email, $picture, $password]);
 		$_SESSION['message'] = 'ajouter';
 
 		return 1;
 	}
 
-	protected function addUserDB2($name, $email, $password)
-	{
-		$sql = "SELECT name FROM user WHERE email = ? ";
-		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$email]);
-		$result = $stmt->fetch();
-		if (isset($result["name"])) {
-			$_SESSION['message'] = " Email deja ajouter  ";
-			return 2;
-		}
-		$sql = "INSERT INTO user (name,email,password)values(?,?,?)";
-		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$name, $email, $password]);
-		$_SESSION['message'] = 'ajouter';
+	// protected function addUserDB2($name, $email, $password)
+	// {
+	// 	$sql = "SELECT name FROM user WHERE email = ? ";
+	// 	$stmt = $this->connect()->prepare($sql);
+	// 	$stmt->execute([$email]);
+	// 	$result = $stmt->fetch();
+	// 	if (isset($result["name"])) {
+	// 		$_SESSION['message'] = " Email deja ajouter  ";
+	// 		return 2;
+	// 	}
+	// 	$sql = "INSERT INTO user (name,email,password)values(?,?,?)";
+	// 	$stmt = $this->connect()->prepare($sql);
+	// 	$stmt->execute([$name, $email, $password]);
+	// 	$_SESSION['message'] = 'ajouter';
 
-		return 1;
-	}
-	protected function getUserDB($email, $password)
+	// 	return 1;
+	// }
+	protected function getUserDB($email)
 	{
 		$sql = "SELECT *  FROM user WHERE email = ? ";
 
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$email]);
-		$result = $stmt->fetch();
-		if (!isset($result["password"])) {
+		$res = $stmt->fetch();
+
+		if (!isset($res["password"])) {
 			$_SESSION['message'] = "Email incorrect";
 			return 1;
 		}
-		$res = password_verify($password, $result["password"]);
-		if ($res) {
-			return "";
-		}
-		$_SESSION['message'] = 'Mot de passe incorrect';
-		return 1;
+		$_SESSION['message'] = "Email correct";
+		// die(var_dump($res));
+		return $res;
 	}
 	protected function getUserDB2($email)
 	{
@@ -69,16 +66,16 @@ class User extends Connection
 
 		return $res;
 	}
-	protected function UpdateUserDB($id, $name, $email, $password)
+	protected function UpdateUserDB($id_user, $name, $email, $password)
 	{
 		$sql = "UPDATE user SET 
-		name = ? ,
+		username = ? ,
 		email = ?, 
-		password = ?,
-		WHERE id = ? ; ";
+		password = ?
+		WHERE id_user = ? ; ";
 
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$name, $email, $password, $id]);
+		$stmt->execute([$name, $email, $password, $id_user]);
 		$_SESSION['message'] = 'modifier';
 
 		return 1;

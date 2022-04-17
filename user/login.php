@@ -1,10 +1,45 @@
+<?php
+session_start();
+
+// require_once('../controller/userController.php');
+require_once('../view/userView.php');
+
+
+if (isset($_SESSION['id_user'])) {
+  header('Location: ../');
+}
+
+if (isset($_POST['check'])) {
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  $userCheck = new UserView();
+  $res = $userCheck->getUser($email);
+  if ($res == 1) {
+    header('Location:' . $_SERVER['PHP_SELF']);
+  } else {
+    if (password_verify($password, $res['password']) == 1) {
+      $_SESSION['id_user'] = $res['id_user'];
+      $_SESSION['username'] = $res['username'];
+      $_SESSION['email'] = $res['email'];
+      $_SESSION['picture'] = $res['picture'];
+      $_SESSION['password'] = $res['password'];
+      $_SESSION['admin'] = $res['admin'];
+      $_SESSION['super'] = $res['super'];
+      header('Location: ../');
+    }
+  }
+}
+// print_r($_POST);
+// print_r($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Login</title>
   <?php
-  require_once 'include/head.php';
+  require_once '../include/head.php';
   ?>
 </head>
 
@@ -18,7 +53,7 @@
   <!-- Preloader End -->
   <div class="main" id="main">
     <?php
-    require_once 'include/header.php';
+    require_once '../include/header.php';
     ?>
     <!-- Start Main Content -->
     <div class="main-content">
@@ -36,33 +71,33 @@
           <div class="row">
             <div class="col-lg-6">
               <!-- Start Form -->
-              <form id="login-form" action="login" method="post" class="mb-4">
+              <form id="login-form" action="" method="post" class="mb-4">
                 <div class="error-container"></div>
                 <div class="form-group">
-                  <label class="control-label col-xs-4">Username</label>
-                  <input type="text" class="form-control" name="username" required="required" />
+                  <label class="control-label col-xs-4">Email</label>
+                  <input type="email" class="form-control" name="email" required="required" />
                 </div>
                 <div class="form-group">
                   <label class="control-label col-xs-4">Password</label>
                   <input type="password" class="form-control" name="password" required="required" />
                 </div>
                 <div class="form-group">
-                  <label class="checkbox-inline mb-3"><input type="checkbox" required="required" /> Save Password</label>
-                  <button type="submit" class="btn btn-block hvr-sweep-to-right btn-primary btn-lg">Login</button>
+                  <label class="checkbox-inline mb-3"><input type="checkbox" /> Save Password</label>
+                  <button type="submit" name="check" class="btn btn-block hvr-sweep-to-right btn-primary btn-lg">Login</button>
                 </div>
                 <a href="reset-password">Lost your Password?</a>
               </form>
               <!-- Form End -->
-              <div class="row d-flex align-items-center mb-4">
+              <!-- <div class="row d-flex align-items-center mb-4">
                 <div class="col-md-6">
                   <a href="watching" class="btn facebook-color d-block hvr-sweep-to-right mb-3" tabindex="0"><i class="icofont-facebook mr-2" aria-hidden="true"></i>Facebook</a>
-                </div>
-                <!-- Col End -->
-                <div class="col-md-6">
+                </div> -->
+              <!-- Col End -->
+              <!-- <div class="col-md-6">
                   <a href="watching" class="btn twitter-color d-block hvr-sweep-to-right mb-3" tabindex="0"><i class="icofont-twitter mr-2" aria-hidden="true"></i>Twitter</a>
-                </div>
-                <!-- Col End -->
-              </div>
+                </div> -->
+              <!-- Col End -->
+              <!-- </div> -->
               <!-- Row End -->
               <p class="text-center">Don't have an account? <a href="sign-up">Sign up here!</a></p>
             </div>
@@ -80,7 +115,7 @@
     </div>
     <!-- Main Content End -->
     <?php
-    require_once 'include/footer.php';
+    require_once '../include/footer.php';
     ?>
   </div>
   <!-- Main Class End -->
@@ -101,7 +136,7 @@
   </div>
   <!-- End Search Modal -->
   <?php
-  require_once 'include/js.php';
+  require_once '../include/js.php';
   ?>
 </body>
 

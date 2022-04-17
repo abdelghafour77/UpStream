@@ -4,6 +4,7 @@
 <head>
   <title>UpStream</title>
   <?php
+  session_start();
   require_once 'include/head.php';
   ?>
 </head>

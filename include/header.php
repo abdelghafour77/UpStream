@@ -46,7 +46,7 @@
                                 </li>
                                 <!-- Nav Item 3 End -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">Pages <i class="fa fa-angle-down"></i></a>
+                                    <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">More <i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown-menu fade-up" role="menu">
                                         <li>
                                             <a class="dropdown-item" href="./about">About Us</a>
@@ -60,13 +60,13 @@
                                             <a class="dropdown-item" href="./404">404</a>
                                         </li>
                                         <!-- Sub Nav Item 3 End -->
-                                        <li>
+                                        <!-- <li>
                                             <a class="dropdown-item" href="./login">Login</a>
-                                        </li>
+                                        </li> -->
                                         <!-- Sub Nav Item 4 End -->
-                                        <li>
+                                        <!-- <li>
                                             <a class="dropdown-item" href="./sign-up">Signup</a>
-                                        </li>
+                                        </li> -->
                                         <!-- Sub Nav Item 5 End -->
                                     </ul>
                                     <!-- Dropdown End -->
@@ -161,21 +161,32 @@
                         <div class="nav-account ml-2">
                             <div class="dropdown">
                                 <div aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="dropdown-account" role="button">
-                                    <img alt="" class="img-fluid user-icon rounded-circle" src="./img/user.jpg" />
+                                    <?php if (!isset($_SESSION['picture']) || $_SESSION['picture'] == '') { ?>
+                                        <img alt="" class="img-fluid user-icon rounded-circle" src="./img/user.jpg" />
+                                    <?php } else { ?>
+                                        <img alt="" class="img-fluid user-icon rounded-circle" src="./uploads/users/<?php echo $_SESSION['picture']; ?>" />
+                                    <?php  } ?>
                                 </div>
                                 <ul class="dropdown-menu dropdown-menu-right fade-up">
-                                    <li>
-                                        <a class="dropdown-item" href="./account-settings">Account Settings</a>
-                                    </li>
-                                    <!-- Li 1 end -->
-                                    <li>
-                                        <a class="dropdown-item" href="./pricing-plan">pricing plans</a>
-                                    </li>
-                                    <!-- Li 2 end -->
-                                    <li>
-                                        <a class="dropdown-item" href="./#">Logout</a>
-                                    </li>
-                                    <!-- Li 3 end -->
+                                    <?php if (isset($_SESSION['id_user'])) {
+                                    ?>
+                                        <li>
+                                            <a class="dropdown-item" href="./user/account-settings">Account Settings</a>
+                                        </li>
+                                        <!-- Li 1 end -->
+                                        <li>
+                                            <a class="dropdown-item" href="./user/logout">Logout</a>
+                                        </li>
+                                        <!-- Li 3 end -->
+                                    <?php
+                                    } else { ?>
+                                        <li>
+                                            <a class="dropdown-item" href="./user/login">Login</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./user/sign-up">Sign-up</a>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                                 <!-- Account List End -->
                             </div>
