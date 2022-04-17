@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 16 avr. 2022 à 21:27
+-- Généré le : dim. 17 avr. 2022 à 16:42
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -130,13 +130,15 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `title` varchar(254) NOT NULL,
   `date` int NOT NULL,
   `description` text NOT NULL,
-  `language` varchar(200) NOT NULL,
+  `language` int NOT NULL,
   `link_trailer` text NOT NULL,
   `movie_file` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `cover` text NOT NULL,
   `id_user` int NOT NULL,
   PRIMARY KEY (`id_movie`),
-  KEY `id_user` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `id_user` (`id_user`),
+  KEY `language` (`language`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -147,13 +149,14 @@ CREATE TABLE IF NOT EXISTS `movie` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id_user` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(60) NOT NULL,
+  `username` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(120) NOT NULL,
   `password` varchar(120) NOT NULL,
+  `picture` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `admin` tinyint(1) DEFAULT NULL,
   `super` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Contraintes pour les tables déchargées
@@ -177,7 +180,8 @@ ALTER TABLE `contain`
 -- Contraintes pour la table `movie`
 --
 ALTER TABLE `movie`
-  ADD CONSTRAINT `movie_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `movie_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `movie_ibfk_2` FOREIGN KEY (`language`) REFERENCES `language` (`id_language`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
