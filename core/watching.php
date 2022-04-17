@@ -37,10 +37,10 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="play-thumb mb-4">
-                    <img class="img-fluid" src="./img/01.jpg" alt="" />
+                    <img class="img-fluid" src="../img/01.jpg" alt="" />
                     <div class="top-badge">
                       <div class="video-badge">
-                        <img class="img-fluid" src="./img/top-movies.png" alt="" />
+                        <img class="img-fluid" src="../img/top-movies.png" alt="" />
                       </div>
                     </div>
                   </div>
@@ -48,7 +48,7 @@
                   <div class="thumb-details text-center">
                     <span> 1080p</span>
                     <span>24p</span>
-                    <span><img class="img-fluid" src="./img/dts-logo.png" alt="" /></span>
+                    <span><img class="img-fluid" src="../img/dts-logo.png" alt="" /></span>
                     <span>7.1</span>
                   </div>
                   <!-- Thumb Details End -->
@@ -204,7 +204,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/01(1).jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
@@ -237,7 +237,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/02.jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/02.jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
@@ -270,7 +270,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/03.jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/03.jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
@@ -303,7 +303,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/04.jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/04.jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
@@ -336,7 +336,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/05.jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/05.jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
@@ -369,7 +369,7 @@
             <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
               <div class="video-block">
                 <div class="video-thumb position-relative thumb-overlay">
-                  <a href="watching"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
+                  <a href="watching"><img class="img-fluid" src="../img/06.jpg" alt="" /></a>
                   <div class="box-content">
                     <ul class="icon">
                       <li>
