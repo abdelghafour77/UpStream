@@ -1,8 +1,12 @@
 <?php
 session_start();
 require_once('../controller/movieController.php');
+require_once '../view/actorView.php';
 require_once '../view/categoryView.php';
 require_once '../view/languageView.php';
+
+$getActor = new ActorView();
+$allActor = $getActor->getActor();
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -215,7 +219,7 @@ if (isset($_POST['submit-movie'])) {
           }
           ?>
         </select>
-        <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
+        <select class="form-control category me-4 my-4" name="category[]" multiple="multiple" required>
           <?php
           foreach ($allCategory as $category) {
             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
@@ -227,6 +231,13 @@ if (isset($_POST['submit-movie'])) {
           <?php
           foreach ($allLanguage as $language) {
             echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
+          }
+          ?>
+        </select>
+        <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required>
+          <?php
+          foreach ($allActor as $actor) {
+            echo '<option value="' . $actor['id_actor'] . '">' . $actor['first_name'] . ' ' . $actor['last_name'] . '</option>';
           }
           ?>
         </select>
@@ -257,7 +268,18 @@ if (isset($_POST['submit-movie'])) {
 
   <script>
     $(document).ready(function() {
-      $('.js-example-basic-multiple').select2();
+      $('.category').select2({
+        placeholder: {
+          id: '-1', // the value of the option
+          text: 'Category'
+        }
+      });
+      $('.actor').select2({
+        placeholder: {
+          id: '-1', // the value of the option
+          text: 'Actor'
+        }
+      });
     });
   </script>
 </body>
