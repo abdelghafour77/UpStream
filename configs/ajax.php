@@ -2,10 +2,14 @@
 require_once('../controller/movieController.php');
 require_once('../view/movieView.php');
 require_once '../view/categoryView.php';
+require_once '../view/actorView.php';
 require_once '../view/languageView.php';
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
+
+$getActor = new ActorView();
+$allActor = $getActor->getActor();
 
 $getLanguage = new LanguageView();
 $allLanguage = $getLanguage->getLanguage();
@@ -34,7 +38,7 @@ if (isset($_POST["id_movie"])) {
             }
             ?>
         </select>
-        <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required>
+        <select class="form-control category me-4 my-4" name="category[]" multiple="multiple" required>
             <?php
             foreach ($allCategory as $category) {
                 $v = "";
@@ -45,14 +49,6 @@ if (isset($_POST["id_movie"])) {
                     }
                 }
                 echo '<option value="' . $category['id_category'] . '" ' . $v . '>' . $category['name'] . '</option>';
-
-                // for ($i = 1; $i < count($output); $i++) {
-                //     if ($output[$i]['name'] == $category['name']) {
-                //         echo '<option value="' . $category['id_category'] . '" selected>' . $category['name'] . '</option>';
-                //     } else {
-                //         echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
-                //     }
-                // }
             }
             ?>
         </select>
@@ -68,16 +64,36 @@ if (isset($_POST["id_movie"])) {
             }
             ?>
         </select>
+        <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required>
+            <?php
+            foreach ($allActor as $actor) {
+                $v = "";
+                for ($i = 1; $i < count($output); $i++) {
+
+                    if ($output[$i]['first_name'] == $actor['first_name']) {
+                        $v = "selected";
+                    }
+                }
+                echo '<option value="' . $actor['id_actor'] . '" ' . $v . '>' . $actor['first_name'] . '</option>';
+            }
+            ?>
+        </select>
         <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" value="<?php echo $output[0]['link_trailer']; ?>" required />
 
     </div>
 
     <script>
         $(document).ready(function() {
-            $('.js-example-basic-multiple').select2({
+            $('.category').select2({
                 placeholder: {
                     id: '-1', // the value of the option
                     text: 'Category'
+                }
+            });
+            $('.actor').select2({
+                placeholder: {
+                    id: '-1', // the value of the option
+                    text: 'Actor'
                 }
             });
         });

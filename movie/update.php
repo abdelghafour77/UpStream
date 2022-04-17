@@ -2,6 +2,7 @@
 session_start();
 require_once('../controller/movieController.php');
 require_once '../view/categoryView.php';
+require_once '../view/actorView.php';
 require_once '../view/languageView.php';
 require_once '../view/movieView.php';
 
@@ -14,12 +15,13 @@ if (isset($_POST['submit-movie'])) {
     $description = $_POST['description'];
     $date = $_POST['date'];
     $category[] = $_POST['category'];
+    $actor[] = $_POST['actor'];
     $language = $_POST['language'];
     $trailer = $_POST['trailer'];
     $user = $_SESSION['id_user'];
 
     $MovieUpdate = new MovieController();
-    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user);
+    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user, $actor);
     if ($res == '1') {
         header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
         die;
@@ -143,7 +145,7 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
-                    <select class=" form-control js-example-basic-multiple" name="category[]" multiple="multiple" required disabled>
+                    <select class="form-control category me-4 my-4" name="category[]" multiple="multiple" required disabled>
                         <?php
                         foreach ($allCategory as $category) {
                             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
@@ -155,6 +157,13 @@ if (isset($_POST['submit-movie'])) {
                         <?php
                         foreach ($allLanguage as $language) {
                             echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                    <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required disabled>
+                        <?php
+                        foreach ($allActor as $actor) {
+                            echo '<option value="' . $actor['id_actor'] . '">' . $actor['first_name'] . ' ' . $actor['last_name'] . '</option>';
                         }
                         ?>
                     </select>
@@ -177,10 +186,16 @@ if (isset($_POST['submit-movie'])) {
 
     <script>
         $(document).ready(function() {
-            $('.js-example-basic-multiple').select2({
+            $('.category').select2({
                 placeholder: {
                     id: '-1', // the value of the option
                     text: 'Category'
+                }
+            });
+            $('.actor').select2({
+                placeholder: {
+                    id: '-1', // the value of the option
+                    text: 'Actor'
                 }
             });
         });

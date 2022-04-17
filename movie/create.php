@@ -20,6 +20,7 @@ if (isset($_POST['submit-movie'])) {
   $description = $_POST['description'];
   $date = $_POST['date'];
   $category[] = $_POST['category'];
+  $actor[] = $_POST['actor'];
   $language = $_POST['language'];
   $trailer = $_POST['trailer'];
   $user = $_SESSION['id_user'];
@@ -68,7 +69,7 @@ if (isset($_POST['submit-movie'])) {
                   $duration = floatval($duration['playtime_seconds']);
 
                   $MovieAdd = new MovieController();
-                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user);
+                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor);
                   if ($res == '1') {
                     header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
                     die;

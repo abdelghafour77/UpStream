@@ -3,7 +3,7 @@
 include_once('cnx.php');
 class Movie extends Connection
 {
-	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user)
+	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor)
 	{
 		// insert into movie table
 		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,duration,cover,id_user)values(?,?,?,?,?,?,?,?,?)";
@@ -20,6 +20,13 @@ class Movie extends Connection
 				$sql = "INSERT INTO contain(id_movie,id_category)values(?,?)";
 				$stmt = $this->connect()->prepare($sql);
 				$stmt->execute([$result["id_movie"], $cat2]); // or die(print_r($stmt->errorInfo() ));
+			}
+		}
+		foreach ($actor as $acat1) {
+			foreach ($acat1 as $acat2) {
+				$sql = "INSERT INTO acting(id_movie,id_actor)values(?,?)";
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->execute([$result["id_movie"], $acat2]); // or die(print_r($stmt->errorInfo() ));
 			}
 		}
 
@@ -59,7 +66,21 @@ class Movie extends Connection
 		$stmt->execute([$id_movie]);
 		$result2 = $stmt->fetchAll();
 
-		$result = array_merge($result1, $result2);
+		$sql = "SELECT
+		act.id_actor ,
+		act.first_name,
+		act.last_name 
+	FROM
+		acting ac ,actor act
+	WHERE
+		ac.id_actor =act.id_actor
+		and
+		ac.id_movie = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result3 = $stmt->fetchAll();
+
+		$result = array_merge($result1, $result2, $result3);
 		return $result;
 	}
 	protected function getMovieNameDB()
@@ -72,7 +93,7 @@ class Movie extends Connection
 
 		return $result;
 	}
-	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user)
+	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor)
 	{
 
 		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?   WHERE id_movie = ? ; ";
@@ -89,6 +110,17 @@ class Movie extends Connection
 				$sql = "INSERT INTO contain(id_movie,id_category)values(?,?)";
 				$stmt = $this->connect()->prepare($sql);
 				$stmt->execute([$id_movie, $cat2]); // or die(print_r($stmt->errorInfo() ));
+			}
+		}
+
+		$sql = "DELETE from acting where id_movie = ? ;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]); // or die(print_r($stmt->errorInfo() ));
+		foreach ($actor as $acat1) {
+			foreach ($acat1 as $acat2) {
+				$sql = "INSERT INTO acting(id_movie,id_actor)values(?,?)";
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->execute([$id_movie, $acat2]); // or die(print_r($stmt->errorInfo() ));
 			}
 		}
 		$_SESSION['message'] = 'modifier';
