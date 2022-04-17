@@ -8,11 +8,6 @@ require_once '../view/movieView.php';
 $getAllMovie = new MovieView();
 $allMovieName = $getAllMovie->getMovieName();
 
-// $getMovie = new MovieView();
-// $resultMovie = $getMovie->getMovie(6);
-// die(var_dump($resultMovie));
-
-
 if (isset($_POST['submit-movie'])) {
 
     $title = $_POST['title'];
@@ -84,8 +79,6 @@ if (isset($_POST['submit-movie'])) {
                     <!-- <i class='bx bxs-disc nav__icon'></i> -->
                     <i class='bx bxs-camera-movie nav__icon'></i> <!-- <img src="../img/mini-logo.png" class="nav__icon" alt="UpStream" width="20" height="20" /> -->
                     <span class="nav__logo-name">UpStream</span>
-
-                    <!-- <span class="nav__logo-name">HASSAN II</span> -->
                 </a>
 
                 <div class="nav__list">
