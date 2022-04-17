@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 17 avr. 2022 à 16:42
+-- Généré le : dim. 17 avr. 2022 à 20:26
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -133,12 +133,13 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `language` int NOT NULL,
   `link_trailer` text NOT NULL,
   `movie_file` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `duration` float NOT NULL,
   `cover` text NOT NULL,
   `id_user` int NOT NULL,
   PRIMARY KEY (`id_movie`),
   KEY `id_user` (`id_user`),
   KEY `language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
