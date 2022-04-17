@@ -85,6 +85,18 @@ class Movie extends Connection
 	}
 	protected function deleteMovieDB($id_movie)
 	{
+		$sql = "SELECT * FROM movie WHERE id_movie = ? ; ";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result = $stmt->fetch();
+		if ($result['cover'] != '') {
+			$link = "../uploads/cover/" . $result['cover'];
+			unlink($link);
+		}
+		if ($result['movie_file'] != '') {
+			$link = "../uploads/movie/" . $result['movie_file'];
+			unlink($link);
+		}
 		$sql = "DELETE from movie WHERE id_movie = ? ; ";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$id_movie]);
