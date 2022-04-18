@@ -136,7 +136,7 @@
     <div class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-md-6">
-                <p>© Copyright 2021, All Rights Reserved</p>
+                <p>© Copyright 2022, All Rights Reserved</p>
             </div>
             <!-- Col End -->
             <div class="col-md-6">
