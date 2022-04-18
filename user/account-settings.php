@@ -73,7 +73,11 @@ if (isset($_POST['update'])) {
                         <div class="col-md-2">
                           <div class="form-group">
                             <div class="settings-avatar">
-                              <img src="../uploads/users/<?php echo $_SESSION['picture']; ?>" class="img-fluid d-block mx-auto mb-3" alt="User avatar" />
+                              <img src="../uploads/users/<?php if (isset($_SESSION['picture'])) {
+                                                            echo $_SESSION['picture'];
+                                                          } else {
+                                                            echo "user.jpg";
+                                                          }; ?>" class="img-fluid d-block mx-auto mb-3" alt="User avatar" />
                               <div class="change-avatar"><a href="account-settings">Edit</a></div>
                             </div>
                           </div>
