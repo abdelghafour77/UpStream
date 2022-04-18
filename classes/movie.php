@@ -3,12 +3,12 @@
 include_once('cnx.php');
 class Movie extends Connection
 {
-	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor)
+	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director)
 	{
 		// insert into movie table
-		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,duration,cover,id_user)values(?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,duration,cover,id_user,director)values(?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $duration, $cover, $user]); // or die(print_r($stmt->errorInfo() ));
+		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $duration, $cover, $user, $director]); // or die(print_r($stmt->errorInfo() ));
 		// insert into categorie
 		$sql = "SELECT id_movie FROM movie WHERE title = ? and movie_file =?";
 		$stmt = $this->connect()->prepare($sql);
@@ -43,6 +43,7 @@ class Movie extends Connection
 			language,
 			link_trailer,
 			movie_file,
+			director,
 			id_user
 		FROM 
 			movie 
@@ -93,13 +94,13 @@ class Movie extends Connection
 
 		return $result;
 	}
-	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor)
+	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor, $director)
 	{
 
-		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?   WHERE id_movie = ? ; ";
+		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?  ,director=? WHERE id_movie = ? ; ";
 
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$description, $date, $language, $trailer, $user, $id_movie]);
+		$stmt->execute([$description, $date, $language, $trailer, $user, $director, $id_movie]);
 
 
 		$sql = "DELETE from contain where id_movie = ? ;";
@@ -148,14 +149,59 @@ class Movie extends Connection
 
 		return 1;
 	}
-	// protected function addCoursDB1($titre, $module, $description, $auteur)
-	// {
-	// 	$sql = "INSERT INTO cours(titre,id_module,description,id_auteur)values(?,?,?,?)";
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$titre, $module, $description, $auteur]); // or die(print_r($stmt->errorInfo() ));
-	// 	$_SESSION['message'] = 'ajouter';
-	// 	return 1;
-	// }
+	protected function getInfoMovieDB($id_movie)
+	{
+		$sql = "SELECT 
+			title,
+			description,
+			date,
+			language,
+			link_trailer,
+			movie_file,
+			cover,
+			duration,
+			duration,
+			director,
+			id_user
+		FROM 
+			movie 
+		where
+			id_movie = ?";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result1 = $stmt->fetchAll();
+
+		$sql = "SELECT
+			ca.id_category ,
+			ca.name 
+		FROM
+			contain co ,category ca 
+		WHERE
+			co.id_category =ca.id_category
+			and
+			co.id_movie = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result2 = $stmt->fetchAll();
+
+		$sql = "SELECT
+		act.id_actor ,
+		act.first_name,
+		act.last_name 
+	FROM
+		acting ac ,actor act
+	WHERE
+		ac.id_actor =act.id_actor
+		and
+		ac.id_movie = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie]);
+		$result3 = $stmt->fetchAll();
+
+		$result = array_merge($result1, $result2, $result3);
+		return $result;
+	}
 
 
 

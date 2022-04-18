@@ -64,6 +64,7 @@ if (isset($_POST["id_movie"])) {
             }
             ?>
         </select>
+        <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" value="<?php echo $output[0]['director']; ?>" required />
         <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required>
             <?php
             foreach ($allActor as $actor) {

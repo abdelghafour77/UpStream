@@ -18,10 +18,11 @@ if (isset($_POST['submit-movie'])) {
     $actor[] = $_POST['actor'];
     $language = $_POST['language'];
     $trailer = $_POST['trailer'];
+    $director = $_POST['director'];
     $user = $_SESSION['id_user'];
 
     $MovieUpdate = new MovieController();
-    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user, $actor);
+    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user, $actor, $director);
     if ($res == '1') {
         header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
         die;
@@ -160,6 +161,7 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
+                    <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required />
                     <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required disabled>
                         <?php
                         foreach ($allActor as $actor) {

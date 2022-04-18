@@ -21,6 +21,7 @@ if (isset($_POST['submit-movie'])) {
   $date = $_POST['date'];
   $category[] = $_POST['category'];
   $actor[] = $_POST['actor'];
+  $director = $_POST['director'];
   $language = $_POST['language'];
   $trailer = $_POST['trailer'];
   $user = $_SESSION['id_user'];
@@ -69,7 +70,7 @@ if (isset($_POST['submit-movie'])) {
                   $duration = floatval($duration['playtime_seconds']);
 
                   $MovieAdd = new MovieController();
-                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor);
+                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
                   if ($res == '1') {
                     header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
                     die;
@@ -235,6 +236,7 @@ if (isset($_POST['submit-movie'])) {
           }
           ?>
         </select>
+        <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required />
         <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required>
           <?php
           foreach ($allActor as $actor) {
