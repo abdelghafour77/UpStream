@@ -105,7 +105,7 @@ if (isset($_POST['sign-up'])) {
           <div class="row text-center intro">
             <div class="col-12">
               <h2>Create an Account</h2>
-              <p class="text-max-800">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p class="text-max-800">Create your account to keep track of all your streams.</p>
             </div>
             <!-- Col End -->
           </div>

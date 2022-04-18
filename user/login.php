@@ -63,7 +63,7 @@ if (isset($_POST['check'])) {
           <div class="row text-center intro">
             <div class="col-12">
               <h2>Welcome Back !</h2>
-              <p class="text-max-800">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p class="text-max-800">Login to fully enjoy your streaming experience.</p>
             </div>
             <!-- Col End -->
           </div>
