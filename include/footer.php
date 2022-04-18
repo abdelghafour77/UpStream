@@ -9,7 +9,7 @@
                             <img alt="" class="img-fluid" src="../img/footer-logo.png" />
                         </div>
                         <div class="footer-about-text">
-                            <p class="text-muted">Here , write the complete address of the Registered office address along with telephone number.</p>
+                            <p class="text-muted">Your new favorite streaming site with the most relevent and frequent services.</p>
                         </div>
                         <div class="footer-social-icons">
                             <ul class="list-inline">
