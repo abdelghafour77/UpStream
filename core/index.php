@@ -408,13 +408,13 @@ $someMovie = $getMovie->getSomeMovie();
                         <div class="box-content">
                           <ul class="icon">
                             <li>
-                              <a href="watching"><i class="fas fa-play"></i></a>
+                              <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                             </li>
-                            <li>
+                            <!-- <li>
                               <a href="./#"><i class="fas fa-plus"></i></a>
-                            </li>
+                            </li> -->
                             <li>
-                              <a href="single"><i class="fas fa-info"></i></a>
+                              <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                             </li>
                           </ul>
                         </div>
@@ -430,7 +430,7 @@ $someMovie = $getMovie->getSomeMovie();
                           <?php
                           $hours = floor($movie['duration'] / 3600);
                           $minutes = floor(($movie['duration'] / 60) % 60);
-                          $duration = "$hours hr $minutes min";
+                          $duration = $hours . "h" . $minutes . "mi";
                           ?>
                           <span class="video-type"><?php echo $duration; ?></span>
                         </div>
