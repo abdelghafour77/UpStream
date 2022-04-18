@@ -79,7 +79,7 @@ if (isset($_POST['sign-up'])) {
 <html lang="en">
 
 <head>
-  <title>Ava Stream - Movies &amp; Tv Shows Bootstrap 4 Template</title>
+  <title>Sign-up</title>
   <?php
   require_once '../include/head.php';
   ?>
