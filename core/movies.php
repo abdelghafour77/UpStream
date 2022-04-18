@@ -1,3 +1,28 @@
+<?php
+session_start();
+require_once '../view/movieView.php';
+require_once '../view/categoryView.php';
+require_once '../view/actorView.php';
+require_once '../view/languageView.php';
+
+$getCategory = new CategoryView();
+$allCategory = $getCategory->getCategory();
+
+$getActor = new ActorView();
+$allActor = $getActor->getActor();
+
+$getLanguage = new LanguageView();
+$allLanguage = $getLanguage->getLanguage();
+
+$getMovie = new MovieView();
+$sixMovie = $getMovie->getSixMovie();
+
+$getMovie = new MovieView();
+$someMovie = $getMovie->getSomeMovie();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -288,611 +313,62 @@
             <div class="col-lg-12">
               <h2 class="block-title">Recently Added</h2>
               <!-- Start Pupular Slider -->
-              <div id="pupular-slider" class="owl-carousel owl-theme owl-loaded owl-drag">
-                <!-- Item 1 End -->
+              <div class="tab-content" id="pills-tabContent">
+                <div id="pills-additions" class="tab-pane animated fadeInRight show active">
+                  <div class="row">
+                    <?php
+                    foreach ($sixMovie as $movie) {
+                    ?>
+                      <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <div class="video-block">
+                          <div class="video-thumb position-relative thumb-overlay">
+                            <a href="watching"><img class="img-fluid" src="<?php echo $movie['cover']; ?>" alt="" /></a>
+                            <div class="box-content">
+                              <ul class="icon">
+                                <li>
+                                  <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
+                                </li>
+                                <li>
+                                  <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- Box Content End -->
+                          </div>
+                          <!-- Video Thumb End -->
+                          <div class="video-content">
+                            <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                            <div class="video-info d-flex align-items-center">
+                              <span class="video-year"><?php echo $movie['date']; ?></span>
+                              <?php
+                              $hours = floor($movie['duration'] / 3600);
+                              $minutes = floor(($movie['duration'] / 60) % 60);
+                              $duration = $hours . "h" . $minutes . "m";
+                              ?>
+                              <span class="video-age"><?php echo $duration; ?></span>
+                              <?php
+                              foreach ($allLanguage as $language) {
+                                if ($language['id_language'] == $movie['language']) {
+                                  echo '<span class="video-type">' . $language["name"] . '</span>';
+                                }
+                              } ?>
+                            </div>
+                          </div>
+                          <!-- video Content End -->
+                        </div>
+                        <!-- video Block End -->
+                      </div>
+                    <?php } ?>
 
-                <!-- Item 2 End -->
-
-                <!-- Item 3 End -->
-
-                <!-- Item 4 End -->
-
-                <!-- Item 5 End -->
-
-                <!-- Item 6 End -->
-
-                <!-- Item 7 End -->
-                <!-- Owl Slider End -->
-                <div class="owl-stage-outer">
-                  <div class="owl-stage" style="transform: translate3d(-2122px, 0px, 0px); transition: all 0.25s ease 0s; width: 4009px">
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/03(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/04(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">hard life</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/05(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Destiny</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/06.jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Paper hero</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/07.jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">The gang</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/01(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">A dam wind</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/02(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">the message</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/03(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/04(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">hard life</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/05(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Destiny</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/06.jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Paper hero</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/07.jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">The gang</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/01(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">A dam wind</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/02(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">the message</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/03(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Verbal messages</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/04(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">hard life</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="movies"><img class="img-fluid" src="../img/05(1).jpg" alt="" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="movies"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title"><a href="single">Destiny</a></h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
+                    <!-- Col End -->
                   </div>
+                  <!-- Row End -->
                 </div>
-                <div class="owl-nav disabled">
-                  <div class="owl-prev">prev</div>
-                  <div class="owl-next">next</div>
-                </div>
-                <div class="owl-dots">
-                  <div class="owl-dot active"><span></span></div>
-                  <div class="owl-dot"><span></span></div>
-                </div>
+                <!-- Tap Pane 1 End -->
+
+                <!-- Tap Pane 2 End -->
+
+                <!-- Tap Pane 3 End -->
               </div>
               <!-- Pupular Slider End -->
             </div>
