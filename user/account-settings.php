@@ -73,7 +73,7 @@ if (isset($_POST['update'])) {
                         <div class="col-md-2">
                           <div class="form-group">
                             <div class="settings-avatar">
-                              <img src="../uploads/users/<?php if (isset($_SESSION['picture'])) {
+                              <img src="../uploads/users/<?php if ($_SESSION['picture'] != '') {
                                                             echo $_SESSION['picture'];
                                                           } else {
                                                             echo "user.jpg";

@@ -42,7 +42,7 @@
                 <div class="footer-widget">
                     <div class="widget">
                         <div class="widget-header">
-                            <h2 class="widget-title">Display Type</h2>
+                            <h2 class="widget-title">Genre</h2>
                         </div>
                         <div class="widget-content footer-menu">
                             <ul class="f-link list-unstyled mb-0">
