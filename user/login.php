@@ -103,7 +103,7 @@ if (isset($_POST['check'])) {
             </div>
             <!-- Col End -->
             <div class="col-lg-6">
-              <img class="img-fluid" src="../img/login.png" alt="" />
+              <img class="img-fluid" src="../img/login.jpeg" alt="" />
             </div>
             <!-- Col End -->
           </div>
