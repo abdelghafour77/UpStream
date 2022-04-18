@@ -41,9 +41,9 @@
                                     <a class="nav-link" href="../core/movies">Movies</a>
                                 </li>
                                 <!-- Nav Item 2 End -->
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="../core/shows">Shows</a>
-                                </li>
+                                </li> -->
                                 <!-- Nav Item 3 End -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">More <i class="fa fa-angle-down"></i></a>

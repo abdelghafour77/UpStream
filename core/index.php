@@ -1,10 +1,42 @@
+<?php
+session_start();
+require_once '../view/movieView.php';
+require_once '../view/categoryView.php';
+require_once '../view/actorView.php';
+require_once '../view/languageView.php';
+
+$getCategory = new CategoryView();
+$allCategory = $getCategory->getCategory();
+
+$getActor = new ActorView();
+$allActor = $getActor->getActor();
+
+$getLanguage = new LanguageView();
+$allLanguage = $getLanguage->getLanguage();
+
+$getMovie = new MovieView();
+$sixMovie = $getMovie->getSixMovie();
+
+$getMovie = new MovieView();
+$someMovie = $getMovie->getSomeMovie();
+
+
+// foreach ($allLanguage as $languag) {
+//   if ($languag['id_language'] == $resultMovie[0]['language'])
+//     $language = $languag['name'];
+// }
+
+// $hours = floor($resultMovie[0]['duration'] / 3600);
+// $minutes = floor(($resultMovie[0]['duration'] / 60) % 60);
+// $duration = "$hours hr $minutes min";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>UpStream</title>
   <?php
-  session_start();
   require_once '../include/head.php';
   ?>
 </head>
@@ -21,6 +53,19 @@
     <?php
     require_once '../include/header.php';
     ?>
+    <style>
+      .slick-bg.bg-1 {
+        background-image: url(../img/slider2.jpg);
+      }
+
+      .slick-bg.bg-2 {
+        background-image: url(../img/slider2.jpg);
+      }
+
+      .slick-bg.bg-3 {
+        background-image: url(../img/slider3.jpg);
+      }
+    </style>
     <!-- Start Main Slider -->
     <div class="main-slider" id="main-slider">
       <div class="slider big-slider slider-wrap slick-initialized slick-slider slick-dotted">
@@ -144,232 +189,55 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-              <div class="season-tabs">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link active" data-toggle="pill" href="./#pills-additions" role="tab" aria-selected="true">Featured</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-toggle="pill" href="./#pills-movies" role="tab" aria-selected="false">Movies</a>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" data-toggle="pill" href="./#pills-shows" role="tab" aria-selected="false">Shows</a>
-                  </li>
-                </ul>
-              </div>
+
               <!-- Season Tabs End -->
               <div class="tab-content" id="pills-tabContent">
                 <div id="pills-additions" class="tab-pane animated fadeInRight show active">
                   <div class="row">
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/01.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
+                    <?php
+                    foreach ($sixMovie as $movie) {
+                    ?>
+                      <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                        <div class="video-block">
+                          <div class="video-thumb position-relative thumb-overlay">
+                            <a href="watching"><img class="img-fluid" src="<?php echo $movie['cover']; ?>" alt="" /></a>
+                            <div class="box-content">
+                              <ul class="icon">
+                                <li>
+                                  <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
+                                </li>
+                                <li>
+                                  <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- Box Content End -->
                           </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">Iron door</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
+                          <!-- Video Thumb End -->
+                          <div class="video-content">
+                            <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                            <div class="video-info d-flex align-items-center">
+                              <span class="video-year"><?php echo $movie['date']; ?></span>
+                              <?php
+                              $hours = floor($movie['duration'] / 3600);
+                              $minutes = floor(($movie['duration'] / 60) % 60);
+                              $duration = $hours . "h" . $minutes . "m";
+                              ?>
+                              <span class="video-age"><?php echo $duration; ?></span>
+                              <?php
+                              foreach ($allLanguage as $language) {
+                                if ($language['id_language'] == $movie['language']) {
+                                  echo '<span class="video-type">' . $language["name"] . '</span>';
+                                }
+                              } ?>
+                            </div>
                           </div>
+                          <!-- video Content End -->
                         </div>
-                        <!-- video Content End -->
+                        <!-- video Block End -->
                       </div>
-                      <!-- video Block End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/02.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">The Earth</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
-                          </div>
-                        </div>
-                        <!-- video Content End -->
-                      </div>
-                      <!-- video Block End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/03.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">City dreams</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
-                          </div>
-                        </div>
-                        <!-- video Content End -->
-                      </div>
-                      <!-- video Block End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/04.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">Divine hand</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
-                          </div>
-                        </div>
-                        <!-- video Content End -->
-                      </div>
-                      <!-- video Block End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/05.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">Deceived</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
-                          </div>
-                        </div>
-                        <!-- video Content End -->
-                      </div>
-                      <!-- video Block End -->
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-                      <div class="video-block">
-                        <div class="video-thumb position-relative thumb-overlay">
-                          <a href="./#"><img alt="" class="img-fluid" src="../img/06.jpg" /></a>
-                          <div class="box-content">
-                            <ul class="icon">
-                              <li>
-                                <a href="watching"><i class="fas fa-play"></i></a>
-                              </li>
-                              <li>
-                                <a href="./#"><i class="fas fa-plus"></i></a>
-                              </li>
-                              <li>
-                                <a href="single"><i class="fas fa-info"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- Box Content End -->
-                        </div>
-                        <!-- Video Thumb End -->
-                        <div class="video-content">
-                          <h2 class="video-title">
-                            <a href="single">Heaven is now</a>
-                          </h2>
-                          <div class="video-info d-flex align-items-center">
-                            <span class="video-year">2021</span>
-                            <span class="video-age">+18</span>
-                            <span class="video-type">Action</span>
-                          </div>
-                        </div>
-                        <!-- video Content End -->
-                      </div>
-                      <!-- video Block End -->
-                    </div>
+                    <?php } ?>
+
                     <!-- Col End -->
                   </div>
                   <!-- Row End -->
@@ -820,642 +688,57 @@
               <!-- Start Pupular Slider -->
               <div class="owl-carousel owl-theme owl-loaded owl-drag" id="pupular-slider">
                 <!-- Item 1 End -->
+                <?php
+                foreach ($sixMovie as $movie) {
+                ?>
+                  <div class="item">
+                    <div class="video-block">
+                      <div class="video-thumb position-relative thumb-overlay">
+                        <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><img alt="" class="img-fluid" src="<?php echo $movie['cover']; ?>" /></a>
+                        <div class="box-content">
+                          <ul class="icon">
+                            <li>
+                              <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
+                            </li>
+                            <!-- <li>
+                              <a href="./#"><i class="fas fa-plus"></i></a>
+                            </li> -->
+                            <li>
+                              <a href="single.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- Box Content End -->
+                      </div>
+                      <!-- Video Thumb End -->
+                      <div class="video-content">
+                        <h2 class="video-title">
+                          <a href="single"><?php echo $movie['title']; ?></a>
+                        </h2>
+                        <?php
+                        $hours = floor($movie['duration'] / 3600);
+                        $minutes = floor(($movie['duration'] / 60) % 60);
+                        $duration = $hours . "h" . $minutes . "m";
+                        ?>
+                        <div class="video-info d-flex align-items-center">
+                          <span class="video-year"><?php echo $movie['date']; ?></span>
+                          <span class="video-age"><?php echo $duration; ?></span>
+                          <?php
+                          foreach ($allLanguage as $language) {
+                            if ($language['id_language'] == $movie['language']) {
+                              echo '<span class="video-type">' . $language["name"] . '</span>';
+                            }
+                          } ?>
 
-                <!-- Item 2 End -->
-
-                <!-- Item 3 End -->
-
-                <!-- Item 4 End -->
-
-                <!-- Item 5 End -->
-
-                <!-- Item 6 End -->
-
-                <!-- Item 7 End -->
-                <div class="owl-stage-outer">
-                  <div class="owl-stage" style="transform: translate3d(-1650px, 0px, 0px); transition: all 0.25s ease 0s; width: 4009px">
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/03(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The thug</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
                         </div>
-                        <!-- video Block End -->
                       </div>
+                      <!-- video Content End -->
                     </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/04(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">Terrifying night</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/05(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The Winter</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/06(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the fear</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/07.jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the love</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/01(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the land of fear</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/02(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">Criminal</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/03(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The thug</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/04(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">Terrifying night</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/05(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The Winter</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/06(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the fear</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item active" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/07.jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the love</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/01(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">the land of fear</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/02(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">Criminal</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/03(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The thug</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/04(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">Terrifying night</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
-                    <div class="owl-item cloned" style="width: 205.8px; margin-right: 30px">
-                      <div class="item">
-                        <div class="video-block">
-                          <div class="video-thumb position-relative thumb-overlay">
-                            <a href="./#"><img alt="" class="img-fluid" src="../img/05(3).jpg" /></a>
-                            <div class="box-content">
-                              <ul class="icon">
-                                <li>
-                                  <a href="watching"><i class="fas fa-play"></i></a>
-                                </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
-                                <li>
-                                  <a href="single"><i class="fas fa-info"></i></a>
-                                </li>
-                              </ul>
-                            </div>
-                            <!-- Box Content End -->
-                          </div>
-                          <!-- Video Thumb End -->
-                          <div class="video-content">
-                            <h2 class="video-title">
-                              <a href="single">The Winter</a>
-                            </h2>
-                            <div class="video-info d-flex align-items-center">
-                              <span class="video-year">2021</span>
-                              <span class="video-age">+18</span>
-                              <span class="video-type">Action</span>
-                            </div>
-                          </div>
-                          <!-- video Content End -->
-                        </div>
-                        <!-- video Block End -->
-                      </div>
-                    </div>
+                    <!-- video Block End -->
                   </div>
-                </div>
-                <div class="owl-nav disabled">
-                  <div class="owl-prev">prev</div>
-                  <div class="owl-next">next</div>
-                </div>
-                <div class="owl-dots">
-                  <div class="owl-dot active"><span></span></div>
-                  <div class="owl-dot"><span></span></div>
-                </div>
+
+                <?php } ?>
+
               </div>
               <!-- Pupular Slider End -->
             </div>
@@ -1481,254 +764,39 @@
               <!-- Start Swiper Slider -->
               <div class="swiper-container pt-0 swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab">
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-861.75px, 0px, 0px); perspective-origin: 1436.25px 50%">
-                  <div class="swiper-slide swiper-bg swiper-slide-duplicate" style="
-                        background-image: url('../img/04.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(100deg);
-                        z-index: -1;
-                      " data-swiper-slide-index="3">
-                    <img alt="" class="entity-img" src="../img/04(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-                        The house
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 2; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-                  </div>
-                  <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-prev" style="
-                        background-image: url('../img/05.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -99.913px) rotateX(0deg) rotateY(49.9565deg);
-                        z-index: 0;
-                      " data-swiper-slide-index="4">
-                    <img alt="" class="entity-img" src="../img/05(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9739%, 0px, 0px) scale(0.700261)">
-                        Treason
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-19.9826%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9739%, 0px, 0px) scale(0.700261)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0.99913; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-                  </div>
-                  <div class="swiper-slide swiper-bg swiper-slide-active" style="
-                        background-image: url('../img/01.jpg');
+                  <?php
+                  foreach ($sixMovie as $movie) {
+                  ?>
+                    <div class="swiper-slide swiper-bg" style="
+                        background-image: url('<?php echo $movie['cover']; ?>');
                         width: 574.5px;
                         transition-duration: 0ms;
                         transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
                         z-index: 1;
                       " data-swiper-slide-index="0">
-                    <img alt="" class="entity-img" src="../img/01(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
+                      <img alt="" class="entity-img" src="<?php echo $movie['title']; ?>" />
+                      <div class="top-badge">
+                        <div class="video-badge">
+                          <img alt="" class="img-fluid" src="../img/top-movies.png" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-                        Romantic world
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                      <div class="content">
+                        <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
+                          <?php echo $movie['title']; ?>
+                        </p>
+                        <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">
+                          <?php echo $movie['description']; ?></span>
+                        <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
+                          <a class="btn hvr-sweep-to-right" href="watching.php?w=<?php echo $movie['id_movie']; ?>" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                          <!-- <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a> -->
+                        </div>
                       </div>
+                      <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
+                      <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
                     </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-                  </div>
-                  <!-- Slide 1 End -->
-                  <div class="swiper-slide swiper-bg swiper-slide-next" style="
-                        background-image: url('../img/02.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -100.087px) rotateX(0deg) rotateY(-50.0435deg);
-                        z-index: 0;
-                      " data-swiper-slide-index="1">
-                    <img alt="" class="entity-img" src="../img/02(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        Incantation
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 1.00087; transition-duration: 0ms"></div>
-                  </div>
-                  <!-- Slide 2 End -->
-                  <div class="swiper-slide swiper-bg" style="
-                        background-image: url('../img/03.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(-100deg);
-                        z-index: -1;
-                      " data-swiper-slide-index="2">
-                    <img alt="" class="entity-img" src="../img/03(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        the years
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 2; transition-duration: 0ms"></div>
-                  </div>
-                  <!-- Slide 3 End -->
-                  <div class="swiper-slide swiper-bg" style="
-                        background-image: url('../img/04.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -300.087px) rotateX(0deg) rotateY(-150.044deg);
-                        z-index: -2;
-                      " data-swiper-slide-index="3">
-                    <img alt="" class="entity-img" src="../img/04(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        The house
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 3.00087; transition-duration: 0ms"></div>
-                  </div>
-                  <!-- Slide 4 End -->
-                  <div class="swiper-slide swiper-bg swiper-slide-duplicate-prev" style="
-                        background-image: url('../img/05.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(-200deg);
-                        z-index: -3;
-                      " data-swiper-slide-index="4">
-                    <img alt="" class="entity-img" src="../img/05(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        Treason
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 4; transition-duration: 0ms"></div>
-                  </div>
-                  <!-- Slide 5 End -->
-                  <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-active" style="
-                        background-image: url('../img/01.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -500.087px) rotateX(0deg) rotateY(-250.044deg);
-                        z-index: -4;
-                      " data-swiper-slide-index="0">
-                    <img alt="" class="entity-img" src="../img/01(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        Romantic world
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 5.00087; transition-duration: 0ms"></div>
-                  </div>
-                  <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-next" style="
-                        background-image: url('../img/02.jpg');
-                        width: 574.5px;
-                        transition-duration: 0ms;
-                        transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(-300deg);
-                        z-index: -5;
-                      " data-swiper-slide-index="1">
-                    <img alt="" class="entity-img" src="../img/02(4).jpg" />
-                    <div class="top-badge">
-                      <div class="video-badge">
-                        <img alt="" class="img-fluid" src="../img/top-movies.png" />
-                      </div>
-                    </div>
-                    <div class="content">
-                      <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        Incantation
-                      </p>
-                      <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book.</span>
-                      <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-                    <div class="swiper-slide-shadow-right" style="opacity: 6; transition-duration: 0ms"></div>
-                  </div>
+                    <!-- Slide  End -->
+                  <?php } ?>
+
                 </div>
                 <!-- Swiper Wrapper End -->
                 <div class="swiper-button-prev swiper-button-white" tabindex="0" role="button" aria-label="Previous slide"></div>
@@ -1967,7 +1035,7 @@
       <!-- Trending Section End -->
       <!-- Start Last Seasons Section -->
       <section class="last-seasons pb-0">
-        <div class="last-season" style="background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 90%)), url(img/best-series.jpg)">
+        <div class="last-season" style="background-image: linear-gradient(to top, #202020, rgb(2 2 2 / 90%)), url(../img/best-series.jpg)">
           <div class="container-fluid">
             <div class="season-header text-center">
               <h5 class="mb-4">featured</h5>
@@ -2878,6 +1946,7 @@
   <?php
   require_once '../include/js.php';
   ?>
+
 </body>
 
 </html>

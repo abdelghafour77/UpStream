@@ -1563,17 +1563,7 @@ ul.navbar-nav > li.active a::before {
 }
 
 /* Slider Images Background */
-.slick-bg.bg-1 {
-    background-image: url(../img/slider1.jpg);
-}
 
-.slick-bg.bg-2 {
-    background-image: url(../img/slider2.jpg);
-}
-
-.slick-bg.bg-3 {
-    background-image: url(../img/slider3.jpg);
-}
 
 /* Slider Content */
 .main-slider h1 {
@@ -2395,3 +2385,19 @@ To Top Button
         -webkit-transform: translateX(0px) rotate(-360deg);
     }
 }
+
+
+
+
+
+
+/* .carousel_img{
+    width: 1349px;
+    height: 500px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+     z-index: 999; 
+    opacity: 1;
+    object-fit: cover;
+  } */

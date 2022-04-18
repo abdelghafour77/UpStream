@@ -216,6 +216,17 @@ class Movie extends Connection
 
 		return $result;
 	}
+
+	protected function getSomeMovieDB()
+	{
+		$sql = "SELECT * FROM movie order by id_movie  limit 4";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+
+		return $result;
+	}
 	// protected function getCoursDB1($id)
 	// {
 	// 	// $sql = "SELECT * FROM cours WHERE id_cours=?";

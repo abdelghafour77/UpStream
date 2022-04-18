@@ -1,9 +1,88 @@
+<?php
+session_start();
+require_once '../view/movieView.php';
+require_once '../view/categoryView.php';
+require_once '../view/actorView.php';
+require_once '../view/languageView.php';
+
+$getCategory = new CategoryView();
+$allCategory = $getCategory->getCategory();
+
+$getActor = new ActorView();
+$allActor = $getActor->getActor();
+
+$getLanguage = new LanguageView();
+$allLanguage = $getLanguage->getLanguage();
+
+$getMovie = new MovieView();
+$sixMovie = $getMovie->getSixMovie();
+
+if (isset($_GET['i'])) {
+  $id_movie = $_GET['i'];
+} else {
+  header('Location: ./ ');
+  die;
+}
+$getMovie = new MovieView();
+$resultMovie = $getMovie->getInfoMovie($id_movie);
+// die(var_dump($resultMovie));
+
+$AllCategory = " ";
+$AllActor = " ";
+$language = " ";
+$description = $resultMovie[0]['description'];
+$id_movie = $resultMovie[0]['id_movie'];
+$title = $resultMovie[0]['title'];
+$date = $resultMovie[0]['date'];
+$director = $resultMovie[0]['director'];
+$trailer = $resultMovie[0]['link_trailer'];
+$movie_file = $resultMovie[0]['movie_file'];
+$cover = $resultMovie[0]['cover'];
+
+$b = "";
+foreach ($allCategory as $category) {
+
+  for ($i = 1; $i < count($resultMovie); $i++) {
+    if (isset($resultMovie[$i]['name'])) {
+      if ($resultMovie[$i]['name'] == $category['name']) {
+        $AllCategory .= $b . $resultMovie[$i]['name'];
+        $b = " , ";
+      }
+    }
+  }
+}
+$b = "";
+foreach ($allActor as $actor) {
+
+  for ($i = 1; $i < count($resultMovie); $i++) {
+    if (isset($resultMovie[$i]['first_name'])) {
+      if ($resultMovie[$i]['first_name'] == $actor['first_name']) {
+        $AllActor .= $b . $resultMovie[$i]['first_name'] . ' ' . $resultMovie[$i]['last_name'];
+        $b = " , ";
+      }
+    }
+  }
+}
+
+foreach ($allLanguage as $languag) {
+  if ($languag['id_language'] == $resultMovie[0]['language'])
+    $language = $languag['name'];
+}
+
+$hours = floor($resultMovie[0]['duration'] / 3600);
+$minutes = floor(($resultMovie[0]['duration'] / 60) % 60);
+$duration = "$hours hr $minutes min";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Single</title>
   <?php
+  echo "<title>" . $title . "</title>";
+
+
   require_once '../include/head.php';
   ?>
 </head>
@@ -24,7 +103,7 @@
     <div class="banner-single banner-wrap banner-bg movie-bg">
       <style>
         .banner-bg.movie-bg {
-          background-image: url(./img/cover.jpg);
+          background-image: url(<?php echo $cover; ?>);
         }
       </style>
       <div class="container-fluid">
@@ -32,7 +111,7 @@
           <div class="transparent-block">
             <div class="banner-caption">
               <div class="position-relative mb-4">
-                <a href="watching" class="d-flex align-items-center">
+                <a href="watching.php?w=<?php echo $id_movie; ?>" class="d-flex align-items-center">
                   <div class="play-icon">
                     <div class="circle pulse"></div>
                     <div class="circle">
@@ -41,7 +120,7 @@
                       </svg>
                     </div>
                   </div>
-                  <h2 class="banner-name text-white font-weight-700">Play The Dark Knight Rises</h2>
+                  <h2 class="banner-name text-white font-weight-700"><?php echo $title; ?></h2>
                 </a>
               </div>
             </div>
@@ -64,10 +143,10 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="play-thumb mb-4">
-                    <img class="img-fluid" src="./img/01.jpg" alt="" />
+                    <img class="img-fluid" src="<?php echo $cover; ?>" alt="" />
                     <div class="top-badge">
                       <div class="video-badge">
-                        <img class="img-fluid" src="./img/top-movies.png" alt="" />
+                        <img class="img-fluid" src="../img/top-movies.png" alt="" />
                       </div>
                     </div>
                   </div>
@@ -75,7 +154,7 @@
                   <div class="thumb-details text-center">
                     <span> 1080p</span>
                     <span>24p</span>
-                    <span><img class="img-fluid" src="./img/dts-logo.png" alt="" /></span>
+                    <span><img class="img-fluid" src="../img/dts-logo.png" alt="" /></span>
                     <span>7.1</span>
                   </div>
                   <!-- Thumb Details End -->
@@ -88,35 +167,32 @@
             <div class="col-md-9">
               <div class="play-details-content">
                 <div class="title-block d-flex align-items-center justify-content-between">
-                  <h2 class="play-title">The Dark Knight Rises</h2>
+                  <h2 class="play-title"><?php echo $title; ?></h2>
                 </div>
                 <!-- Title Block -->
                 <div class="details-info mb-4">
-                  <span><i class="fa-solid fa-user"></i> 18+</span>
-                  <span><i class="fa-solid fa-clock"></i></i> 2hr 45min</span>
-                  <span><i class="fa-solid fa-face-smile"></i></i> 2021</span>
-                  <span><i class="fa-solid fa-film"></i></i> Action</span>
-                  <span><i class="fa-solid fa-earth-africa" aria-hidden="true"></i></i> United States</span>
+                  <!-- <span><i class="fa-solid fa-user"></i> 18+</span> -->
+                  <span><i class="fa-solid fa-clock"></i></i> <?php echo $duration; ?></span>
+                  <span><i class="fa-solid fa-face-smile"></i></i> <?php echo $date; ?></span>
+                  <span><i class="fa-solid fa-film"></i></i> <?php echo $AllCategory; ?></span>
+                  <span><i class="fa-solid fa-earth-africa" aria-hidden="true"></i></i> <?php echo $language; ?></span>
                 </div>
                 <!-- Details Info -->
                 <div class="details-desc">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.
+                    <?php echo $description; ?>
                   </p>
                 </div>
                 <!-- Details Desc -->
                 <div class="movie-persons mb-4">
                   <div class="person-block">
                     <h5 class="title">Director</h5>
-                    <p class="name">Christopher Nolan</p>
+                    <p class="name"><?php echo $director; ?></p>
                   </div>
                   <!-- Person Block -->
                   <div class="person-block">
                     <h5 class="title">Cast</h5>
-                    <p>Christian Bale, Michael Cain, Gary Oldman, Anne Hathway, Tom Hardy, Marion Cotillard</p>
+                    <p><?php echo $AllActor; ?></p>
                   </div>
                   <!-- Person Block -->
                 </div>
@@ -124,15 +200,11 @@
                 <div class="details-buttons">
                   <div class="row d-flex align-items-center">
                     <div class="col-6 col-xl mb-xl-0 mb-3">
-                      <a href="watching" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="fa-solid fa-play"></i> Play</a>
+                      <a href="watching.php?w=<?php echo $id_movie; ?>" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="fa-solid fa-play"></i> Play</a>
                     </div>
                     <!-- Col End -->
                     <div class="col-6 col-xl mb-xl-0 mb-3">
-                      <a href="watching" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="fa-solid fa-plus"></i> MY List</a>
-                    </div>
-                    <!-- Col End -->
-                    <div class="col-6 col-xl mb-xl-0 mb-3">
-                      <a id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true"><i class="fa-solid fa-film"></i> Trailer</a>
+                      <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true"><i class="fa-solid fa-film"></i> Trailer</a>
                       <!-- Modal Trailer -->
                       <div class="modal fade" id="trailer-modal" tabindex="0" role="dialog" aria-labelledby="trailer-modal" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document" id="trailerModal">
@@ -148,7 +220,7 @@
                             <!-- Modal Body -->
                             <div class="modal-body">
                               <video class="video d-block" controls="" loop="">
-                                <source src="video/01-video.mp4" type="video/mp4" />
+                                <source src="<?php echo $movie_file; ?>" type="video/mp4" />
                               </video>
                             </div>
                             <!-- Modal Body -->
@@ -228,204 +300,50 @@
           </div>
           <!-- Row End -->
           <div class="row">
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/01(1).jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
+            <?php
+            foreach ($sixMovie as $movie) {
+            ?>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
+                <div class="video-block">
+                  <div class="video-thumb position-relative thumb-overlay">
+                    <a href="watching"><img class="img-fluid" src="<?php echo $movie['cover']; ?>" alt="" /></a>
+                    <div class="box-content">
+                      <ul class="icon">
+                        <li>
+                          <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
+                        </li>
+                        <li>
+                          <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Box Content End -->
                   </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">life is Beautiful</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
+                  <!-- Video Thumb End -->
+                  <div class="video-content">
+                    <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                    <div class="video-info d-flex align-items-center">
+                      <span class="video-year"><?php echo $movie['date']; ?></span>
+                      <?php
+                      $hours = floor($movie['duration'] / 3600);
+                      $minutes = floor(($movie['duration'] / 60) % 60);
+                      $duration = $hours . "h" . $minutes . "m";
+                      ?>
+                      <span class="video-age"><?php echo $duration; ?></span>
+                      <?php
+                      foreach ($allLanguage as $language) {
+                        if ($language['id_language'] == $movie['language']) {
+                          echo '<span class="video-type">' . $language["name"] . '</span>';
+                        }
+                      } ?>
+                    </div>
                   </div>
+                  <!-- video Content End -->
                 </div>
-                <!-- video Content End -->
+                <!-- video Block End -->
               </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/02.jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">The End</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
-                  </div>
-                </div>
-                <!-- video Content End -->
-              </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/03.jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">the beginning</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
-                  </div>
-                </div>
-                <!-- video Content End -->
-              </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/04.jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">The Search</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
-                  </div>
-                </div>
-                <!-- video Content End -->
-              </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/05.jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">The Treasures</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
-                  </div>
-                </div>
-                <!-- video Content End -->
-              </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
-              <div class="video-block">
-                <div class="video-thumb position-relative thumb-overlay">
-                  <a href="single"><img class="img-fluid" src="./img/06.jpg" alt="" /></a>
-                  <div class="box-content">
-                    <ul class="icon">
-                      <li>
-                        <a href="watching"><i class="fas fa-play"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-plus"></i></a>
-                      </li>
-                      <li>
-                        <a href="single"><i class="fas fa-info"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Box Content End -->
-                </div>
-                <!-- Video Thumb End -->
-                <div class="video-content">
-                  <h2 class="video-title"><a href="single">Problems</a></h2>
-                  <div class="video-info d-flex align-items-center">
-                    <span class="video-year">2021</span>
-                    <span class="video-age">+18</span>
-                    <span class="video-type">Action</span>
-                  </div>
-                </div>
-                <!-- video Content End -->
-              </div>
-              <!-- video Block End -->
-            </div>
-            <!-- Col End -->
+            <?php } ?>
+
           </div>
           <!-- Row End -->
         </div>

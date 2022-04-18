@@ -36,6 +36,8 @@ $title = $resultMovie[0]['title'];
 $date = $resultMovie[0]['date'];
 $director = $resultMovie[0]['director'];
 $trailer = $resultMovie[0]['link_trailer'];
+$movie_file = $resultMovie[0]['movie_file'];
+$cover = $resultMovie[0]['cover'];
 
 $b = "";
 foreach ($allCategory as $category) {
@@ -71,10 +73,7 @@ $hours = floor($resultMovie[0]['duration'] / 3600);
 $minutes = floor(($resultMovie[0]['duration'] / 60) % 60);
 $duration = "$hours hr $minutes min";
 
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +94,7 @@ $duration = "$hours hr $minutes min";
     <!-- Start Video Player -->
     <div class="video-container">
       <video class="video d-block" controls="" loop="">
-        <source src="<?php echo $resultMovie[0]['movie_file']; ?>" type="video/mp4" />
+        <source src="<?php echo $movie_file; ?>" type="video/mp4" />
       </video>
     </div>
     <!-- Video Player End -->
@@ -109,7 +108,7 @@ $duration = "$hours hr $minutes min";
               <div class="row">
                 <div class="col-md-12">
                   <div class="play-thumb mb-4">
-                    <img class="img-fluid" src="<?php echo $resultMovie[0]['cover']; ?>" alt="" />
+                    <img class="img-fluid" src="<?php echo $cover; ?>" alt="" />
                     <div class="top-badge">
                       <div class="video-badge">
                         <img class="img-fluid" src="../img/top-movies.png" alt="" />
@@ -190,7 +189,7 @@ $duration = "$hours hr $minutes min";
                             <!-- Modal Body -->
                             <div class="modal-body">
                               <video class="video d-block" controls="" loop="">
-                                <source src="video/01-video.mp4" type="video/mp4" />
+                                <source src="<?php echo $id_movie; ?>" type="video/mp4" />
                               </video>
                             </div>
                             <!-- Modal Body -->
