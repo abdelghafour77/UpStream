@@ -152,6 +152,7 @@ class Movie extends Connection
 	protected function getInfoMovieDB($id_movie)
 	{
 		$sql = "SELECT 
+			id_movie,
 			title,
 			description,
 			date,
@@ -205,16 +206,16 @@ class Movie extends Connection
 
 
 
-	// protected function getLastCoursDB()
-	// {
-	// 	$sql = "SELECT * FROM cours order by id_cours DESC limit 15 ";
+	protected function getSixMovieDB()
+	{
+		$sql = "SELECT * FROM movie order by id_movie DESC limit 6 ";
 
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute();
-	// 	$result = $stmt->fetchAll();
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
 
-	// 	return $result;
-	// }
+		return $result;
+	}
 	// protected function getCoursDB1($id)
 	// {
 	// 	// $sql = "SELECT * FROM cours WHERE id_cours=?";

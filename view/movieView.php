@@ -16,4 +16,8 @@ class MovieView extends Movie
 	{
 		return $this->getInfoMovieDB($id_movie);
 	}
+	public function getSixMovie()
+	{
+		return $this->getSixMovieDB();
+	}
 }
