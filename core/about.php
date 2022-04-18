@@ -144,8 +144,8 @@
                   <img src="./img/01.jpg" class="img-fluid img-zoom" alt="" />
                 </div>
                 <div class="card-body">
-                  <h2 class="card-title team-box-name">Tonny Smith</h2>
-                  <span>ceo</span>
+                  <h2 class="card-title team-box-name">AOUAD Abdelghafour</h2>
+                  <span>Project manager</span>
                 </div>
               </div>
               <!-- Team Box End -->
@@ -157,8 +157,8 @@
                   <img src="./img/02.jpg" class="img-fluid img-zoom" alt="" />
                 </div>
                 <div class="card-body">
-                  <h2 class="card-title team-box-name">Barry Tech</h2>
-                  <span>Designer</span>
+                  <h2 class="card-title team-box-name">KASSEMI Anass</h2>
+                  <span>Code & Quality Supervisor</span>
                 </div>
               </div>
               <!-- Team Box End -->
@@ -170,8 +170,8 @@
                   <img src="./img/03.jpg" class="img-fluid img-zoom" alt="" />
                 </div>
                 <div class="card-body">
-                  <h2 class="card-title team-box-name">kep John</h2>
-                  <span>Developer</span>
+                  <h2 class="card-title team-box-name">NAJAHI Ahlam</h2>
+                  <span>Deliverables Supervisor</span>
                 </div>
               </div>
               <!-- Team Box End -->
@@ -183,8 +183,8 @@
                   <img src="./img/04.jpg" class="img-fluid img-zoom" alt="" />
                 </div>
                 <div class="card-body">
-                  <h2 class="card-title team-box-name">Monty Rock</h2>
-                  <span>Designer</span>
+                  <h2 class="card-title team-box-name">RHALIM Sami</h2>
+                  <span>Communication Supervisor</span>
                 </div>
               </div>
               <!-- Team Box End -->
