@@ -71,11 +71,11 @@ if (isset($_POST["id_movie"])) {
                 $v = "";
                 for ($i = 1; $i < count($output); $i++) {
 
-                    if ($output[$i]['first_name'] == $actor['first_name']) {
+                    if ($output[$i]['id_actor'] == $actor['id_actor']) {
                         $v = "selected";
                     }
                 }
-                echo '<option value="' . $actor['id_actor'] . '" ' . $v . '>' . $actor['first_name'] . '</option>';
+                echo '<option value="' . $actor['id_actor'] . '" ' . $v . '>' . $actor['first_name'] . ' ' . $actor['last_name'] . '</option>';
             }
             ?>
         </select>

@@ -337,7 +337,7 @@ $someMovie = $getMovie->getSomeMovie();
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                            <h2 class="video-title"><a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year"><?php echo $movie['date']; ?></span>
                               <?php

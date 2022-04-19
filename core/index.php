@@ -20,6 +20,9 @@ $sixMovie = $getMovie->getSixMovie();
 $getMovie = new MovieView();
 $someMovie = $getMovie->getSomeMovie();
 
+$getMovie = new MovieView();
+$NotificationMovie = $getMovie->getMovieNotification();
+
 
 // foreach ($allLanguage as $languag) {
 //   if ($languag['id_language'] == $resultMovie[0]['language'])
@@ -207,6 +210,9 @@ $someMovie = $getMovie->getSomeMovie();
                                   <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                                 </li>
                                 <li>
+                                  <a href="./#"><i class="fas fa-plus"></i></a>
+                                </li>
+                                <li>
                                   <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                                 </li>
                               </ul>
@@ -215,13 +221,13 @@ $someMovie = $getMovie->getSomeMovie();
                           </div>
                           <!-- Video Thumb End -->
                           <div class="video-content">
-                            <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                            <h2 class="video-title"><a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
                             <div class="video-info d-flex align-items-center">
                               <span class="video-year"><?php echo $movie['date']; ?></span>
                               <?php
                               $hours = floor($movie['duration'] / 3600);
                               $minutes = floor(($movie['duration'] / 60) % 60);
-                              $duration = $hours . "h" . $minutes . "m";
+                              $duration = $hours . "h " . $minutes . "m";
                               ?>
                               <span class="video-age"><?php echo $duration; ?></span>
                               <?php
@@ -278,11 +284,11 @@ $someMovie = $getMovie->getSomeMovie();
                             <li>
                               <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                             </li>
-                            <!-- <li>
-                              <a href="./#"><i class="fas fa-plus"></i></a>
-                            </li> -->
                             <li>
-                              <a href="single.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
+                              <a href="./#"><i class="fas fa-plus"></i></a>
+                            </li>
+                            <li>
+                              <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                             </li>
                           </ul>
                         </div>
@@ -296,7 +302,7 @@ $someMovie = $getMovie->getSomeMovie();
                         <?php
                         $hours = floor($movie['duration'] / 3600);
                         $minutes = floor(($movie['duration'] / 60) % 60);
-                        $duration = $hours . "h" . $minutes . "m";
+                        $duration = $hours . "h " . $minutes . "m";
                         ?>
                         <div class="video-info d-flex align-items-center">
                           <span class="video-year"><?php echo $movie['date']; ?></span>
@@ -366,7 +372,7 @@ $someMovie = $getMovie->getSomeMovie();
                           <?php echo $movie['description']; ?></span>
                         <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
                           <a class="btn hvr-sweep-to-right" href="watching.php?w=<?php echo $movie['id_movie']; ?>" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                          <!-- <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a> -->
+                          <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
                         </div>
                       </div>
                       <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -410,9 +416,9 @@ $someMovie = $getMovie->getSomeMovie();
                             <li>
                               <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                             </li>
-                            <!-- <li>
+                            <li>
                               <a href="./#"><i class="fas fa-plus"></i></a>
-                            </li> -->
+                            </li>
                             <li>
                               <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                             </li>
@@ -430,7 +436,7 @@ $someMovie = $getMovie->getSomeMovie();
                           <?php
                           $hours = floor($movie['duration'] / 3600);
                           $minutes = floor(($movie['duration'] / 60) % 60);
-                          $duration = $hours . "h" . $minutes . "mi";
+                          $duration = $hours . "h " . $minutes . "m";
                           ?>
                           <span class="video-type"><?php echo $duration; ?></span>
                         </div>

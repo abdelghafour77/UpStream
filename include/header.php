@@ -94,54 +94,46 @@
                         <div class="nav-notification">
                             <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#"><i class="fa-solid fa-bell"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right fade-up" role="menu">
-                                <li>
-                                    <a class="dropdown-item" href="./#">
-                                        <div class="notification-card media">
-                                            <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="../img/thumb-1.jpg" />
+                                <?php
+                                foreach ($NotificationMovie as $movie) {
+
+                                    if (!empty($movie["last_update"])) {
+
+                                        $timestamp = strtotime($movie["last_update"]);
+
+                                        $strTime = array("second", "minute", "hour", "day", "month", "year");
+                                        $length = array("60", "60", "24", "30", "12", "10");
+
+                                        $currentTime = time();
+                                        if ($currentTime >= $timestamp) {
+                                            $diff     = time() - $timestamp;
+                                            for ($i = 0; $diff >= $length[$i] && $i < count($length) - 1; $i++) {
+                                                $diff = $diff / $length[$i];
+                                            }
+
+                                            $diff = round($diff);
+                                            $ago = $diff . " " . $strTime[$i] . " ago ";
+                                        }
+                                    }
+
+                                ?>
+                                    <li>
+                                        <a class="dropdown-item" href="../core/watching.php?w=<?php echo $movie['id_movie']; ?>">
+                                            <div class="notification-card media">
+                                                <div class="notification-thumb">
+                                                    <img alt="" class="img-fluid" src="<?php echo $movie['cover']; ?>" />
+                                                </div>
+                                                <!-- Notification thumb end -->
+                                                <div class="notification-content media-body">
+                                                    <h2 class="notification-title"><?php echo $movie['title']; ?></h2>
+                                                    <span class="date"><i class="far fa-clock"></i> <?php echo $ago; ?></span>
+                                                </div>
+                                                <!-- Notification Content end -->
                                             </div>
-                                            <!-- Notification thumb end -->
-                                            <div class="notification-content media-body">
-                                                <h2 class="notification-title">Iron Door</h2>
-                                                <span class="date"><i class="far fa-clock"></i> 1 min ago</span>
-                                            </div>
-                                            <!-- Notification Content end -->
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- Li 1 end -->
-                                <li>
-                                    <a class="dropdown-item" href="./#">
-                                        <div class="notification-card media">
-                                            <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="../img/thumb-2.jpg" />
-                                            </div>
-                                            <!-- Notification thumb end -->
-                                            <div class="notification-content media-body">
-                                                <h2 class="notification-title">The Earth</h2>
-                                                <span class="date"><i class="far fa-clock"></i> 3 min ago</span>
-                                            </div>
-                                            <!-- Notification Content end -->
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- Li 2 end -->
-                                <li>
-                                    <a class="dropdown-item" href="./#">
-                                        <div class="notification-card media">
-                                            <div class="notification-thumb">
-                                                <img alt="" class="img-fluid" src="../img/thumb-3.jpg" />
-                                            </div>
-                                            <!-- Notification thumb end -->
-                                            <div class="notification-content media-body">
-                                                <h2 class="notification-title">City Dreams</h2>
-                                                <span class="date"><i class="far fa-clock"></i> 10 min ago</span>
-                                            </div>
-                                            <!-- Notification Content end -->
-                                        </div>
-                                    </a>
-                                </li>
-                                <!-- Li 3 end -->
+                                        </a>
+                                    </li>
+                                <?php } ?>
+
                             </ul>
                             <!-- Notification List End -->
                         </div>

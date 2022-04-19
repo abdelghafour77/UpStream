@@ -227,6 +227,16 @@ class Movie extends Connection
 
 		return $result;
 	}
+	protected function getMovieNotificationDB()
+	{
+		$sql = "SELECT id_movie ,title,cover,last_update FROM movie order by last_update DESC limit 5";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+
+		return $result;
+	}
 	// protected function getCoursDB1($id)
 	// {
 	// 	// $sql = "SELECT * FROM cours WHERE id_cours=?";
