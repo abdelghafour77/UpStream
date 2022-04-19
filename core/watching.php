@@ -56,7 +56,7 @@ foreach ($allActor as $actor) {
 
   for ($i = 1; $i < count($resultMovie); $i++) {
     if (isset($resultMovie[$i]['first_name'])) {
-      if ($resultMovie[$i]['first_name'] == $actor['first_name']) {
+      if ($resultMovie[$i]['id_actor'] == $actor['id_actor']) {
         $AllActor .= $b . $resultMovie[$i]['first_name'] . ' ' . $resultMovie[$i]['last_name'];
         $b = " , ";
       }
@@ -173,7 +173,8 @@ $duration = "$hours hr $minutes min";
                     </div> -->
                     <!-- Col End -->
                     <div class="col-6 col-xl mb-xl-0 mb-3">
-                      <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true"><i class="icofont-ui-movie mr-2" aria-hidden="true"></i>Trailer</a>
+                      <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true">
+                        <i class="icofont-ui-movie mr-2" aria-hidden="true"></i>Trailer</a>
                       <!-- Modal Trailer -->
                       <div class="modal fade" id="trailer-modal" tabindex="0" role="dialog" aria-labelledby="trailer-modal" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document" id="trailerModal">
@@ -188,9 +189,8 @@ $duration = "$hours hr $minutes min";
                             </div>
                             <!-- Modal Body -->
                             <div class="modal-body">
-                              <video class="video d-block" controls="" loop="">
-                                <source src="<?php echo $id_movie; ?>" type="video/mp4" />
-                              </video>
+                              <iframe width="100%" height="415" src="<?php echo str_replace("/watch?v=", "\/embed/",  $trailer); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <!-- <source src="" type="video/mp4" /> -->
                             </div>
                             <!-- Modal Body -->
                           </div>
@@ -282,6 +282,9 @@ $duration = "$hours hr $minutes min";
                           <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                         </li>
                         <li>
+                          <a href="./#"><i class="fas fa-plus"></i></a>
+                        </li>
+                        <li>
                           <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                         </li>
                       </ul>
@@ -290,7 +293,7 @@ $duration = "$hours hr $minutes min";
                   </div>
                   <!-- Video Thumb End -->
                   <div class="video-content">
-                    <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                    <h2 class="video-title"><a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
                     <div class="video-info d-flex align-items-center">
                       <span class="video-year"><?php echo $movie['date']; ?></span>
                       <?php

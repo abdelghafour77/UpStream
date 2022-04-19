@@ -56,7 +56,7 @@ foreach ($allActor as $actor) {
 
   for ($i = 1; $i < count($resultMovie); $i++) {
     if (isset($resultMovie[$i]['first_name'])) {
-      if ($resultMovie[$i]['first_name'] == $actor['first_name']) {
+      if ($resultMovie[$i]['id_actor'] == $actor['id_actor']) {
         $AllActor .= $b . $resultMovie[$i]['first_name'] . ' ' . $resultMovie[$i]['last_name'];
         $b = " , ";
       }
@@ -321,7 +321,7 @@ $duration = "$hours hr $minutes min";
                   </div>
                   <!-- Video Thumb End -->
                   <div class="video-content">
-                    <h2 class="video-title"><a href="watching.php?i=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+                    <h2 class="video-title"><a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
                     <div class="video-info d-flex align-items-center">
                       <span class="video-year"><?php echo $movie['date']; ?></span>
                       <?php
