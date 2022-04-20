@@ -219,9 +219,7 @@ $duration = "$hours hr $minutes min";
                             </div>
                             <!-- Modal Body -->
                             <div class="modal-body">
-                              <video class="video d-block" controls="" loop="">
-                                <source src="<?php echo $movie_file; ?>" type="video/mp4" />
-                              </video>
+                              <iframe width="100%" height="415" src="<?php echo str_replace("/watch?v=", "\/embed/",  $trailer); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <!-- Modal Body -->
                           </div>

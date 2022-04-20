@@ -358,7 +358,7 @@ $NotificationMovie = $getMovie->getMovieNotification();
                         transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
                         z-index: 1;
                       " data-swiper-slide-index="0">
-                      <img alt="" class="entity-img" src="<?php echo $movie['title']; ?>" />
+                      <img alt="" class="entity-img" src="<?php echo $movie['cover']; ?>" />
                       <div class="top-badge">
                         <div class="video-badge">
                           <img alt="" class="img-fluid" src="../img/top-movies.png" />
