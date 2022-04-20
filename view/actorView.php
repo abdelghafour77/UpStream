@@ -9,4 +9,8 @@ class ActorView extends Actor
 	{
 		return $this->getActorDB();
 	}
+	public function getActorById($id_actor)
+	{
+		return $this->getActorByIdDB($id_actor);
+	}
 }

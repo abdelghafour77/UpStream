@@ -9,4 +9,8 @@ class CategoryView extends Category
 	{
 		return $this->getCategoryDB();
 	}
+	public function getCategoryById($id_category)
+	{
+		return $this->getCategoryByIdDB($id_category);
+	}
 }

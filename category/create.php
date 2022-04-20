@@ -1,30 +1,22 @@
 <?php
 session_start();
-require_once('../controller/movieController.php');
-require_once '../view/movieView.php';
-
-$getAllMovie = new MovieView();
-$allMovieName = $getAllMovie->getMovieName();
+require_once('../controller/categoryController.php');
 
 
-if (isset($_POST['submit-movie'])) {
+if (isset($_POST['submit-category'])) {
 
-  $id_movie = $_POST['title'];
+  $name = $_POST['name'];
 
-  $user = $_SESSION['id_user'];
 
-  $MovieDelete = new MovieController();
-  $res = $MovieDelete->deleteMovie($id_movie);
-  if ($res == '1') {
-    header('Location:' . $_SERVER['PHP_SELF']);
-    die;
-  }
+  $CategoryAdd = new CategoryController();
+  $res = $CategoryAdd->addCategory($name);
 }
+
 
 ?>
 
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -47,7 +39,7 @@ if (isset($_POST['submit-movie'])) {
   <link rel="stylesheet" href="../styles/style2.css" />
   <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Delete movie</title>
+  <title>Add category</title>
 </head>
 
 
@@ -141,7 +133,7 @@ if (isset($_POST['submit-movie'])) {
         </div>
       </div>
 
-      <a href="../log_out" class="nav__link nav__logout">
+      <a href="../user/logout" class="nav__link nav__logout">
         <i class="bx bx-log-out nav__icon"></i>
         <span class="nav__name">Log out</span>
       </a>
@@ -151,19 +143,12 @@ if (isset($_POST['submit-movie'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Delete movie</h3>
+      <h3>Add category</h3>
 
-      <form method="post" action="" class="text-center" enctype="multipart/form-data">
-        <select id="title" name="title" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- Movie --</option>
-          <?php
-          foreach ($allMovieName as $movie) {
-            echo '<option value="' . $movie['id_movie'] . '">' . $movie['title'] . '</option>';
-          }
-          ?>
-        </select>
+      <form method="post" action="" class="text-center">
+        <input class="form-control me-4 my-4" type="text" name="name" id="name" placeholder="Name" required />
 
-        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Delete</button>
+        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-category">Add</button>
         <br>
       </form>
 
@@ -176,7 +161,6 @@ if (isset($_POST['submit-movie'])) {
 
   <!--========== MAIN JS ==========-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-
 
 </body>
 

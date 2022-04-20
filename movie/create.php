@@ -171,7 +171,7 @@ if (isset($_POST['submit-movie'])) {
             <!-- <h3 class="nav__subtitle">Profile</h3> -->
             <a href="../index" class="nav__link ">
               <i class="bx bx-home nav__icon"></i>
-              <span class="nav__name">Accueil</span>
+              <span class="nav__name">Home</span>
             </a>
           </div>
 
@@ -179,7 +179,7 @@ if (isset($_POST['submit-movie'])) {
 
             <div class="nav__dropdown">
               <a href="#" class="nav__link">
-                <i class="bx bx-news nav__icon"></i>
+                <i class='bx bxs-movie-play nav__icon'></i>
                 <span class="nav__name">movie</span>
                 <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
               </a>
@@ -192,6 +192,37 @@ if (isset($_POST['submit-movie'])) {
                 </div>
               </div>
             </div>
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-user nav__icon'></i>
+                <span class="nav__name">actor</span>
+                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="../actor/create" class="nav__dropdown-item">Add</a>
+                  <a href="../actor/update" class="nav__dropdown-item">Update</a>
+                  <a href="../actor/delete" class="nav__dropdown-item">Delete</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__dropdown">
+              <a href="#" class="nav__link">
+                <i class='bx bxs-category nav__icon'></i>
+                <span class="nav__name">category</span>
+                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+              </a>
+
+              <div class="nav__dropdown-collapse">
+                <div class="nav__dropdown-content">
+                  <a href="../category/create" class="nav__dropdown-item">Add</a>
+                  <a href="../category/update" class="nav__dropdown-item">Update</a>
+                  <a href="../category/delete" class="nav__dropdown-item">Delete</a>
+                </div>
+              </div>
+            </div>
 
 
           </div>
@@ -200,7 +231,7 @@ if (isset($_POST['submit-movie'])) {
 
       <a href="../log_out" class="nav__link nav__logout">
         <i class="bx bx-log-out nav__icon"></i>
-        <span class="nav__name">Se déconnecter</span>
+        <span class="nav__name">Log out</span>
       </a>
     </nav>
   </div>

@@ -1,20 +1,19 @@
 <?php
 session_start();
-require_once('../controller/movieController.php');
-require_once '../view/movieView.php';
+require_once('../controller/categoryController.php');
+require_once '../view/categoryView.php';
 
-$getAllMovie = new MovieView();
-$allMovieName = $getAllMovie->getMovieName();
+$getAllCategory = new CategoryView();
+$allCategory = $getAllCategory->getCategory();
 
 
-if (isset($_POST['submit-movie'])) {
+if (isset($_POST['submit-category'])) {
 
-  $id_movie = $_POST['title'];
+  $id_category = $_POST['id_category'];
 
-  $user = $_SESSION['id_user'];
 
-  $MovieDelete = new MovieController();
-  $res = $MovieDelete->deleteMovie($id_movie);
+  $CategoryDelete = new CategoryController();
+  $res = $CategoryDelete->deleteCategory($id_category);
   if ($res == '1') {
     header('Location:' . $_SERVER['PHP_SELF']);
     die;
@@ -47,7 +46,7 @@ if (isset($_POST['submit-movie'])) {
   <link rel="stylesheet" href="../styles/style2.css" />
   <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Delete movie</title>
+  <title>Delete category</title>
 </head>
 
 
@@ -151,19 +150,19 @@ if (isset($_POST['submit-movie'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Delete movie</h3>
+      <h3>Delete Category</h3>
 
       <form method="post" action="" class="text-center" enctype="multipart/form-data">
-        <select id="title" name="title" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- Movie --</option>
+        <select id="id_category" name="id_category" class="form-control me-4 my-4" required>
+          <option value disabled selected>-- category --</option>
           <?php
-          foreach ($allMovieName as $movie) {
-            echo '<option value="' . $movie['id_movie'] . '">' . $movie['title'] . '</option>';
+          foreach ($allCategory as $category) {
+            echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
           }
           ?>
         </select>
 
-        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Delete</button>
+        <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-category">Delete</button>
         <br>
       </form>
 

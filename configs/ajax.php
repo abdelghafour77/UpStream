@@ -100,6 +100,33 @@ if (isset($_POST["id_movie"])) {
         });
     </script>
 <?php
-    // break;
 }
-// }
+if (isset($_POST["id_actor"])) {
+
+    $getActor = new ActorView();
+    $output = $getActor->getActorById($_POST["id_actor"]);
+?>
+
+    <div id="actor">
+
+        <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="first name" value="<?php echo $output[0]['first_name']; ?>" required />
+        <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="last name" value="<?php echo $output[0]['last_name']; ?>" required />
+
+    </div>
+
+<?php
+}
+if (isset($_POST["id_category"])) {
+
+    $getCategory = new CategoryView();
+    $output = $getCategory->getCategoryById($_POST["id_category"]);
+?>
+
+    <div id="category">
+
+        <input class="form-control me-4 my-4" type="text" name="name" id="name" placeholder="name" value="<?php echo $output[0]['name']; ?>" required />
+
+    </div>
+
+<?php
+}
