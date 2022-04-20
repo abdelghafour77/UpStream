@@ -13,6 +13,18 @@ class UserController extends User
     {
         return $this->UpdateUserDB($id_user, $username, $email,  $password);
     }
+    public function disableAdmin($id_user)
+    {
+        return $this->disableAdminDB($id_user);
+    }
+    public function enableAdmin($id_user)
+    {
+        return $this->enableAdminDB($id_user);
+    }
+    public function deleteUser($id_user)
+    {
+        return $this->deleteUserDB($id_user);
+    }
     // public function addUser2($nom, $prenom, $email, $password)
     // {
     //     return $this->addUserDB2($nom, $prenom, $email, $password);

@@ -133,6 +133,12 @@ if (isset($_POST['submit-category'])) {
                                 </div>
                             </div>
                         </div>
+                        <div class="nav__dropdown">
+                            <a href="../user/list_users" class="nav__link">
+                                <i class='bx bx-list-ul nav__icon'></i>
+                                <span class="nav__name">List of Users</span>
+                            </a>
+                        </div>
 
 
                     </div>

@@ -1,3 +1,9 @@
+<?php
+require_once '../view/movieView.php';
+
+$getMovie = new MovieView();
+$NotificationMovie = $getMovie->getMovieNotification();
+?>
 <!-- Start Mobile Header -->
 <header class="mobile-header">
     <div class="mobile-header-content">

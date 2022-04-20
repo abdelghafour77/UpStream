@@ -9,4 +9,8 @@ class UserView extends User
 	{
 		return $this->getUserDB($email);
 	}
+	public function getAllUser()
+	{
+		return $this->getAllUserDB();
+	}
 }

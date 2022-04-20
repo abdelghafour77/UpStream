@@ -22,23 +22,7 @@ class User extends Connection
 		return 1;
 	}
 
-	// protected function addUserDB2($name, $email, $password)
-	// {
-	// 	$sql = "SELECT name FROM user WHERE email = ? ";
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$email]);
-	// 	$result = $stmt->fetch();
-	// 	if (isset($result["name"])) {
-	// 		$_SESSION['message'] = " Email deja ajouter  ";
-	// 		return 2;
-	// 	}
-	// 	$sql = "INSERT INTO user (name,email,password)values(?,?,?)";
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$name, $email, $password]);
-	// 	$_SESSION['message'] = 'ajouter';
 
-	// 	return 1;
-	// }
 	protected function getUserDB($email)
 	{
 		$sql = "SELECT *  FROM user WHERE email = ? ";
@@ -51,6 +35,17 @@ class User extends Connection
 			$_SESSION['message'] = "Email incorrect";
 			return 1;
 		}
+		$_SESSION['message'] = "Email correct";
+		// die(var_dump($res));
+		return $res;
+	}
+	protected function getAllUserDB()
+	{
+		$sql = "SELECT *  FROM user ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$res = $stmt->fetchAll();
 		$_SESSION['message'] = "Email correct";
 		// die(var_dump($res));
 		return $res;
@@ -76,6 +71,40 @@ class User extends Connection
 
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute([$name, $email, $password, $id_user]);
+		$_SESSION['message'] = 'modifier';
+
+		return 1;
+	}
+	protected function disableAdminDB($id_user)
+	{
+		$sql = "UPDATE user SET 
+		admin = NULL
+		WHERE id_user = ? ; ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_user]);
+		$_SESSION['message'] = 'modifier';
+
+		return 1;
+	}
+	protected function enableAdminDB($id_user)
+	{
+		$sql = "UPDATE user SET 
+		admin = 1
+		WHERE id_user = ? ; ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_user]);
+		$_SESSION['message'] = 'modifier';
+
+		return 1;
+	}
+	protected function deleteUserDB($id_user)
+	{
+
+		$sql = "DELETE from user WHERE id_user = ? ; ";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_user]);
 		$_SESSION['message'] = 'modifier';
 
 		return 1;

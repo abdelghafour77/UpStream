@@ -20,8 +20,6 @@ $sixMovie = $getMovie->getSixMovie();
 $getMovie = new MovieView();
 $someMovie = $getMovie->getSomeMovie();
 
-$getMovie = new MovieView();
-$NotificationMovie = $getMovie->getMovieNotification();
 
 
 // foreach ($allLanguage as $languag) {
