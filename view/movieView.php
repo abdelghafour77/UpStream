@@ -28,4 +28,8 @@ class MovieView extends Movie
 	{
 		return $this->getMovieNotificationDB();
 	}
+	public function findMovie($keyword)
+	{
+		return $this->findMovieDB($keyword);
+	}
 }

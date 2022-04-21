@@ -237,79 +237,30 @@ class Movie extends Connection
 
 		return $result;
 	}
-	// protected function getCoursDB1($id)
-	// {
-	// 	// $sql = "SELECT * FROM cours WHERE id_cours=?";
 
-	// 	$sql = "SELECT co.id_cours as id_cours ,
-	// 	co.titre as titre ,
-	// 	co.date_pub as date ,
-	// 	co.description as description ,
-	// 	co.id_module as id_module,
-	// 	co.file_Adr as file_Adr,
-	// 	co.date_Pub as date_Pub,
-	// 	u.nom as n_auteur ,
-	// 	u.prenom as p_auteur,
-	// 	u.specialite as specialite,
-	// 	u.admin as admin
-	// 	FROM
-	// 	cours co , utilisateur u 
-	// 	 WHERE
-	// 	co.id_auteur = u.id
-	// 	 and
-	// 	co.id_cours =?";
 
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$id]);
-	// 	$result = $stmt->fetchAll();
+	protected function findMovieDB($keyword)
+	{
+		$keyword = "%" . $keyword . "%";
 
-	// 	return $result;
-	// }
-	// protected function getCoursDB2($module)
-	// {
-	// 	// $sql = "SELECT * FROM cours WHERE id_cours=?";
 
-	// 	$sql = "SELECT co.id_cours as id_cours ,
-	// 	co.titre as titre ,
-	// 	co.date_pub as date ,
-	// 	co.description as description ,
-	// 	co.date_Pub as date_Pub,
-	// 	m.titre as module,
-	// 	u.nom as n_auteur ,
-	// 	u.prenom as p_auteur
-	// 	FROM
-	// 	cours co , utilisateur u ,module m
-	// 	 WHERE
-	// 	co.id_auteur = u.id
-	// 	 and
-	// 	co.id_module = m.id_module
-	// 	 and
-	// 	co.id_module =?";
+		$sql = " SELECT 
+			id_movie,
+			title,
+			date,
+			language,
+			cover,
+			duration,
+			director
+	  	FROM
+		   movie
+	  	WHERE
+			title LIKE ? or
+			description LIKE ? ";
 
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$module]);
-	// 	$result = $stmt->fetchAll();
-
-	// 	return $result;
-	// }
-	// 
-	// protected function deleteCoursDB($id_cours)
-	// {
-	// 	$sql = "SELECT * FROM cours WHERE id_cours = ? ; ";
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$id_cours]);
-	// 	$result = $stmt->fetch();
-	// 	if ($result['file_Adr'] != '') {
-	// 		$link = "../uploads/cours/" . $result['file_Adr'];
-	// 		unlink($link);
-	// 	}
-
-	// 	$sql = "DELETE from cours WHERE id_cours = ? ;";
-
-	// 	$stmt = $this->connect()->prepare($sql);
-	// 	$stmt->execute([$id_cours]);
-	// 	$_SESSION['message'] = 'supprimer';
-
-	// 	return 1;
-	// }
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$keyword, $keyword]);
+		$result = $stmt->fetchAll();
+		return $result;
+	}
 }

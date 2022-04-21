@@ -103,10 +103,9 @@ session_start();
       <!-- Contact Us Section End -->
     </div>
     <!-- Main Content End -->
+
     <?php
     require_once '../include/footer.php';
-    ?>
-    <?php
     require_once '../include/js.php';
     ?>
 </body>

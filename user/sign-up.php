@@ -179,7 +179,14 @@ if (isset($_POST['sign-up'])) {
   </div>
   <!-- Main Class End -->
   <!-- Start Search Modal -->
-  <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
+  <div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+      <input type="search" value="" placeholder="type keyword(s) here" />
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  <!-- <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="search-panel">
@@ -192,7 +199,7 @@ if (isset($_POST['sign-up'])) {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- End Search Modal -->
   <?php
   require_once '../include/filter.php';

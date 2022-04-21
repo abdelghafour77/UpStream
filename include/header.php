@@ -92,8 +92,18 @@ $NotificationMovie = $getMovie->getMovieNotification();
                 <ul class="nav d-flex align-items-center list-inline m-0 float-right">
                     <li class="nav-item">
                         <div class="nav-search">
-                            <a class="nav-link modal-popup" href="index.php#search-popup"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#search" class="nav-link ">
+                                <i class="fa-solid fa-magnifying-glass">
+                                </i>
+                            </a>
                         </div>
+                        <!-- <div class="container ">
+                            <input type="text" placeholder="Search...">
+                            <div class="search"></div>
+                        </div> -->
+                        <!-- <div class="nav-search">
+                            <a class="nav-link modal-popup" href="index.php#search-popup"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div> -->
                         <!-- Search Icon End -->
                     </li>
                     <li class="nav-item dropdown">

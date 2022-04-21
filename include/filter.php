@@ -1,3 +1,35 @@
+  <!-- Start Search Modal -->
+  <div id="search">
+      <button type="button" class="close">×</button>
+      <form action="search" method="get">
+          <input name="search" type="search" value="" placeholder="type movie name here" />
+          <input type="submit" class="btn btn-primary" />
+      </form>
+  </div>
+  <!-- <div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+      <input type="search" value="" placeholder="type keyword(s) here" />
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  <!-- <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="search-panel">
+          <form class="search-group">
+            <div class="input-group">
+              <input class="form-control" name="s" placeholder="Search" type="search" value="" />
+              <button class="input-group-btn search-button"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- End Search Modal -->
+
+
   <!-- Start Filter Sidebar -->
   <div class="filter-sidebar" id="f-Sidebar">
       <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"><i class="fas fa-times"></i></a>

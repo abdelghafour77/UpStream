@@ -355,26 +355,8 @@ $duration = "$hours hr $minutes min";
     ?>
   </div>
   <!-- Main Class End -->
-  <!-- Start Search Modal -->
-  <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="search-panel">
-          <form class="search-group">
-            <div class="input-group">
-              <input class="form-control" name="s" placeholder="Search" type="search" value="" />
-              <button class="input-group-btn search-button"><i class="fas fa-search"></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Search Modal -->
   <?php
   require_once '../include/filter.php';
-  ?>
-  <?php
   require_once '../include/js.php';
   ?>
 </body>

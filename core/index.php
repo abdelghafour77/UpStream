@@ -295,7 +295,7 @@ $someMovie = $getMovie->getSomeMovie();
                       <!-- Video Thumb End -->
                       <div class="video-content">
                         <h2 class="video-title">
-                          <a href="single"><?php echo $movie['title']; ?></a>
+                          <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a>
                         </h2>
                         <?php
                         $hours = floor($movie['duration'] / 3600);
@@ -427,16 +427,22 @@ $someMovie = $getMovie->getSomeMovie();
                       <!-- Video Thumb End -->
                       <div class="video-content">
                         <h2 class="video-title">
-                          <a href="single"><?php echo $movie['title']; ?></a>
+                          <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a>
                         </h2>
                         <div class="video-info d-flex align-items-center">
-                          <span class="video-year"><?php echo $movie['date']; ?></span> <span class="video-age">+18</span>
+                          <span class="video-year"><?php echo $movie['date']; ?></span>
                           <?php
                           $hours = floor($movie['duration'] / 3600);
                           $minutes = floor(($movie['duration'] / 60) % 60);
                           $duration = $hours . "h " . $minutes . "m";
                           ?>
-                          <span class="video-type"><?php echo $duration; ?></span>
+                          <span class="video-age"><?php echo $duration; ?></span>
+                          <?php
+                          foreach ($allLanguage as $language) {
+                            if ($language['id_language'] == $movie['language']) {
+                              echo '<span class="video-type">' . $language["name"] . '</span>';
+                            }
+                          } ?>
                         </div>
                       </div>
                       <!-- video Content End -->
@@ -461,27 +467,9 @@ $someMovie = $getMovie->getSomeMovie();
     ?>
   </div>
   <!-- Main Class End -->
-  <!-- Start Search Modal -->
-  <div class="zoom-anim-dialog mfp-hide modal-searchPanel search-form" id="search-popup">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="search-panel">
-          <form class="search-group">
-            <div class="input-group">
-              <input class="form-control" name="s" placeholder="Search" type="search" value="" />
-              <button class="input-group-btn search-button"><i class="fas fa-search"></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Search Modal -->
-  <?php
-  require_once '../include/filter.php';
-  ?>
 
   <?php
+  require_once '../include/filter.php';
   require_once '../include/js.php';
   ?>
 
