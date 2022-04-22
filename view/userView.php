@@ -13,4 +13,8 @@ class UserView extends User
 	{
 		return $this->getAllUserDB();
 	}
+	public function countUser()
+	{
+		return $this->countUserDB();
+	}
 }

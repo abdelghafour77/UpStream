@@ -94,6 +94,16 @@ class Movie extends Connection
 
 		return $result;
 	}
+	protected function countMovieDB()
+	{
+		$sql = "SELECT count(*)  FROM movie ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$res = $stmt->fetch();
+		// die(var_dump($res));
+		return $res;
+	}
 	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor, $director)
 	{
 

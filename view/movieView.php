@@ -32,4 +32,8 @@ class MovieView extends Movie
 	{
 		return $this->findMovieDB($keyword);
 	}
+	public function countMovie()
+	{
+		return $this->countMovieDB();
+	}
 }

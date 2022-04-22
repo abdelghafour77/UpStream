@@ -50,15 +50,14 @@ class User extends Connection
 		// die(var_dump($res));
 		return $res;
 	}
-	protected function getUserDB2($email)
+	protected function countUserDB()
 	{
-		$sql = "SELECT name, id  FROM user WHERE email = ? ";
+		$sql = "SELECT count(*)  FROM user ";
 
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$email]);
-		$result = $stmt->fetch();
-		$res = array('name' => $result['name'], 'id' => $result['id']);
-
+		$stmt->execute();
+		$res = $stmt->fetch();
+		// die(var_dump($res));
 		return $res;
 	}
 	protected function UpdateUserDB($id_user, $name, $email, $password)
