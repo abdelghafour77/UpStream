@@ -39,7 +39,7 @@ $movies = $movie->countMovie();
               <ol class="breadcrumb">
                 <li>
                   <i class="fa fa-home"></i>
-                  <a href="about">Home</a>
+                  <a href="../">Home</a>
                   <i class="fa fa-angle-right"></i>
                 </li>
                 <li><a href="about">About Us</a></li>
@@ -126,7 +126,7 @@ $movies = $movie->countMovie();
                 attachment with each other are what friends share between each other. These are just the general traits of a friendship. To experience what is
                 friendship, one must have true friends, who are indeed rare treasure.
               </p>
-              <a class="btn hvr-sweep-to-right">Subscribe Now</a>
+              <a href="../user/sign-up" class="btn hvr-sweep-to-right">JOIN US</a>
             </div>
             <!-- Col End -->
           </div>
