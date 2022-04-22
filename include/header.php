@@ -47,9 +47,11 @@ $NotificationMovie = $getMovie->getMovieNotification();
                                     <a class="nav-link" href="../core/movies">Movies</a>
                                 </li>
                                 <!-- Nav Item 2 End -->
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="../core/shows">Shows</a>
-                                </li> -->
+                                <?php if (isset($_SESSION['id_user'])) { ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../core/mylist">My list</a>
+                                    </li>
+                                <?php } ?>
                                 <!-- Nav Item 3 End -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">More <i class="fa fa-angle-down"></i></a>

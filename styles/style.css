@@ -644,7 +644,10 @@ ul.list-check li:before {
 }
 
 .video-block .video-thumb {
-    max-width: 100%;
+    /* max-width: 100%; */
+    width: 150px;
+    height: 210px;
+    object-fit: cover;
     position: relative;
     overflow: hidden;
     margin-bottom: 15px;
@@ -1693,8 +1696,9 @@ ul.navbar-nav > li.active a::before {
 
 [class^=swiper-button-] {
     width: 44px;
-    opacity: 0;
-    visibility: hidden;
+    
+    /* opacity: 0;
+    visibility: hidden; */
 }
 
 .swiper-button-prev {
@@ -2593,3 +2597,100 @@ To Top Button
 	font-size: 27px;
     z-index: 11;
 }
+
+        /** Click on ⚙️ to view CSS libraries used - https://unpkg.com/swiper/swiper-bundle.min.css CSS Used below is just to prettify demo. */
+        .swiper-slider {
+            --swiper-navigation-color: #fff;
+            --swiper-theme-color: #fff;
+            height: 50vh;
+            min-height: 640px;
+            max-height: 960px;
+        }
+
+        .swiper-slide {
+            background-color: #0f0f0f;
+        }
+
+        .swiper-slide::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70%;
+            height: 100%;
+            background-color: #3d405b;
+            z-index: 1;
+            background: linear-gradient(90deg, rgb(39 40 41) 0%, rgb(39 40 41) 35%, rgba(83, 100, 141, 0) 100%);
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* opacity: 0.75; */
+        }
+
+        .swiper-slide__title {
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            position: absolute;
+            /* left: 10%; */
+            /* top: 20%; */
+            /* transform: translate(0, -50%); */
+            /* z-index: 2; */
+            /* letter-spacing: -2px; */
+            /* opacity: 0.5; */
+            transition: 0.3s;
+        }
+
+        .swiper-slide__text {
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            /* position: absolute; */
+            /* left: 10%; */
+            /* top: 60%; */
+            /* transform: translate(0, -50%); */
+            /* z-index: 2; */
+            /* letter-spacing: -2px; */
+            /* opacity: 0.5; */
+            transition: 0.3s;
+            /* z-index: 99; */
+        }
+
+        .swiper-slide__text.slider-buttons {
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            position: absolute;
+            /* left: 10%; */
+            /* top: 80%; */
+            /* transform: translate(0, -50%); */
+            /* z-index: 2; */
+            /* letter-spacing: -2px; */
+            /* opacity: 0.5; */
+            transition: 0.3s;
+            /* z-index: 99; */
+        }
+
+        .swiper-slide h1 {
+            font-size: 5rem;
+            /* z-index: 211; */
+        }
+
+        .swiper-slide p {
+            font-size: 1rem;
+            /* z-index: 2; */
+        }
+
+        .swiper-slide h2 {
+            font-size: 4rem;
+            /* z-index: 2; */
+        }
+
+        .swiper-slide.swiper-slide-active #0f0f0f__title {
+            opacity: 1;
+
+        }
+
+        /** Just some extra styles non-related to the swiper */
+    

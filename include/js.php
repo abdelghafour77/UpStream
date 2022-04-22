@@ -17,6 +17,8 @@
   <script src="../js/slick.js"></script>
   <!-- jQuery Slick Animation -->
   <script src="../js/slick-animation.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <!-- jQuery Pop-up Search -->
   <script src="../js/jquery.magnific-popup.min.js"></script>
   <!-- jQuery Swiper Slider -->

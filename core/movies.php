@@ -4,6 +4,34 @@ require_once '../view/movieView.php';
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/myListView.php';
+require_once '../controller/myListController.php';
+
+if (isset($_GET['tl'])) {
+
+  $id_movie = $_GET['tl'];
+  $id_user = $_SESSION['id_user'];
+
+  $addList = new MylistController();
+  $r = $addList->addToList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF']);
+}
+if (isset($_GET['tld'])) {
+
+  $id_movie = $_GET['tld'];
+  $id_user = $_SESSION['id_user'];
+
+  $deleteList = new MylistController();
+  $r = $deleteList->deleteFromList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF']);
+}
+if (isset($_SESSION['id_user'])) {
+  $id_user = $_SESSION['id_user'];
+
+  $getMovie = new MyListView();
+  $fMovie = $getMovie->getList($id_user);
+  // die(var_dump($Movie));
+}
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -46,256 +74,62 @@ $someMovie = $getMovie->getSomeMovie();
     require_once '../include/header.php';
     ?>
     <!-- Start Swiper Slider -->
-    <div class="swiper-container swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab">
-      <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1011.75px, 0px, 0px); perspective-origin: 1686.25px 50%">
-        <div class="swiper-slide swiper-bg swiper-slide-duplicate" style="
-              background-image: url('../img/04.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(100deg);
-              z-index: -1;
-            " data-swiper-slide-index="3">
-          <img src="../img/04.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
+    <div class="swiper-container swiper-container-coverflow swiper-container-3d swiper-container-horizontal" style="cursor: grab ;">
+      <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-861.75px, 0px, 0px); perspective-origin: 1436.25px 50%">
+        <?php
+        foreach ($sixMovie as $movie) {
+        ?>
+          <div class="swiper-slide swiper-bg" style="
+                        background-image: url('<?php echo $movie['cover']; ?>');
+                        width: 574.5px;
+                        transition-duration: 0ms;
+                        transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
+                        z-index: 1;
+                      " data-swiper-slide-index="0">
+            <img alt="" class="entity-img" src="<?php echo $movie['cover']; ?>" />
+            <div class="top-badge">
+              <div class="video-badge">
+                <img alt="" class="img-fluid" src="../img/top-movies.png" />
+              </div>
             </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-              hard life
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+            <div class="content" style="z-index: 10;">
+              <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
+                <?php echo $movie['title']; ?>
+              </p>
+              <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">
+                <?php echo $movie['description']; ?></span>
+              <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
+                <a class="btn hvr-sweep-to-right" href="watching.php?w=<?php echo $movie['id_movie']; ?>" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                <?php
+                if (isset($_SESSION['id_user'])) {
+                ?>
+
+                  <?php
+                  $state = "fas fa-plus mr-2";
+                  foreach ($fMovie as $list) {
+                    if ($list['id_movie'] == $movie['id_movie']) {
+                      $state = "fas fa-minus mr-2";
+                    }  ?>
+
+                  <?php
+                  }
+                  if ($state == "fas fa-minus mr-2") { ?>
+                    <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tld=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                  <?php  } else { ?>
+                    <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tl=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                  <?php }
+                  ?>
+
+                <?php
+                } ?>
+              </div>
             </div>
+            <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
+            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
           </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 2; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-        </div>
-        <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-prev" style="
-              background-image: url('../img/05.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -99.9259px) rotateX(0deg) rotateY(49.9629deg);
-              z-index: 0;
-            " data-swiper-slide-index="4">
-          <img src="../img/05.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9778%, 0px, 0px) scale(0.700222)">
-              Destiny
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(-19.9852%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(-29.9778%, 0px, 0px) scale(0.700222)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0.999259; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-        </div>
-        <div class="swiper-slide swiper-bg swiper-slide-active" style="
-              background-image: url('../img/01.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg);
-              z-index: 1;
-            " data-swiper-slide-index="0">
-          <img src="../img/01.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-              A dam wind
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms"></div>
-        </div>
-        <!-- Slide 1 End -->
-        <div class="swiper-slide swiper-bg swiper-slide-next" style="
-              background-image: url('../img/02.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -100.074px) rotateX(0deg) rotateY(-50.0371deg);
-              z-index: 0;
-            " data-swiper-slide-index="1">
-          <img src="../img/02.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              the message
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 1.00074; transition-duration: 0ms"></div>
-        </div>
-        <!-- Slide 2 End -->
-        <div class="swiper-slide swiper-bg" style="
-              background-image: url('../img/03.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(-100deg);
-              z-index: -1;
-            " data-swiper-slide-index="2">
-          <img src="../img/03.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              Verbal messages
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 2; transition-duration: 0ms"></div>
-        </div>
-        <!-- Slide 3 End -->
-        <div class="swiper-slide swiper-bg" style="
-              background-image: url('../img/04.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -300.074px) rotateX(0deg) rotateY(-150.037deg);
-              z-index: -2;
-            " data-swiper-slide-index="3">
-          <img src="../img/04.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              hard life
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 3.00074; transition-duration: 0ms"></div>
-        </div>
-        <!-- Slide 4 End -->
-        <div class="swiper-slide swiper-bg swiper-slide-duplicate-prev" style="
-              background-image: url('../img/05.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(-200deg);
-              z-index: -3;
-            " data-swiper-slide-index="4">
-          <img src="../img/05.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              Destiny
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 4; transition-duration: 0ms"></div>
-        </div>
-        <!-- Slide 5 End -->
-        <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-active" style="
-              background-image: url('../img/01.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -500.074px) rotateX(0deg) rotateY(-250.037deg);
-              z-index: -4;
-            " data-swiper-slide-index="0">
-          <img src="../img/01.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              A dam wind
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 5.00074; transition-duration: 0ms"></div>
-        </div>
-        <div class="swiper-slide swiper-bg swiper-slide-duplicate swiper-slide-duplicate-next" style="
-              background-image: url('../img/02.jpg');
-              width: 674.5px;
-              transition-duration: 0ms;
-              transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(-300deg);
-              z-index: -5;
-            " data-swiper-slide-index="1">
-          <img src="../img/02.jpg" class="entity-img" alt="" />
-          <div class="top-badge">
-            <div class="video-badge">
-              <img class="img-fluid" src="../img/top-movies.png" alt="" />
-            </div>
-          </div>
-          <div class="content">
-            <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              the message
-            </p>
-            <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(20%, 0px, 0px)">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-              type specimen book.</span>
-            <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(30%, 0px, 0px) scale(0.7)">
-              <a href="watching" class="btn hvr-sweep-to-right" tabindex="0"><i class="fa fa-play mr-2" aria-hidden="true"></i>Play Now</a>
-              <a href="movies" class="btn hvr-sweep-to-right ml-3" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-            </div>
-          </div>
-          <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
-          <div class="swiper-slide-shadow-right" style="opacity: 6; transition-duration: 0ms"></div>
-        </div>
+          <!-- Slide  End -->
+        <?php } ?>
+
       </div>
       <!-- Swiper Wrapper -->
       <div class="swiper-button-prev swiper-button-white" tabindex="0" role="button" aria-label="Previous slide"></div>
@@ -328,6 +162,9 @@ $someMovie = $getMovie->getSomeMovie();
                                 <li>
                                   <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                                 </li>
+                                <?php
+                                include '../include/list.php';
+                                ?>
                                 <li>
                                   <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                                 </li>

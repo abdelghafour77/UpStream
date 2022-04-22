@@ -4,7 +4,34 @@ require_once '../view/movieView.php';
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/myListView.php';
+require_once '../controller/myListController.php';
 
+if (isset($_GET['tl'])) {
+
+  $id_movie = $_GET['tl'];
+  $id_user = $_SESSION['id_user'];
+
+  $addList = new MylistController();
+  $r = $addList->addToList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF']);
+}
+if (isset($_GET['tld'])) {
+
+  $id_movie = $_GET['tld'];
+  $id_user = $_SESSION['id_user'];
+
+  $deleteList = new MylistController();
+  $r = $deleteList->deleteFromList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF']);
+}
+if (isset($_SESSION['id_user'])) {
+  $id_user = $_SESSION['id_user'];
+
+  $getMovie = new MyListView();
+  $fMovie = $getMovie->getList($id_user);
+  // die(var_dump($Movie));
+}
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
 
@@ -54,134 +81,96 @@ $someMovie = $getMovie->getSomeMovie();
     <?php
     require_once '../include/header.php';
     ?>
-    <style>
-      .slick-bg.bg-1 {
-        background-image: url(../img/slider2.jpg);
-      }
 
-      .slick-bg.bg-2 {
-        background-image: url(../img/slider2.jpg);
-      }
-
-      .slick-bg.bg-3 {
-        background-image: url(../img/slider3.jpg);
-      }
-    </style>
     <!-- Start Main Slider -->
-    <div class="main-slider" id="main-slider">
-      <div class="slider big-slider slider-wrap slick-initialized slick-slider slick-dotted">
-        <i class="prev-arrow fas fa-chevron-left slick-arrow"></i>
-        <div class="slick-list draggable" style="height: 750px">
-          <div class="slick-track" style="opacity: 1; width: 4047px">
-            <div class="slide slick-bg bg-1 slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1349px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
-              <div class="container-fluid position-relative h-100">
-                <div class="slider-content h-100">
-                  <div class="row align-items-center h-100">
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                      <h3 data-animation-in="fadeInUp" data-delay-in="1" class="fadeInUp animated" style="opacity: 1; animation-delay: 1s">
-                        <span class="badge bg-warning text-dark">New</span>
-                      </h3>
-                      <h1 data-animation-in="fadeInUp" data-delay-in="1" class="fadeInUp animated" style="opacity: 1; animation-delay: 1s">Iron door</h1>
-                      <div class="slide-info fadeInUp animated" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 1; animation-delay: 1s">
-                        <span>2021</span> <span class="radius">+18</span> <span>2h 6m</span>
-                      </div>
-                      <p data-animation-in="fadeInUp" data-delay-in="1" class="fadeInUp animated" style="opacity: 1; animation-delay: 1s">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                        the 1500s.
-                      </p>
-                      <div class="slider-buttons d-flex align-items-center fadeInUp animated" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 1; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <!-- Col End -->
-                  </div>
-                  <!-- Row End -->
-                </div>
-                <!-- Slider Content End -->
+
+    <!-- Slider main container -->
+    <div class="swiper-slider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <?php
+        foreach ($sixMovie as $movie) {
+        ?>
+          <div class="swiper-slide ">
+            <div class="" style="position: absolute;left: 8%;top: 24%; z-index: 2;">
+              <h3>
+                <span class="badge bg-warning text-dark fadeInUp animated">New</span>
+              </h3>
+              <h1 class="swiper-slide__titlea fadeInUp animated mb-4">
+                <?php
+                $string = strip_tags($movie['title']);
+                if (strlen($string) > 28) {
+
+                  // truncate string
+                  $stringCut = substr($string, 0, 28);
+                  $endPoint = strrpos($stringCut, ' ');
+
+                  //if the string doesn't contain any space then it will cut without word basis.
+                  $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                  $string .= ' ...';
+                }
+                echo $string;
+                ?></h1>
+              <div class="slide-info swiper-slide__text fadeInUp animated">
+                <span></span>
+                <span class="radius">+18</span>
+                <span>
+                  <?php $hours = floor($movie['duration'] / 3600);
+                  $minutes = floor(($movie['duration'] / 60) % 60);
+                  $duration = $hours . "h " . $minutes . "m";
+                  echo $duration; ?>
+                </span>
               </div>
-              <!-- Container End -->
-            </div>
-            <div class="slide slick-bg bg-2 slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1349px; position: relative; left: -1349px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms cubic-bezier(0.7, 0, 0.3, 1) 0s" tabindex="-1" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01">
-              <div class="container-fluid position-relative h-100">
-                <div class="slider-content h-100">
-                  <div class="row align-items-center h-100">
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                      <h3 data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">
-                        <span class="badge bg-warning text-dark">New</span>
-                      </h3>
-                      <h1 data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">The Earth</h1>
-                      <div class="slide-info" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <span>2021</span> <span class="radius">+18</span> <span>2h 6m</span>
-                      </div>
-                      <p data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                        the 1500s.
-                      </p>
-                      <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="-1"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <!-- Col End -->
-                  </div>
-                  <!-- Row End -->
-                </div>
-                <!-- Slider Content End -->
+              <p class="fadeInUp animated swiper-slide__text col-xl-6 col-lg-12 col-md-12">
+                <?php
+                $string = strip_tags($movie['description']);
+                if (strlen($string) > 130) {
+
+                  // truncate string
+                  $stringCut = substr($string, 0, 240);
+                  $endPoint = strrpos($stringCut, ' ');
+
+                  //if the string doesn't contain any space then it will cut without word basis.
+                  $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                  $string .= ' ...';
+                }
+                echo $string;
+                ?>
+              </p>
+              <div class="slider-buttons d-flex align-items-center fadeInUp animated">
+                <a class="btn hvr-sweep-to-right" href="watching.php?w=<?php echo $movie['id_movie']; ?>">
+                  <i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
+                <?php
+                if (isset($_SESSION['id_user'])) {
+                  $state = "fas fa-plus mr-2";
+                  foreach ($fMovie as $list) {
+                    if ($list['id_movie'] == $movie['id_movie']) {
+                      $state = "fas fa-minus mr-2";
+                    }
+                  }
+                  if ($state == "fas fa-minus mr-2") { ?>
+                    <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tld=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                  <?php  } else { ?>
+                    <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tl=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                <?php
+                  }
+                }
+                ?>
               </div>
-              <!-- Container End -->
             </div>
-            <div class="slide slick-bg bg-3 slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1349px; position: relative; left: -2698px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms cubic-bezier(0.7, 0, 0.3, 1) 0s" tabindex="-1" role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02">
-              <div class="container-fluid position-relative h-100">
-                <div class="slider-content h-100">
-                  <div class="row align-items-center h-100">
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                      <h3 data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">
-                        <span class="badge bg-warning text-dark">New</span>
-                      </h3>
-                      <h1 data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">City dreams</h1>
-                      <div class="slide-info" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <span>2021</span> <span class="radius">+18</span> <span>2h 6m</span>
-                      </div>
-                      <p data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s" class="">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                        the 1500s.
-                      </p>
-                      <div class="slider-buttons d-flex align-items-center" data-animation-in="fadeInUp" data-delay-in="1" style="opacity: 0; animation-delay: 1s">
-                        <a class="btn hvr-sweep-to-right" href="watching" tabindex="-1"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                        <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="-1"><i class="fas fa-plus mr-2"></i>My List</a>
-                      </div>
-                    </div>
-                    <!-- Col End -->
-                  </div>
-                  <!-- Row End -->
-                </div>
-                <!-- Slider Content End -->
-              </div>
-              <!-- Container End -->
-            </div>
+            <img src="<?php echo $movie['cover']; ?>" alt="Placeholder image with tag Apple">
           </div>
-        </div>
-        <!-- Slide 1 End -->
-
-        <!-- Slide 2 End -->
-
-        <!-- Slide 3 End -->
-        <i class="next-arrow fas fa-chevron-right slick-arrow"></i>
-        <ul class="slick-dots" role="tablist">
-          <li class="slick-active" role="presentation">
-            <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button>
-          </li>
-          <li role="presentation" class="">
-            <button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3" tabindex="-1">2</button>
-          </li>
-          <li role="presentation" class="">
-            <button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3" tabindex="-1">3</button>
-          </li>
-        </ul>
+        <?php } ?>
       </div>
-      <!-- Slide Wrap End -->
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
+
     <!-- Main Slider End -->
     <!-- Start Main Content -->
     <div class="main-content">
@@ -207,9 +196,9 @@ $someMovie = $getMovie->getSomeMovie();
                                 <li>
                                   <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                                 </li>
-                                <li>
-                                  <a href="./#"><i class="fas fa-plus"></i></a>
-                                </li>
+                                <?php
+                                include '../include/list.php';
+                                ?>
                                 <li>
                                   <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                                 </li>
@@ -282,9 +271,8 @@ $someMovie = $getMovie->getSomeMovie();
                             <li>
                               <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                             </li>
-                            <li>
-                              <a href="./#"><i class="fas fa-plus"></i></a>
-                            </li>
+                            <?php
+                            include '../include/list.php'; ?>
                             <li>
                               <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                             </li>
@@ -362,15 +350,48 @@ $someMovie = $getMovie->getSomeMovie();
                           <img alt="" class="img-fluid" src="../img/top-movies.png" />
                         </div>
                       </div>
-                      <div class="content">
+                      <div class="content" style="z-index: 10;">
                         <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
-                          <?php echo $movie['title']; ?>
+                          <?php
+                          $string = strip_tags($movie['title']);
+                          if (strlen($string) > 32) {
+
+                            // truncate string
+                            $stringCut = substr($string, 0, 32);
+                            $endPoint = strrpos($stringCut, ' ');
+
+                            //if the string doesn't contain any space then it will cut without word basis.
+                            $string = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                            $string .= ' ...';
+                          }
+                          echo $string; ?>
                         </p>
                         <span class="caption mb-4" data-swiper-parallax="-20%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px)">
                           <?php echo $movie['description']; ?></span>
                         <div class="slider-buttons d-flex align-items-center" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px) scale(1)">
                           <a class="btn hvr-sweep-to-right" href="watching.php?w=<?php echo $movie['id_movie']; ?>" tabindex="0"><i aria-hidden="true" class="fa fa-play mr-2"></i>Play Now</a>
-                          <a class="btn hvr-sweep-to-right ml-3" href="./#" tabindex="0"><i class="fas fa-plus mr-2"></i>My List</a>
+                          <?php
+                          if (isset($_SESSION['id_user'])) {
+                          ?>
+
+                            <?php
+                            $state = "fas fa-plus mr-2";
+                            foreach ($fMovie as $list) {
+                              if ($list['id_movie'] == $movie['id_movie']) {
+                                $state = "fas fa-minus mr-2";
+                              }  ?>
+
+                            <?php
+                            }
+                            if ($state == "fas fa-minus mr-2") { ?>
+                              <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tld=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                            <?php  } else { ?>
+                              <a class="btn hvr-sweep-to-right ml-3" href="<?php echo $_SERVER['PHP_SELF'] . '?tl=' . $movie['id_movie']; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                            <?php }
+                            ?>
+
+                          <?php
+                          } ?>
                         </div>
                       </div>
                       <div class="swiper-slide-shadow-left" style="opacity: 0; transition-duration: 0ms"></div>
@@ -415,7 +436,9 @@ $someMovie = $getMovie->getSomeMovie();
                               <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                             </li>
                             <li>
-                              <a href="./#"><i class="fas fa-plus"></i></a>
+                              <?php
+                              include '../include/list.php';
+                              ?>
                             </li>
                             <li>
                               <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
@@ -427,7 +450,9 @@ $someMovie = $getMovie->getSomeMovie();
                       <!-- Video Thumb End -->
                       <div class="video-content">
                         <h2 class="video-title">
-                          <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a>
+                          <a href="watching.php?w=<?php echo $movie['id_movie']; ?>">
+                            <?php
+                            echo $movie['title']; ?></a>
                         </h2>
                         <div class="video-info d-flex align-items-center">
                           <span class="video-year"><?php echo $movie['date']; ?></span>

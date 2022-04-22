@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 19 avr. 2022 à 05:45
+-- Généré le : ven. 22 avr. 2022 à 19:00
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -81,14 +81,14 @@ CREATE TABLE IF NOT EXISTS `actor` (
   `last_name` varchar(250) NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_actor`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `actor`
 --
 
 INSERT INTO `actor` (`id_actor`, `first_name`, `last_name`, `last_update`) VALUES
-(1, 'Leonardo ', 'DiCaprio', '2022-04-17 21:32:55'),
+(1, 'Leonardo', 'DiCaprio', '2022-04-17 21:32:55'),
 (2, 'Johnny', 'Depp', '2022-04-17 21:39:06'),
 (3, 'Margot', 'Robbie', '2022-04-17 21:39:06'),
 (4, 'Tom', 'Cruise', '2022-04-17 21:39:06'),
@@ -289,14 +289,21 @@ INSERT INTO `movie` (`id_movie`, `title`, `date`, `description`, `language`, `li
 
 DROP TABLE IF EXISTS `my_list`;
 CREATE TABLE IF NOT EXISTS `my_list` (
-  `id_list` int NOT NULL AUTO_INCREMENT,
   `id_movie` int NOT NULL,
   `id_user` int NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_list`),
   KEY `id_movie` (`id_movie`),
   KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `my_list`
+--
+
+INSERT INTO `my_list` (`id_movie`, `id_user`, `last_update`) VALUES
+(20, 1, '2022-04-22 18:43:58'),
+(19, 1, '2022-04-22 18:44:04'),
+(21, 1, '2022-04-22 18:53:24');
 
 -- --------------------------------------------------------
 
@@ -322,8 +329,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `picture`, `admin`, `super`, `last_update`) VALUES
-(1, 'abdelghafour', 'miso.abdo@gmail.com', '$2y$10$N0uycKS0VmvBNdvVlh9GU.Wt2S6PsOIh29fHwVYSmAkIafIDNdJzu', 'aouad_abdo.jpg', 1, 1, '2022-04-17 20:29:29'),
-(9, 'alooo', 'test@gmail.com', '$2y$10$PwFfUUYAjxzwKyi10SKj0uElSOSHqdzWrzHU3Vbpu0YRh15Mif2Xu', 'tttt_1704221650208084.png', NULL, NULL, '2022-04-17 20:29:29');
+(1, 'abdelghafour', 'miso.abdo@gmail.com', '$2y$10$N0uycKS0VmvBNdvVlh9GU.Wt2S6PsOIh29fHwVYSmAkIafIDNdJzu', 'aouad_abdo.jpg', 1, 1, '2022-04-17 20:29:29');
 
 --
 -- Contraintes pour les tables déchargées

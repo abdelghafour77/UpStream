@@ -197,3 +197,21 @@ jQuery(function ($) {
     $('.back-to-top').tooltip('hide');
 
 });
+
+var swiper = new Swiper(".swiper-slider", {
+    slidesPerView: 1,
+    effect: "fade",
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
