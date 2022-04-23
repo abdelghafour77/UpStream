@@ -5,16 +5,35 @@ require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
 require_once '../view/qualityView.php';
+require_once '../view/myListView.php';
+require_once '../controller/myListController.php';
 
-if (isset($_GET['search'])) {
-    $keyword = $_GET['search'];
+if (isset($_GET['tl'])) {
 
-    $getMovie = new MovieView();
-    $fMovie = $getMovie->findMovie($keyword);
-    // die(var_dump($Movie));
-} else {
-    header('location: index');
+    $id_movie = $_GET['tl'];
+    $id_user = $_SESSION['id_user'];
+
+    $addList = new MylistController();
+    $r = $addList->addToList($id_movie, $id_user);
+    header('Location:' . $_SERVER['PHP_SELF']);
 }
+if (isset($_GET['tld'])) {
+
+    $id_movie = $_GET['tld'];
+    $id_user = $_SESSION['id_user'];
+
+    $deleteList = new MylistController();
+    $r = $deleteList->deleteFromList($id_movie, $id_user);
+    header('Location:' . $_SERVER['PHP_SELF']);
+}
+if (isset($_SESSION['id_user'])) {
+    $id_user = $_SESSION['id_user'];
+
+    $getMovie = new MyListView();
+    $fMovie = $getMovie->getList($id_user);
+    // die(var_dump($fMovie));
+}
+
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -34,6 +53,38 @@ $sixMovie = $getMovie->getSixMovie();
 $getMovie = new MovieView();
 $someMovie = $getMovie->getSomeMovie();
 
+if (isset($_GET['search'])) {
+    $keyword = $_GET['search'];
+    $title = "SEARCHING FOR :" . $keyword;
+    $getMovie = new MovieView();
+    $Movie = $getMovie->findMovie($keyword);
+    // die(var_dump($Movie));
+} elseif (isset($_GET['cat'])) {
+    foreach ($allCategory as $cat) {
+        if ($cat['name'] == ucfirst(strtolower($_GET['cat']))) {
+            $title = "Category : " . $cat['name'];
+            $keyword = $cat['id_category'];
+            $getMovie = new MovieView();
+            $Movie = $getMovie->findCatMovie($keyword);
+        }
+    }
+} elseif (isset($_GET['year'])) {
+    $title = "Year : " . $_GET['year'];
+    $keyword = $_GET['year'];
+    $getMovie = new MovieView();
+    $Movie = $getMovie->findYearMovie($keyword);
+} elseif (isset($_GET['quality'])) {
+    foreach ($allQuality as $quality) {
+        if ($quality['name'] == $_GET['quality']) {
+            $title = "Quality : " . $quality['name'];
+            $keyword = $quality['id_quality'];
+            $getMovie = new MovieView();
+            $Movie = $getMovie->findQualityMovie($keyword);
+        }
+    }
+} else {
+    header('location: index');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,11 +108,11 @@ $someMovie = $getMovie->getSomeMovie();
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2 class="block-title">SEARCHING FOR : <?php echo $keyword; ?></h2>
+                            <h2 class="block-title"><?php echo $title; ?></h2>
                             <div class="row">
                                 <?php
-                                if (count($fMovie) > 0) {
-                                    foreach ($fMovie as $movie) {
+                                if (count($Movie) > 0) {
+                                    foreach ($Movie as $movie) {
                                 ?>
                                         <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-2">
                                             <div class="video-block">
@@ -72,9 +123,9 @@ $someMovie = $getMovie->getSomeMovie();
                                                             <li>
                                                                 <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                                                             </li>
-                                                            <li>
-                                                                <a href="./#"><i class="fas fa-plus"></i></a>
-                                                            </li>
+                                                            <?php
+                                                            include '../include/list.php';
+                                                            ?>
                                                             <li>
                                                                 <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                                                             </li>

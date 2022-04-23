@@ -286,4 +286,70 @@ class Movie extends Connection
 		$result = $stmt->fetchAll();
 		return $result;
 	}
+
+	protected function findCatMovieDB($keyword)
+	{
+		$sql = " SELECT 
+			m.id_movie,
+			m.title,
+			m.date,
+			m.language,
+			m.quality,
+			m.cover,
+			m.duration,
+			m.director
+	  	FROM
+		   movie m , contain co
+	  	WHERE
+			co.id_movie=m.id_movie
+		and
+			co.id_category = ? ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$keyword]);
+		$result = $stmt->fetchAll();
+		return $result;
+	}
+	protected function findQualityMovieDB($keyword)
+	{
+		$sql = " SELECT 
+			id_movie,
+			title,
+			date,
+			language,
+			quality,
+			cover,
+			duration,
+			director
+	  	FROM
+			movie 
+	  	WHERE
+			quality = ? ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$keyword]);
+		$result = $stmt->fetchAll();
+		return $result;
+	}
+	protected function findYearMovieDB($keyword)
+	{
+		$sql = " SELECT 
+			id_movie,
+			title,
+			date,
+			language,
+			quality,
+			cover,
+			duration,
+			director
+	  	FROM
+		   movie m 
+	  	WHERE
+			date = ? ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$keyword]);
+		$result = $stmt->fetchAll();
+		return $result;
+	}
 }

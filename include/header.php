@@ -53,32 +53,27 @@ $NotificationMovie = $getMovie->getMovieNotification();
                                     </li>
                                 <?php } ?>
                                 <!-- Nav Item 3 End -->
-                                <li class="nav-item dropdown">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../core/about">About Us</a>
+                                </li>
+                                <!-- Nav Item 4 End -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../core/contact-us">Contact Us</a>
+                                </li>
+                                <!-- <li class="nav-item dropdown">
                                     <a class="nav-link menu-dropdown" data-toggle="dropdown" href="./#">More <i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown-menu fade-up" role="menu">
                                         <li>
                                             <a class="dropdown-item" href="../core/about">About Us</a>
                                         </li>
-                                        <!-- Sub Nav Item 1 End -->
                                         <li>
                                             <a class="dropdown-item" href="../core/contact-us">Contact Us</a>
                                         </li>
-                                        <!-- Sub Nav Item 2 End -->
                                         <li>
                                             <a class="dropdown-item" href="../core/404">404</a>
                                         </li>
-                                        <!-- Sub Nav Item 3 End -->
-                                        <!-- <li>
-                                            <a class="dropdown-item" href="./login">Login</a>
-                                        </li> -->
-                                        <!-- Sub Nav Item 4 End -->
-                                        <!-- <li>
-                                            <a class="dropdown-item" href="./sign-up">Signup</a>
-                                        </li> -->
-                                        <!-- Sub Nav Item 5 End -->
                                     </ul>
-                                    <!-- Dropdown End -->
-                                </li>
+                                </li> -->
                                 <!-- Nav Item 4 End -->
                             </ul>
                             <!-- Nav UL End -->

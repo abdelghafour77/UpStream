@@ -36,6 +36,18 @@ class MovieView extends Movie
 	{
 		return $this->findMovieDB($keyword);
 	}
+	public function findCatMovie($keyword)
+	{
+		return $this->findCatMovieDB($keyword);
+	}
+	public function findQualityMovie($keyword)
+	{
+		return $this->findQualityMovieDB($keyword);
+	}
+	public function findYearMovie($keyword)
+	{
+		return $this->findYearMovieDB($keyword);
+	}
 	public function countMovie()
 	{
 		return $this->countMovieDB();

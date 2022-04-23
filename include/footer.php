@@ -47,16 +47,16 @@
                         <div class="widget-content footer-menu">
                             <ul class="f-link list-unstyled mb-0">
                                 <li>
-                                    <a href="./#">Action</a>
+                                    <a href="../core/search.php?cat=action">Action</a>
                                 </li>
                                 <li>
-                                    <a href="./#">Comedy</a>
+                                    <a href="../core/search.php?cat=comedy">Comedy</a>
                                 </li>
                                 <li>
-                                    <a href="./#">Drama</a>
+                                    <a href="../core/search.php?cat=drama">Drama</a>
                                 </li>
                                 <li>
-                                    <a href="./#">Horror</a>
+                                    <a href="../core/search.php?cat=horror">Horror</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,16 +76,16 @@
                         <div class="widget-content footer-menu">
                             <ul class="f-link list-unstyled mb-0">
                                 <li>
-                                    <a href="./#">2018 Year</a>
+                                    <a href="../core/search.php?year=2019">2019 Year</a>
                                 </li>
                                 <li>
-                                    <a href="./#">2019 Year</a>
+                                    <a href="../core/search.php?year=2020">2020 Year</a>
                                 </li>
                                 <li>
-                                    <a href="./#">2020 Year</a>
+                                    <a href="../core/search.php?year=2021">2021 Year</a>
                                 </li>
                                 <li>
-                                    <a href="./#">2021 Year</a>
+                                    <a href="../core/search.php?year=2022">2022 Year</a>
                                 </li>
                             </ul>
                         </div>
@@ -105,16 +105,16 @@
                         <div class="widget-content footer-menu">
                             <ul class="f-link list-unstyled mb-0">
                                 <li>
-                                    <a href="./#">720p HDTV</a>
+                                    <a href="../core/search.php?quality=BluRay">BluRay</a>
                                 </li>
                                 <li>
-                                    <a href="./#">1080p BluRay</a>
+                                    <a href="../core/search.php?quality=DVDRip">DVDRip</a>
                                 </li>
                                 <li>
-                                    <a href="./#">720p BluRay</a>
+                                    <a href="../core/search.php?quality=HDCAM">HDCAM</a>
                                 </li>
                                 <li>
-                                    <a href="./#">1080p WEB-DL</a>
+                                    <a href="../core/search.php?quality=WEB-DL">WEB-DL</a>
                                 </li>
                             </ul>
                         </div>
