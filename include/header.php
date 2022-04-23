@@ -5,7 +5,7 @@ $getMovie = new MovieView();
 $NotificationMovie = $getMovie->getMovieNotification();
 ?>
 <!-- Start Mobile Header -->
-<header class="mobile-header">
+<header class="mobile-header" style="z-index: 11;">
     <div class="mobile-header-content">
         <div class="container">
             <div class="row">
@@ -24,7 +24,7 @@ $NotificationMovie = $getMovie->getMovieNotification();
 </header>
 <!-- Mobile Header End -->
 <!-- Start Header -->
-<header class="main-nav clearfix is-sticky">
+<header class="main-nav clearfix is-sticky" style="z-index: 11;">
     <div class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-lg-9 pl-0">
