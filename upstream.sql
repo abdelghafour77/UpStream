@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 23 avr. 2022 à 14:27
+-- Généré le : sam. 23 avr. 2022 à 19:00
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -214,7 +214,6 @@ INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
 (16, 8),
 (17, 1),
 (17, 8),
-(20, 1),
 (21, 1),
 (21, 8),
 (23, 3),
@@ -223,7 +222,8 @@ INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
 (15, 8),
 (22, 2),
 (22, 5),
-(22, 11);
+(22, 11),
+(20, 1);
 
 -- --------------------------------------------------------
 
@@ -308,6 +308,13 @@ CREATE TABLE IF NOT EXISTS `my_list` (
   KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Déchargement des données de la table `my_list`
+--
+
+INSERT INTO `my_list` (`id_movie`, `id_user`, `last_update`) VALUES
+(22, 1, '2022-04-23 18:36:54');
+
 -- --------------------------------------------------------
 
 --
@@ -319,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `quality` (
   `id_quality` int NOT NULL AUTO_INCREMENT,
   `name` varchar(220) NOT NULL,
   PRIMARY KEY (`id_quality`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `quality`
@@ -334,7 +341,8 @@ INSERT INTO `quality` (`id_quality`, `name`) VALUES
 (6, 'HDTC'),
 (7, 'HDTS'),
 (8, 'HDTV'),
-(9, 'TVRip');
+(9, 'TVRip'),
+(10, 'WEB-DL');
 
 -- --------------------------------------------------------
 
