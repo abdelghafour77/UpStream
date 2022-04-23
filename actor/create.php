@@ -154,8 +154,8 @@ if (isset($_POST['submit-actor'])) {
       <h3>Add actor</h3>
 
       <form method="post" action="" class="text-center">
-        <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="name" required />
-        <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="name" required />
+        <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="first name" required />
+        <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="last name" required />
 
 
         <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-actor">Add</button>

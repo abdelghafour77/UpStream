@@ -226,6 +226,16 @@ class Movie extends Connection
 
 		return $result;
 	}
+	protected function getLastMovieDB()
+	{
+		$sql = "SELECT * FROM movie WHERE date = year(now()) limit 6 ";
+
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+
+		return $result;
+	}
 
 	protected function getSomeMovieDB()
 	{

@@ -100,12 +100,8 @@ $duration = "$hours hr $minutes min";
     require_once '../include/header.php';
     ?>
     <!-- Start Banner Section -->
-    <div class="banner-single banner-wrap banner-bg movie-bg">
-      <style>
-        .banner-bg.movie-bg {
-          background-image: url(<?php echo $cover; ?>);
-        }
-      </style>
+    <div class="banner-single banner-wrap banner-bg movie-bg" style="background-image: url(<?php echo $cover; ?>);">
+
       <div class="container-fluid">
         <div class="banner-content">
           <div class="transparent-block">

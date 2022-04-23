@@ -457,13 +457,13 @@ ul.list-check li:before {
 }
 
 /* banner images background */
-.banner-bg.show-bg {
+/* .banner-bg.show-bg {
     background-image: url(../img/01.jpg);
 }
 
 .banner-bg.movie-bg {
     background-image: url(../img/01.jpg);
-}
+} */
 
 /* Sub header */
 .sub-header {
@@ -748,7 +748,7 @@ ul.list-check li:before {
     font-size: 14px;
     text-align: left !important;
     color: #a3a3a3;
-    margin-right: 8px;
+    /* margin-right: 8px; */
     padding-right: 10px;
     line-height: 12px;
     display: inline-block;

@@ -42,6 +42,7 @@ if (isset($_POST['submit-movie'])) {
         if ($fileSize < 4572864) {  // 4,5MB
           $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
           $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
+          $fileNameNew = str_replace("'", "", $fileNameNew); //remove all single quote 
           $cover = "../uploads/cover/" . $fileNameNew;
           move_uploaded_file($fileTmpName, $cover);
 
@@ -61,6 +62,7 @@ if (isset($_POST['submit-movie'])) {
                 if ($fileSize < 4572864000) {  // 4500MB
                   $fileNameNew =   $title  . "_" . date("dmy") . time() . "." . $fileActualExt; //create unique Id using time and date and name of 'cours'
                   $fileNameNew = preg_replace('/\s+/', '_', $fileNameNew); //replace all space with "_"
+                  $fileNameNew = str_replace("'", "", $fileNameNew); //remove all single quote 
                   $movie_file = "../uploads/movie/" . $fileNameNew;
                   move_uploaded_file($fileTmpName, $movie_file);
                   include_once('../getid3/getid3.php');
