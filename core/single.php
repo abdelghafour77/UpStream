@@ -4,6 +4,7 @@ require_once '../view/movieView.php';
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/qualityView.php';
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -13,6 +14,9 @@ $allActor = $getActor->getActor();
 
 $getLanguage = new LanguageView();
 $allLanguage = $getLanguage->getLanguage();
+
+$getQuality = new QualityView();
+$allQuality = $getQuality->getQuality();
 
 $getMovie = new MovieView();
 $sixMovie = $getMovie->getSixMovie();
@@ -67,6 +71,11 @@ foreach ($allActor as $actor) {
 foreach ($allLanguage as $languag) {
   if ($languag['id_language'] == $resultMovie[0]['language'])
     $language = $languag['name'];
+}
+
+foreach ($allQuality as $qualit) {
+  if ($qualit['id_quality'] == $resultMovie[0]['quality'])
+    $quality = $qualit['name'];
 }
 
 $hours = floor($resultMovie[0]['duration'] / 3600);
@@ -168,10 +177,11 @@ $duration = "$hours hr $minutes min";
                 <!-- Title Block -->
                 <div class="details-info mb-4">
                   <!-- <span><i class="fa-solid fa-user"></i> 18+</span> -->
-                  <span><i class="fa-solid fa-clock"></i></i> <?php echo $duration; ?></span>
-                  <span><i class="fa-solid fa-face-smile"></i></i> <?php echo $date; ?></span>
-                  <span><i class="fa-solid fa-film"></i></i> <?php echo $AllCategory; ?></span>
-                  <span><i class="fa-solid fa-earth-africa" aria-hidden="true"></i></i> <?php echo $language; ?></span>
+                  <span><i class="fa-solid fa-clock"></i> <?php echo $duration; ?></span>
+                  <span><i class="fa-solid fa-calendar-days"></i> <?php echo $date; ?></span>
+                  <span><i class="fa-solid fa-film"></i> <?php echo $AllCategory; ?></span>
+                  <span><i class="fa-solid fa-earth-africa"></i> <?php echo $language; ?></span>
+                  <span class="badge bg-warning text-dark" style="padding: 5px;"><?php echo $quality; ?></span>
                 </div>
                 <!-- Details Info -->
                 <div class="details-desc">
@@ -321,13 +331,13 @@ $duration = "$hours hr $minutes min";
                       <?php
                       $hours = floor($movie['duration'] / 3600);
                       $minutes = floor(($movie['duration'] / 60) % 60);
-                      $duration = $hours . "h" . $minutes . "m";
+                      $duration = $hours . "h " . $minutes . "m";
                       ?>
                       <span class="video-age"><?php echo $duration; ?></span>
                       <?php
-                      foreach ($allLanguage as $language) {
-                        if ($language['id_language'] == $movie['language']) {
-                          echo '<span class="video-type">' . $language["name"] . '</span>';
+                      foreach ($allQuality as $quality) {
+                        if ($quality['id_quality'] == $movie['quality']) {
+                          echo '<span class="video-type">' . $quality["name"] . '</span>';
                         }
                       } ?>
                     </div>

@@ -39,6 +39,7 @@ class MyList extends Connection
         mo.id_user as id_user,
         mo.date as date,
 		mo.language as language,
+		mo.quality as quality,
 		mo.duration as duration,
 		mo.cover as cover,
 		mo.director as director 

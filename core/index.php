@@ -4,6 +4,7 @@ require_once '../view/movieView.php';
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/qualityView.php';
 require_once '../view/myListView.php';
 require_once '../controller/myListController.php';
 
@@ -40,6 +41,9 @@ $allActor = $getActor->getActor();
 
 $getLanguage = new LanguageView();
 $allLanguage = $getLanguage->getLanguage();
+
+$getQuality = new qualityView();
+$allQuality = $getQuality->getQuality();
 
 $getMovie = new MovieView();
 $sixMovie = $getMovie->getSixMovie();
@@ -114,7 +118,14 @@ $someMovie = $getMovie->getSomeMovie();
                 ?></h1>
               <div class="slide-info swiper-slide__text fadeInUp animated">
                 <span></span>
-                <span class="radius">+18</span>
+                <span class="radius">
+                  <?php
+                  foreach ($allQuality as $quality) {
+                    if ($quality['id_quality'] == $movie['quality']) {
+                      echo  $quality["name"];
+                    }
+                  } ?>
+                </span>
                 <span>
                   <?php $hours = floor($movie['duration'] / 3600);
                   $minutes = floor(($movie['duration'] / 60) % 60);
@@ -218,9 +229,9 @@ $someMovie = $getMovie->getSomeMovie();
                               ?>
                               <span class="video-age"><?php echo $duration; ?></span>
                               <?php
-                              foreach ($allLanguage as $language) {
-                                if ($language['id_language'] == $movie['language']) {
-                                  echo '<span class="video-type">' . $language["name"] . '</span>';
+                              foreach ($allQuality as $quality) {
+                                if ($quality['id_quality'] == $movie['quality']) {
+                                  echo '<span class="video-type">' . $quality["name"] . '</span>';
                                 }
                               } ?>
                             </div>
@@ -294,9 +305,9 @@ $someMovie = $getMovie->getSomeMovie();
                           <span class="video-year"><?php echo $movie['date']; ?></span>
                           <span class="video-age"><?php echo $duration; ?></span>
                           <?php
-                          foreach ($allLanguage as $language) {
-                            if ($language['id_language'] == $movie['language']) {
-                              echo '<span class="video-type">' . $language["name"] . '</span>';
+                          foreach ($allQuality as $quality) {
+                            if ($quality['id_quality'] == $movie['quality']) {
+                              echo '<span class="video-type">' . $quality["name"] . '</span>';
                             }
                           } ?>
 
@@ -463,9 +474,9 @@ $someMovie = $getMovie->getSomeMovie();
                           ?>
                           <span class="video-age"><?php echo $duration; ?></span>
                           <?php
-                          foreach ($allLanguage as $language) {
-                            if ($language['id_language'] == $movie['language']) {
-                              echo '<span class="video-type">' . $language["name"] . '</span>';
+                          foreach ($allQuality as $quality) {
+                            if ($quality['id_quality'] == $movie['quality']) {
+                              echo '<span class="video-type">' . $quality["name"] . '</span>';
                             }
                           } ?>
                         </div>
