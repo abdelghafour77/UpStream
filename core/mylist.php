@@ -47,7 +47,7 @@ $someMovie = $getMovie->getSomeMovie();
 <html lang="en">
 
 <head>
-    <title>UpStream</title>
+    <title>My List</title>
     <?php
     require_once '../include/head.php';
     ?>

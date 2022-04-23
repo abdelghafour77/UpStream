@@ -11,7 +11,7 @@ $movies = $movie->countMovie();
 <html lang="en">
 
 <head>
-  <title>About</title>
+  <title>About Us</title>
   <?php
   require_once '../include/head.php';
   ?>
@@ -210,6 +210,7 @@ $movies = $movie->countMovie();
 
     <?php
     require_once '../include/footer.php';
+    require_once '../include/filter.php';
     require_once '../include/js.php';
     ?>
     <script>

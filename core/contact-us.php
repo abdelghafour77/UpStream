@@ -106,6 +106,7 @@ session_start();
 
     <?php
     require_once '../include/footer.php';
+    require_once '../include/filter.php';
     require_once '../include/js.php';
     ?>
 </body>
