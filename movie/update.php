@@ -4,6 +4,7 @@ require_once('../controller/movieController.php');
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/qualityView.php';
 require_once '../view/movieView.php';
 
 $getAllMovie = new MovieView();
@@ -17,12 +18,13 @@ if (isset($_POST['submit-movie'])) {
     $category[] = $_POST['category'];
     $actor[] = $_POST['actor'];
     $language = $_POST['language'];
+    $quality = $_POST['quality'];
     $trailer = $_POST['trailer'];
     $director = $_POST['director'];
     $user = $_SESSION['id_user'];
 
     $MovieUpdate = new MovieController();
-    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $trailer, $user, $actor, $director);
+    $res = $MovieUpdate->updateMovie($title, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director);
     if ($res == '1') {
         header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
         die;
@@ -197,7 +199,15 @@ if (isset($_POST['submit-movie'])) {
                         }
                         ?>
                     </select>
-                    <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required />
+                    <select id="quality" name="quality" class="form-control me-4 my-4" required disabled>
+                        <option value disabled selected>-- Quality --</option>
+                        <?php
+                        foreach ($allQuality as $quality) {
+                            echo '<option value="' . $quality['id_quality'] . '">' . $quality['name'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                    <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required disabled />
                     <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required disabled>
                         <?php
                         foreach ($allActor as $actor) {

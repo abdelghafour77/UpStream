@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 22 avr. 2022 à 19:00
+-- Généré le : sam. 23 avr. 2022 à 14:27
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -66,7 +66,12 @@ INSERT INTO `acting` (`id_actor`, `id_movie`) VALUES
 (57, 21),
 (58, 22),
 (59, 22),
-(60, 22);
+(60, 22),
+(1, 23),
+(40, 23),
+(47, 23),
+(63, 23),
+(64, 23);
 
 -- --------------------------------------------------------
 
@@ -81,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
   `last_name` varchar(250) NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_actor`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `actor`
@@ -147,7 +152,9 @@ INSERT INTO `actor` (`id_actor`, `first_name`, `last_name`, `last_update`) VALUE
 (57, 'Aisha', 'Hinds', '2022-04-19 05:16:56'),
 (58, 'Daniel', 'Kaluuya', '2022-04-19 05:25:42'),
 (59, 'Allison', 'Williams', '2022-04-19 05:25:42'),
-(60, 'Catherine', 'Keener', '2022-04-19 05:25:42');
+(60, 'Catherine', 'Keener', '2022-04-19 05:25:42'),
+(63, 'Jennifer', 'Lawrence', '2022-04-22 23:36:06'),
+(64, 'Ariana', 'Grande', '2022-04-22 23:37:02');
 
 -- --------------------------------------------------------
 
@@ -167,6 +174,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 --
 
 INSERT INTO `category` (`id_category`, `name`) VALUES
+(0, 'Disaster'),
 (1, 'Action'),
 (2, 'Crime'),
 (3, 'Comedy'),
@@ -202,9 +210,6 @@ INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
 (19, 4),
 (19, 7),
 (19, 8),
-(15, 1),
-(15, 4),
-(15, 8),
 (16, 7),
 (16, 8),
 (17, 1),
@@ -212,6 +217,10 @@ INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
 (20, 1),
 (21, 1),
 (21, 8),
+(23, 3),
+(15, 1),
+(15, 4),
+(15, 8),
 (22, 2),
 (22, 5),
 (22, 11);
@@ -259,27 +268,30 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `link_trailer` text NOT NULL,
   `movie_file` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `duration` float NOT NULL,
+  `quality` int DEFAULT NULL,
   `cover` text NOT NULL,
   `director` text NOT NULL,
   `id_user` int NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_movie`),
   KEY `id_user` (`id_user`),
-  KEY `language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `language` (`language`),
+  KEY `quality` (`quality`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `movie`
 --
 
-INSERT INTO `movie` (`id_movie`, `title`, `date`, `description`, `language`, `link_trailer`, `movie_file`, `duration`, `cover`, `director`, `id_user`, `last_update`) VALUES
-(15, 'inception', 2010, 'Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb\'s criminal history as payment for performing an inception on his sick competitor\'s son.', 1, 'https://www.youtube.com/watch?v=YoHD9XEInc0', '../uploads/movie/test_bach_nchouf_language_1704221650211093.mp4', 10000, '../uploads/cover/test_bach_nchouf_language_1704221650211093.jpg', 'Christopher Nolan', 1, '2022-04-17 20:30:09'),
-(16, 'Star Wars', 2019, 'The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi\'s legendary conflict with the Sith Lord comes to a head.', 2, 'https://www.youtube.com/watch?v=8Qn_spdM5Zg', '../uploads/movie/yow_test_id_1704221650211486.mp4', 900, '../uploads/cover/yow_test_id_1704221650211486.jpg', 'Irvin Kershner', 1, '2022-04-17 20:30:09'),
-(17, 'Avengers: Endgame', 2019, 'After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.', 2, 'https://www.youtube.com/watch?v=TcMBFSGVi1c', '../uploads/movie/rdytfugihljo_1704221650226482.mp4', 807, '../uploads/cover/rdytfugihljo_1704221650226482.jpg', 'Anthony Russo, Joe Russo', 1, '2022-04-17 20:30:09'),
-(19, 'Dune', 2021, 'Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.', 2, 'https://www.youtube.com/watch?v=8g18jFHCLXk', '../uploads/movie/1aaaaaaaaaaaaaaaaaa_1704221650227041.mp4', 449.375, '../uploads/cover/1aaaaaaaaaaaaaaaaaa_1704221650227041.jpg', 'Denis Villeneuve', 1, '2022-04-17 20:30:09'),
-(20, 'spider-man into the spider-verse', 2018, 'After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.', 2, 'https://www.youtube.com/watch?v=g4Hbz2jLxvQ', '../uploads/movie/spiderman_1704221650231843.mp4', 204.9, '../uploads/cover/spiderman_1704221650231843.jpg', 'Peter Ramsey, Bob Persichetti, Rodney Rothman', 1, '2022-04-17 21:44:03'),
-(21, 'Godzilla: King of the Monsters', 2019, 'A legendary monster named King Ghidorah awakens Rodan, as well as other titans, to destroy the world. To defeat them, the crypto-zoological organisation Monarch must rely on the almighty Godzilla.', 2, 'https://www.youtube.com/watch?v=QFxN2oDKk0E', '../uploads/movie/test_dyal_actor_1804221650240018.mp4', 449.375, '../uploads/cover/test_dyal_actor_1804221650240018.jpg', 'Michael Dougherty', 1, '2022-04-18 00:00:18'),
-(22, 'Get out', 2017, 'Chris, an African-American man, decides to visit his Caucasian girlfriend\'s parents during a weekend getaway. Although they seem normal at first, he is not prepared to experience the horrors ahead.', 2, 'https://www.youtube.com/watch?v=DzfpyUB60YY', '../uploads/movie/Get_out_1904221650331021.mp4', 449.375, '../uploads/cover/Get_out_1904221650331021.jpg', 'Jordan Peele', 1, '2022-04-19 01:17:01');
+INSERT INTO `movie` (`id_movie`, `title`, `date`, `description`, `language`, `link_trailer`, `movie_file`, `duration`, `quality`, `cover`, `director`, `id_user`, `last_update`) VALUES
+(15, 'inception', 2010, 'Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb\'s criminal history as payment for performing an inception on his sick competitor\'s son.', 1, 'https://www.youtube.com/watch?v=YoHD9XEInc0', '../uploads/movie/test_bach_nchouf_language_1704221650211093.mp4', 10000, 2, '../uploads/cover/test_bach_nchouf_language_1704221650211093.jpg', 'Christopher Nolan', 1, '2022-04-17 20:30:09'),
+(16, 'Star Wars', 2019, 'The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi\'s legendary conflict with the Sith Lord comes to a head.', 2, 'https://www.youtube.com/watch?v=8Qn_spdM5Zg', '../uploads/movie/yow_test_id_1704221650211486.mp4', 900, 1, '../uploads/cover/yow_test_id_1704221650211486.jpg', 'Irvin Kershner', 1, '2022-04-17 20:30:09'),
+(17, 'Avengers: Endgame', 2019, 'After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.', 2, 'https://www.youtube.com/watch?v=TcMBFSGVi1c', '../uploads/movie/rdytfugihljo_1704221650226482.mp4', 807, 1, '../uploads/cover/rdytfugihljo_1704221650226482.jpg', 'Anthony Russo, Joe Russo', 1, '2022-04-17 20:30:09'),
+(19, 'Dune', 2021, 'Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.', 2, 'https://www.youtube.com/watch?v=8g18jFHCLXk', '../uploads/movie/1aaaaaaaaaaaaaaaaaa_1704221650227041.mp4', 449.375, 1, '../uploads/cover/1aaaaaaaaaaaaaaaaaa_1704221650227041.jpg', 'Denis Villeneuve', 1, '2022-04-17 20:30:09'),
+(20, 'Spider-man into the spider-verse', 2018, 'After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.', 2, 'https://www.youtube.com/watch?v=g4Hbz2jLxvQ', '../uploads/movie/spiderman_1704221650231843.mp4', 204.9, 1, '../uploads/cover/spiderman_1704221650231843.jpg', 'Peter Ramsey, Bob Persichetti, Rodney Rothman', 1, '2022-04-17 21:44:03'),
+(21, 'Godzilla: King of the Monsters', 2019, 'A legendary monster named King Ghidorah awakens Rodan, as well as other titans, to destroy the world. To defeat them, the crypto-zoological organisation Monarch must rely on the almighty Godzilla.', 2, 'https://www.youtube.com/watch?v=QFxN2oDKk0E', '../uploads/movie/test_dyal_actor_1804221650240018.mp4', 449.375, 1, '../uploads/cover/test_dyal_actor_1804221650240018.jpg', 'Michael Dougherty', 1, '2022-04-18 00:00:18'),
+(22, 'Get out', 2017, 'Chris, an African-American man, decides to visit his Caucasian girlfriend\'s parents during a weekend getaway. Although they seem normal at first, he is not prepared to experience the horrors ahead.', 2, 'https://www.youtube.com/watch?v=DzfpyUB60YY', '../uploads/movie/Get_out_1904221650331021.mp4', 449.375, 9, '../uploads/cover/Get_out_1904221650331021.jpg', 'Jordan Peele', 1, '2022-04-19 01:17:01'),
+(23, 'Don\'t look up', 2022, 'Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy planet Earth.', 2, 'https://www.youtube.com/watch?v=RbIxYm3mKzI', '../uploads/movie/Don\'t_look_up_2204221650670460.mp4', 449.375, 1, '../uploads/cover/Dont_look_up_2204221650670460.jpg', 'Adam McKay', 1, '2022-04-22 23:34:21');
 
 -- --------------------------------------------------------
 
@@ -296,14 +308,33 @@ CREATE TABLE IF NOT EXISTS `my_list` (
   KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- --------------------------------------------------------
+
 --
--- Déchargement des données de la table `my_list`
+-- Structure de la table `quality`
 --
 
-INSERT INTO `my_list` (`id_movie`, `id_user`, `last_update`) VALUES
-(20, 1, '2022-04-22 18:43:58'),
-(19, 1, '2022-04-22 18:44:04'),
-(21, 1, '2022-04-22 18:53:24');
+DROP TABLE IF EXISTS `quality`;
+CREATE TABLE IF NOT EXISTS `quality` (
+  `id_quality` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(220) NOT NULL,
+  PRIMARY KEY (`id_quality`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `quality`
+--
+
+INSERT INTO `quality` (`id_quality`, `name`) VALUES
+(1, 'BluRay'),
+(2, 'DVDRip'),
+(3, 'DVDScr'),
+(4, 'HDCAM'),
+(5, 'HDRip'),
+(6, 'HDTC'),
+(7, 'HDTS'),
+(8, 'HDTV'),
+(9, 'TVRip');
 
 -- --------------------------------------------------------
 
@@ -354,7 +385,8 @@ ALTER TABLE `contain`
 --
 ALTER TABLE `movie`
   ADD CONSTRAINT `movie_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `movie_ibfk_2` FOREIGN KEY (`language`) REFERENCES `language` (`id_language`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `movie_ibfk_2` FOREIGN KEY (`language`) REFERENCES `language` (`id_language`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `movie_ibfk_3` FOREIGN KEY (`quality`) REFERENCES `quality` (`id_quality`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `my_list`

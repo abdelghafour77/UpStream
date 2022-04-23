@@ -4,6 +4,7 @@ require_once('../view/movieView.php');
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
+require_once '../view/qualityView.php';
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -13,6 +14,9 @@ $allActor = $getActor->getActor();
 
 $getLanguage = new LanguageView();
 $allLanguage = $getLanguage->getLanguage();
+
+$getQuality = new QualityView();
+$allQuality = $getQuality->getQuality();
 
 $getAllMovie = new MovieView();
 $allMovieName = $getAllMovie->getMovieName();
@@ -61,6 +65,18 @@ if (isset($_POST["id_movie"])) {
                     echo '<option value="' . $language['id_language'] . '" selected>' . $language['name'] . '</option>';
                 else
                     echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
+            }
+            ?>
+        </select>
+        <select id="quality" name="quality" class="form-control me-4 my-4" required>
+            <option value disabled>-- Quality --</option>
+
+            <?php
+            foreach ($allQuality as $quality) {
+                if ($quality['id_quality'] == $output[0]['quality'])
+                    echo '<option value="' . $quality['id_quality'] . '" selected>' . $quality['name'] . '</option>';
+                else
+                    echo '<option value="' . $quality['id_quality'] . '">' . $quality['name'] . '</option>';
             }
             ?>
         </select>

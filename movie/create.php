@@ -4,12 +4,16 @@ require_once('../controller/movieController.php');
 require_once '../view/actorView.php';
 require_once '../view/categoryView.php';
 require_once '../view/languageView.php';
+require_once '../view/QualityView.php';
 
 $getActor = new ActorView();
 $allActor = $getActor->getActor();
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
+
+$getQuality = new QualityView();
+$allQuality = $getQuality->getQuality();
 
 $getLanguage = new LanguageView();
 $allLanguage = $getLanguage->getLanguage();
@@ -23,6 +27,7 @@ if (isset($_POST['submit-movie'])) {
   $actor[] = $_POST['actor'];
   $director = $_POST['director'];
   $language = $_POST['language'];
+  $quality = $_POST['quality'];
   $trailer = $_POST['trailer'];
   $user = $_SESSION['id_user'];
 
@@ -72,7 +77,7 @@ if (isset($_POST['submit-movie'])) {
                   $duration = floatval($duration['playtime_seconds']);
 
                   $MovieAdd = new MovieController();
-                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
+                  $res = $MovieAdd->addMovie($title, $description, $date, $category, $language, $quality, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
                   if ($res == '1') {
                     header('Location:' . $_SERVER['PHP_SELF']); //pour eviter alert when refresh page
                     die;
@@ -271,6 +276,14 @@ if (isset($_POST['submit-movie'])) {
           <?php
           foreach ($allLanguage as $language) {
             echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
+          }
+          ?>
+        </select>
+        <select id="quality" name="quality" class="form-control me-4 my-4" required>
+          <option value disabled selected>-- Quality --</option>
+          <?php
+          foreach ($allQuality as $quality) {
+            echo '<option value="' . $quality['id_quality'] . '">' . $quality['name'] . '</option>';
           }
           ?>
         </select>

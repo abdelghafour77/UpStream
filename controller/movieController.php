@@ -4,13 +4,13 @@ include_once('../classes/movie.php');
 class MovieController extends Movie
 {
 
-    public function addMovie($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director)
+    public function addMovie($title, $description, $date, $category, $language, $quality, $movie_file, $duration, $trailer, $cover, $user, $actor, $director)
     {
-        return $this->addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
+        return $this->addMovieDB($title, $description, $date, $category, $language, $quality, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
     }
-    public function updateMovie($id_movie, $description, $date, $category, $language, $trailer, $user, $actor, $director)
+    public function updateMovie($id_movie, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director)
     {
-        return $this->updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor, $director);
+        return $this->updateMovieDB($id_movie, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director);
     }
     public function deleteMovie($id_movie)
     {

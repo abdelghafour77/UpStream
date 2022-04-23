@@ -3,12 +3,12 @@
 include_once('cnx.php');
 class Movie extends Connection
 {
-	protected function addMovieDB($title, $description, $date, $category, $language, $movie_file, $duration, $trailer, $cover, $user, $actor, $director)
+	protected function addMovieDB($title, $description, $date, $category, $language, $quality, $movie_file, $duration, $trailer, $cover, $user, $actor, $director)
 	{
 		// insert into movie table
-		$sql = "INSERT INTO movie(title,description,date,language,link_trailer,movie_file,duration,cover,id_user,director)values(?,?,?,?,?,?,?,?,?,?)";
+		$sql = "INSERT INTO movie(title,description,date,language,quality,link_trailer,movie_file,duration,cover,id_user,director)values(?,?,?,?,?,?,?,?,?,?,?)";
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$title, $description, $date, $language, $trailer, $movie_file, $duration, $cover, $user, $director]); // or die(print_r($stmt->errorInfo() ));
+		$stmt->execute([$title, $description, $date, $language, $quality, $trailer, $movie_file, $duration, $cover, $user, $director]); // or die(print_r($stmt->errorInfo() ));
 		// insert into categorie
 		$sql = "SELECT id_movie FROM movie WHERE title = ? and movie_file =?";
 		$stmt = $this->connect()->prepare($sql);
@@ -41,6 +41,7 @@ class Movie extends Connection
 			description,
 			date,
 			language,
+			quality,
 			link_trailer,
 			movie_file,
 			director,
@@ -104,13 +105,13 @@ class Movie extends Connection
 		// die(var_dump($res));
 		return $res;
 	}
-	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $trailer, $user, $actor, $director)
+	protected function updateMovieDB($id_movie, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director)
 	{
 
-		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,link_trailer=? ,id_user=?  ,director=? WHERE id_movie = ? ; ";
+		$sql = "UPDATE movie SET description = ? ,date =?  ,language=? ,quality=? ,link_trailer=? ,id_user=?  ,director=? WHERE id_movie = ? ; ";
 
 		$stmt = $this->connect()->prepare($sql);
-		$stmt->execute([$description, $date, $language, $trailer, $user, $director, $id_movie]);
+		$stmt->execute([$description, $date, $language, $quality, $trailer, $user, $director, $id_movie]);
 
 
 		$sql = "DELETE from contain where id_movie = ? ;";
@@ -145,11 +146,11 @@ class Movie extends Connection
 		$stmt->execute([$id_movie]);
 		$result = $stmt->fetch();
 		if ($result['cover'] != '') {
-			$link = "../uploads/cover/" . $result['cover'];
+			$link =  $result['cover'];
 			unlink($link);
 		}
 		if ($result['movie_file'] != '') {
-			$link = "../uploads/movie/" . $result['movie_file'];
+			$link =  $result['movie_file'];
 			unlink($link);
 		}
 		$sql = "DELETE from movie WHERE id_movie = ? ; ";
@@ -167,6 +168,7 @@ class Movie extends Connection
 			description,
 			date,
 			language,
+			quality,
 			link_trailer,
 			movie_file,
 			cover,
@@ -269,6 +271,7 @@ class Movie extends Connection
 			title,
 			date,
 			language,
+			quality,
 			cover,
 			duration,
 			director
