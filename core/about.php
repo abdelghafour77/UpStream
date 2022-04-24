@@ -150,7 +150,7 @@ $movies = $movie->countMovie();
             <div class="col-6 col-xl mb-5 mb-xl-0">
               <div class="card team-box">
                 <div class="team-box-img">
-                  <img src="../img/01.jpg" class="img-fluid img-zoom" alt="" />
+                  <!-- <img src="../img/01.jpg" class="img-fluid img-zoom" alt="" /> -->
                 </div>
                 <div class="card-body">
                   <h2 class="card-title team-box-name">AOUAD Abdelghafour</h2>
@@ -163,7 +163,7 @@ $movies = $movie->countMovie();
             <div class="col-6 col-xl mb-5 mb-xl-0">
               <div class="card team-box">
                 <div class="team-box-img">
-                  <img src="../img/02.jpg" class="img-fluid img-zoom" alt="" />
+                  <!-- <img src="../img/02.jpg" class="img-fluid img-zoom" alt="" /> -->
                 </div>
                 <div class="card-body">
                   <h2 class="card-title team-box-name">KASSEMI Anass</h2>
@@ -176,7 +176,7 @@ $movies = $movie->countMovie();
             <div class="col-6 col-xl mb-5 mb-xl-0">
               <div class="card team-box">
                 <div class="team-box-img">
-                  <img src="../img/03.jpg" class="img-fluid img-zoom" alt="" />
+                  <!-- <img src="../img/03.jpg" class="img-fluid img-zoom" alt="" /> -->
                 </div>
                 <div class="card-body">
                   <h2 class="card-title team-box-name">NAJAHI Ahlam</h2>
@@ -189,7 +189,7 @@ $movies = $movie->countMovie();
             <div class="col-6 col-xl mb-5 mb-xl-0">
               <div class="card team-box">
                 <div class="team-box-img">
-                  <img src="../img/04.jpg" class="img-fluid img-zoom" alt="" />
+                  <!-- <img src="../img/04.jpg" class="img-fluid img-zoom" alt="" /> -->
                 </div>
                 <div class="card-body">
                   <h2 class="card-title team-box-name">RHALIM Sami</h2>

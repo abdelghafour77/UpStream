@@ -95,23 +95,28 @@ $someMovie = $getMovie->getSomeMovie();
                                                     <!-- Box Content End -->
                                                 </div>
                                                 <!-- Video Thumb End -->
-                                                <div class="video-info d-flex align-items-center">
-                                                    <span class="video-year"><?php echo $movie['date']; ?></span>
-                                                    <?php
-                                                    $hours = floor($movie['duration'] / 3600);
-                                                    $minutes = floor(($movie['duration'] / 60) % 60);
-                                                    $duration = $hours . "h " . $minutes . "m";
-                                                    ?>
-                                                    <span class="video-age"><?php echo $duration; ?></span>
-                                                    <?php
-                                                    foreach ($allQuality as $quality) {
-                                                        if ($quality['id_quality'] == $movie['quality']) {
-                                                            echo '<span class="video-type">' . $quality["name"] . '</span>';
-                                                        }
-                                                    } ?>
+                                                <div class="video-content">
+                                                    <h2 class="video-title"><a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><?php echo $movie['title']; ?></a></h2>
+
+                                                    <div class="video-info d-flex align-items-center">
+                                                        <span class="video-year"><?php echo $movie['date']; ?></span>
+                                                        <?php
+                                                        $hours = floor($movie['duration'] / 3600);
+                                                        $minutes = floor(($movie['duration'] / 60) % 60);
+                                                        $duration = $hours . "h " . $minutes . "m";
+                                                        ?>
+                                                        <span class="video-age"><?php echo $duration; ?></span>
+                                                        <?php
+                                                        foreach ($allQuality as $quality) {
+                                                            if ($quality['id_quality'] == $movie['quality']) {
+                                                                echo '<span class="video-type">' . $quality["name"] . '</span>';
+                                                            }
+                                                        } ?>
+                                                    </div>
+                                                    <!-- video Content End -->
                                                 </div>
-                                                <!-- video Content End -->
                                             </div>
+
                                             <!-- video Block End -->
                                         </div>
                                     <?php }

@@ -1,7 +1,7 @@
   <!-- Start Search Modal -->
   <div id="search">
       <button type="button" class="close">×</button>
-      <form action="search" method="get">
+      <form action="search" method="get" autocomplete="off">
           <input name="search" type="search" value="" placeholder="type movie name here" />
           <input type="submit" class="btn btn-primary" />
       </form>
