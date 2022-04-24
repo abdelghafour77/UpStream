@@ -55,7 +55,7 @@ $someMovie = $getMovie->getSomeMovie();
 
 if (isset($_GET['search'])) {
     $keyword = $_GET['search'];
-    $title = "SEARCHING FOR :" . $keyword;
+    $title = "SEARCHING FOR : " . $keyword;
     $getMovie = new MovieView();
     $Movie = $getMovie->findMovie($keyword);
     // die(var_dump($Movie));

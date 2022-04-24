@@ -52,4 +52,8 @@ class MovieView extends Movie
 	{
 		return $this->countMovieDB();
 	}
+	public function getWatchingTime($id_movie, $id_user)
+	{
+		return $this->getWatchingTimeDB($id_movie, $id_user);
+	}
 }

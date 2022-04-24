@@ -5,6 +5,34 @@ require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
 require_once '../view/qualityView.php';
+require_once '../view/myListView.php';
+require_once '../controller/myListController.php';
+
+if (isset($_GET['tl'])) {
+
+  $id_movie = $_GET['tl'];
+  $id_user = $_SESSION['id_user'];
+
+  $addList = new MylistController();
+  $r = $addList->addToList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF'] . '?i=' . $_GET['i']);
+}
+if (isset($_GET['tld'])) {
+
+  $id_movie = $_GET['tld'];
+  $id_user = $_SESSION['id_user'];
+
+  $deleteList = new MylistController();
+  $r = $deleteList->deleteFromList($id_movie, $id_user);
+  header('Location:' . $_SERVER['PHP_SELF'] . '?i=' . $_GET['i']);
+}
+if (isset($_SESSION['id_user'])) {
+  $id_user = $_SESSION['id_user'];
+
+  $getMovie = new MyListView();
+  $fMovie = $getMovie->getList($id_user);
+  // die(var_dump($Movie));
+}
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -209,6 +237,26 @@ $duration = "$hours hr $minutes min";
                       <a href="watching.php?w=<?php echo $id_movie; ?>" class="btn d-block hvr-sweep-to-right" tabindex="0"><i class="fa-solid fa-play"></i> Play</a>
                     </div>
                     <!-- Col End -->
+                    <?php
+                    if (isset($_SESSION['id_user'])) {
+                      $state = "fas fa-plus mr-2";
+                      foreach ($fMovie as $list) {
+                        if ($list['id_movie'] == $id_movie) {
+                          $state = "fas fa-minus mr-2";
+                        }
+                      }
+                      if ($state == "fas fa-minus mr-2") { ?>
+                        <div class="col-6 col-xl mb-xl-0 mb-3">
+                          <a class="btn d-block hvr-sweep-to-right" href="<?php echo $_SERVER['PHP_SELF'] . '?i=' . $id_movie . '&tld=' . $id_movie; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                        </div>
+                      <?php  } else { ?>
+                        <div class="col-6 col-xl mb-xl-0 mb-3">
+                          <a class="btn d-block hvr-sweep-to-right" href="<?php echo $_SERVER['PHP_SELF'] . '?i=' . $id_movie . '&tl=' . $id_movie; ?>"><i class="<?php echo $state; ?>"></i>My List</a>
+                        </div>
+                    <?php
+                      }
+                    }
+                    ?>
                     <div class="col-6 col-xl mb-xl-0 mb-3">
                       <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true"><i class="fa-solid fa-film"></i> Trailer</a>
                       <!-- Modal Trailer -->
@@ -316,6 +364,9 @@ $duration = "$hours hr $minutes min";
                         <li>
                           <a href="watching.php?w=<?php echo $movie['id_movie']; ?>"><i class="fas fa-play"></i></a>
                         </li>
+                        <?php
+                        include '../include/list.php';
+                        ?>
                         <li>
                           <a href="single.php?i=<?php echo $movie['id_movie']; ?>"><i class="fas fa-info"></i></a>
                         </li>

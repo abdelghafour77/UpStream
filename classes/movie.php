@@ -352,4 +352,41 @@ class Movie extends Connection
 		$result = $stmt->fetchAll();
 		return $result;
 	}
+
+	protected function setWatchingTimeDB($time, $id_movie, $id_user)
+	{
+		// insert into movie table
+		$sql = "SELECT time FROM watching_time WHERE id_movie = ? and id_user =?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie, $id_user]); // or die(print_r($stmt->errorInfo() ));
+		$result = $stmt->fetch();
+		if (isset($result['time'])) {
+			if ($result['time'] >= 0) {
+				$sql = "UPDATE watching_time set time = ? WHERE id_movie = ? and id_user =?";
+				$stmt = $this->connect()->prepare($sql);
+				$stmt->execute([$time, $id_movie, $id_user]);
+			}
+		} else {
+			// insert into categorie
+			$sql = "INSERT INTO watching_time (time,id_movie,id_user) values(?,?,?)";
+			$stmt = $this->connect()->prepare($sql);
+			$stmt->execute([$time, $id_movie, $id_user]);
+			$result = $stmt->fetch();
+		}
+		$_SESSION['message'] = 'ajouter';
+		return 1;
+	}
+	protected function getWatchingTimeDB($id_movie, $id_user)
+	{
+		// insert into movie table
+		$sql = "SELECT time FROM watching_time WHERE id_movie = ? and id_user =?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute([$id_movie, $id_user]); // or die(print_r($stmt->errorInfo() ));
+		$result = $stmt->fetch();
+		if (isset($result['time']))
+			$result = $result['time'];
+
+		$_SESSION['message'] = 'ajouter';
+		return $result;
+	}
 }

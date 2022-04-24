@@ -178,42 +178,22 @@ if (isset($_POST['submit-movie'])) {
                     <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description" disabled></textarea>
                     <select id="date" name="date" class="form-control me-4 my-4" required disabled>
                         <option value disabled selected>-- Date --</option>
-                        <?php
-                        for ($i = 2000; $i <= date('Y'); $i++) {
-                            echo '<option value="' . $i . '">' . $i . '</option>';
-                        }
-                        ?>
+
                     </select>
                     <select class="form-control category me-4 my-4" name="category[]" multiple="multiple" required disabled>
-                        <?php
-                        foreach ($allCategory as $category) {
-                            echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
-                        }
-                        ?>
+
                     </select>
                     <select id="language" name="language" class="form-control me-4 my-4" required disabled>
                         <option value disabled selected>-- Language --</option>
-                        <?php
-                        foreach ($allLanguage as $language) {
-                            echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
-                        }
-                        ?>
+
                     </select>
                     <select id="quality" name="quality" class="form-control me-4 my-4" required disabled>
                         <option value disabled selected>-- Quality --</option>
-                        <?php
-                        foreach ($allQuality as $quality) {
-                            echo '<option value="' . $quality['id_quality'] . '">' . $quality['name'] . '</option>';
-                        }
-                        ?>
+
                     </select>
                     <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required disabled />
                     <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required disabled>
-                        <?php
-                        foreach ($allActor as $actor) {
-                            echo '<option value="' . $actor['id_actor'] . '">' . $actor['first_name'] . ' ' . $actor['last_name'] . '</option>';
-                        }
-                        ?>
+
                     </select>
                     <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required disabled />
                 </div>

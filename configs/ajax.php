@@ -1,10 +1,12 @@
 <?php
+session_start();
 require_once('../controller/movieController.php');
 require_once('../view/movieView.php');
 require_once '../view/categoryView.php';
 require_once '../view/actorView.php';
 require_once '../view/languageView.php';
 require_once '../view/qualityView.php';
+
 
 $getCategory = new CategoryView();
 $allCategory = $getCategory->getCategory();
@@ -145,4 +147,8 @@ if (isset($_POST["id_category"])) {
     </div>
 
 <?php
+}
+if (isset($_POST['watchingTime'])) {
+    $watchingTime = new MovieController();
+    $r = $watchingTime->setWatchingTime($_POST['watchingTime'], $_POST['idmovie'], $_SESSION['id_user']);
 }

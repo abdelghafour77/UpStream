@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 23 avr. 2022 à 19:00
+-- Généré le : dim. 24 avr. 2022 à 19:08
 -- Version du serveur :  8.0.25
 -- Version de PHP : 8.0.6
 
@@ -54,10 +54,6 @@ INSERT INTO `acting` (`id_actor`, `id_movie`) VALUES
 (50, 17),
 (51, 17),
 (52, 17),
-(40, 19),
-(41, 19),
-(42, 19),
-(43, 19),
 (42, 20),
 (53, 21),
 (54, 21),
@@ -71,7 +67,12 @@ INSERT INTO `acting` (`id_actor`, `id_movie`) VALUES
 (40, 23),
 (47, 23),
 (63, 23),
-(64, 23);
+(64, 23),
+(40, 29),
+(41, 29),
+(42, 29),
+(43, 29),
+(3, 31);
 
 -- --------------------------------------------------------
 
@@ -206,10 +207,6 @@ CREATE TABLE IF NOT EXISTS `contain` (
 --
 
 INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
-(19, 1),
-(19, 4),
-(19, 7),
-(19, 8),
 (16, 7),
 (16, 8),
 (17, 1),
@@ -223,7 +220,12 @@ INSERT INTO `contain` (`id_movie`, `id_category`) VALUES
 (22, 2),
 (22, 5),
 (22, 11),
-(20, 1);
+(20, 1),
+(29, 1),
+(29, 4),
+(29, 7),
+(29, 8),
+(31, 7);
 
 -- --------------------------------------------------------
 
@@ -277,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `movie` (
   KEY `id_user` (`id_user`),
   KEY `language` (`language`),
   KEY `quality` (`quality`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `movie`
@@ -287,11 +289,12 @@ INSERT INTO `movie` (`id_movie`, `title`, `date`, `description`, `language`, `li
 (15, 'inception', 2010, 'Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb\'s criminal history as payment for performing an inception on his sick competitor\'s son.', 1, 'https://www.youtube.com/watch?v=YoHD9XEInc0', '../uploads/movie/test_bach_nchouf_language_1704221650211093.mp4', 10000, 2, '../uploads/cover/test_bach_nchouf_language_1704221650211093.jpg', 'Christopher Nolan', 1, '2022-04-17 20:30:09'),
 (16, 'Star Wars', 2019, 'The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi\'s legendary conflict with the Sith Lord comes to a head.', 2, 'https://www.youtube.com/watch?v=8Qn_spdM5Zg', '../uploads/movie/yow_test_id_1704221650211486.mp4', 900, 1, '../uploads/cover/yow_test_id_1704221650211486.jpg', 'Irvin Kershner', 1, '2022-04-17 20:30:09'),
 (17, 'Avengers: Endgame', 2019, 'After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.', 2, 'https://www.youtube.com/watch?v=TcMBFSGVi1c', '../uploads/movie/rdytfugihljo_1704221650226482.mp4', 807, 1, '../uploads/cover/rdytfugihljo_1704221650226482.jpg', 'Anthony Russo, Joe Russo', 1, '2022-04-17 20:30:09'),
-(19, 'Dune', 2021, 'Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.', 2, 'https://www.youtube.com/watch?v=8g18jFHCLXk', '../uploads/movie/1aaaaaaaaaaaaaaaaaa_1704221650227041.mp4', 449.375, 1, '../uploads/cover/1aaaaaaaaaaaaaaaaaa_1704221650227041.jpg', 'Denis Villeneuve', 1, '2022-04-17 20:30:09'),
 (20, 'Spider-man into the spider-verse', 2018, 'After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.', 2, 'https://www.youtube.com/watch?v=g4Hbz2jLxvQ', '../uploads/movie/spiderman_1704221650231843.mp4', 204.9, 1, '../uploads/cover/spiderman_1704221650231843.jpg', 'Peter Ramsey, Bob Persichetti, Rodney Rothman', 1, '2022-04-17 21:44:03'),
 (21, 'Godzilla: King of the Monsters', 2019, 'A legendary monster named King Ghidorah awakens Rodan, as well as other titans, to destroy the world. To defeat them, the crypto-zoological organisation Monarch must rely on the almighty Godzilla.', 2, 'https://www.youtube.com/watch?v=QFxN2oDKk0E', '../uploads/movie/test_dyal_actor_1804221650240018.mp4', 449.375, 1, '../uploads/cover/test_dyal_actor_1804221650240018.jpg', 'Michael Dougherty', 1, '2022-04-18 00:00:18'),
 (22, 'Get out', 2017, 'Chris, an African-American man, decides to visit his Caucasian girlfriend\'s parents during a weekend getaway. Although they seem normal at first, he is not prepared to experience the horrors ahead.', 2, 'https://www.youtube.com/watch?v=DzfpyUB60YY', '../uploads/movie/Get_out_1904221650331021.mp4', 449.375, 9, '../uploads/cover/Get_out_1904221650331021.jpg', 'Jordan Peele', 1, '2022-04-19 01:17:01'),
-(23, 'Don\'t look up', 2022, 'Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy planet Earth.', 2, 'https://www.youtube.com/watch?v=RbIxYm3mKzI', '../uploads/movie/Don\'t_look_up_2204221650670460.mp4', 449.375, 1, '../uploads/cover/Dont_look_up_2204221650670460.jpg', 'Adam McKay', 1, '2022-04-22 23:34:21');
+(23, 'Don\'t look up', 2022, 'Two low-level astronomers must go on a giant media tour to warn mankind of an approaching comet that will destroy planet Earth.', 2, 'https://www.youtube.com/watch?v=RbIxYm3mKzI', '../uploads/movie/Don\'t_look_up_2204221650670460.mp4', 449.375, 1, '../uploads/cover/Dont_look_up_2204221650670460.jpg', 'Adam McKay', 1, '2022-04-22 23:34:21'),
+(29, 'Dune', 2021, 'Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.', 2, 'https://www.youtube.com/watch?v=8g18jFHCLXk', '../uploads/movie/Dune_2304221650757466.mkv', 9324.98, 1, '../uploads/cover/Dune_2304221650757466.png', 'Denis Villeneuve', 1, '2022-04-23 23:44:26'),
+(31, 'harry potter', 2011, 'harry potterharry potterharry potterharry potterharry potterharry potter', 2, 'https://www.youtube.com/watch?v=YoHD9XEInc0', '../uploads/movie/harry_potter_2304221650757677.mp4', 9530.57, 1, '../uploads/cover/harry_potter_2304221650757677.jpg', 'Denis Villeneuve', 1, '2022-04-23 23:47:58');
 
 -- --------------------------------------------------------
 
@@ -313,7 +316,9 @@ CREATE TABLE IF NOT EXISTS `my_list` (
 --
 
 INSERT INTO `my_list` (`id_movie`, `id_user`, `last_update`) VALUES
-(22, 1, '2022-04-23 18:36:54');
+(20, 1, '2022-04-23 22:19:41'),
+(31, 1, '2022-04-24 19:05:42'),
+(29, 1, '2022-04-24 19:05:51');
 
 -- --------------------------------------------------------
 
@@ -370,6 +375,32 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `picture`, `admin`, `super`, `last_update`) VALUES
 (1, 'abdelghafour', 'miso.abdo@gmail.com', '$2y$10$N0uycKS0VmvBNdvVlh9GU.Wt2S6PsOIh29fHwVYSmAkIafIDNdJzu', 'aouad_abdo.jpg', 1, 1, '2022-04-17 20:29:29');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `watching_time`
+--
+
+DROP TABLE IF EXISTS `watching_time`;
+CREATE TABLE IF NOT EXISTS `watching_time` (
+  `id_movie` int NOT NULL,
+  `id_user` int NOT NULL,
+  `time` float NOT NULL,
+  PRIMARY KEY (`id_movie`,`id_user`),
+  KEY `id_movie` (`id_movie`),
+  KEY `id_user` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `watching_time`
+--
+
+INSERT INTO `watching_time` (`id_movie`, `id_user`, `time`) VALUES
+(20, 1, 0),
+(22, 1, 0),
+(23, 1, 3.24305),
+(31, 1, 4747.63);
+
 --
 -- Contraintes pour les tables déchargées
 --
@@ -402,6 +433,13 @@ ALTER TABLE `movie`
 ALTER TABLE `my_list`
   ADD CONSTRAINT `my_list_ibfk_1` FOREIGN KEY (`id_movie`) REFERENCES `movie` (`id_movie`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `my_list_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `watching_time`
+--
+ALTER TABLE `watching_time`
+  ADD CONSTRAINT `watching_time_ibfk_1` FOREIGN KEY (`id_movie`) REFERENCES `movie` (`id_movie`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `watching_time_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

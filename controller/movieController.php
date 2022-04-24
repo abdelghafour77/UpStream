@@ -8,6 +8,10 @@ class MovieController extends Movie
     {
         return $this->addMovieDB($title, $description, $date, $category, $language, $quality, $movie_file, $duration, $trailer, $cover, $user, $actor, $director);
     }
+    public function setWatchingTime($time, $id_movie, $id_user)
+    {
+        return $this->setWatchingTimeDB($time, $id_movie, $id_user);
+    }
     public function updateMovie($id_movie, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director)
     {
         return $this->updateMovieDB($id_movie, $description, $date, $category, $language, $quality, $trailer, $user, $actor, $director);
