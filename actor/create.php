@@ -42,7 +42,7 @@ if (isset($_POST['submit-actor'])) {
   <link rel="stylesheet" href="../styles/style2.css" />
   <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Add actor</title>
+  <title>Add Actor</title>
 </head>
 
 
@@ -151,11 +151,11 @@ if (isset($_POST['submit-actor'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Add actor</h3>
+      <h3>Add Actor</h3>
 
       <form method="post" action="" class="text-center">
-        <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="first name" required />
-        <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="last name" required />
+        <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="First name" required />
+        <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="Last name" required />
 
 
         <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-actor">Add</button>

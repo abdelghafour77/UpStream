@@ -155,11 +155,11 @@ if (isset($_POST['submit-category'])) {
     <!--========== CONTENTS ==========-->
     <main>
         <div class="container">
-            <h3>Update category</h3>
+            <h3>Update Category</h3>
 
             <form method="post" action="" class="text-center" enctype="multipart/form-data">
                 <select id="id_category" name="id_category" class="form-control me-4 my-4" required>
-                    <option value disabled selected>-- category --</option>
+                    <option value disabled selected>-- Category --</option>
                     <?php
                     foreach ($allCategoryName as $category) {
                         echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';
@@ -168,7 +168,7 @@ if (isset($_POST['submit-category'])) {
                 </select>
                 <div id="category">
 
-                    <input class="form-control me-4 my-4" type="text" name="name" id="name" placeholder="name" required disabled />
+                    <input class="form-control me-4 my-4" type="text" name="name" id="name" placeholder="Name" required disabled />
 
                 </div>
                 <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-category">Update</button>

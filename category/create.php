@@ -149,7 +149,7 @@ if (isset($_POST['submit-category'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Add category</h3>
+      <h3>Add Category</h3>
 
       <form method="post" action="" class="text-center">
         <input class="form-control me-4 my-4" type="text" name="name" id="name" placeholder="Name" required />

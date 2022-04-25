@@ -155,7 +155,7 @@ if (isset($_POST['submit-actor'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Delete actor</h3>
+      <h3>Delete Actor</h3>
 
       <form method="post" action="" class="text-center" enctype="multipart/form-data">
         <select id="id_actor" name="id_actor" class="form-control me-4 my-4" required>

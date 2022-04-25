@@ -142,7 +142,7 @@ if (isset($_POST['submit-movie'])) {
   <link rel="stylesheet" href="../styles/style2.css" />
   <!-- <link rel="stylesheet" href="../styles/styles.css" /> -->
 
-  <title>Add movie</title>
+  <title>Add Movie</title>
 </head>
 
 
@@ -251,13 +251,13 @@ if (isset($_POST['submit-movie'])) {
   <!--========== CONTENTS ==========-->
   <main>
     <div class="container">
-      <h3>Add movie</h3>
+      <h3>Add Movie</h3>
 
       <form method="post" action="" class="text-center" enctype="multipart/form-data">
-        <input class="form-control me-4 my-4" type="text" name="title" id="title" placeholder="title" required />
+        <input class="form-control me-4 my-4" type="text" name="title" id="title" placeholder="Title" required />
         <textarea class="form-control me-4 my-4" rows="3" name="description" id="description" placeholder="Description"></textarea>
         <select id="date" name="date" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- Date --</option>
+          <option value disabled selected>Date</option>
           <?php
           for ($i = 2000; $i <= date('Y'); $i++) {
             echo '<option value="' . $i . '">' . $i . '</option>';
@@ -272,7 +272,7 @@ if (isset($_POST['submit-movie'])) {
           ?>
         </select>
         <select id="language" name="language" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- Language --</option>
+          <option value disabled selected>Language</option>
           <?php
           foreach ($allLanguage as $language) {
             echo '<option value="' . $language['id_language'] . '">' . $language['name'] . '</option>';
@@ -280,14 +280,14 @@ if (isset($_POST['submit-movie'])) {
           ?>
         </select>
         <select id="quality" name="quality" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- Quality --</option>
+          <option value disabled selected>Quality</option>
           <?php
           foreach ($allQuality as $quality) {
             echo '<option value="' . $quality['id_quality'] . '">' . $quality['name'] . '</option>';
           }
           ?>
         </select>
-        <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required />
+        <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="Director" required />
         <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required>
           <?php
           foreach ($allActor as $actor) {
@@ -295,7 +295,7 @@ if (isset($_POST['submit-movie'])) {
           }
           ?>
         </select>
-        <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required />
+        <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="Link of trailer" required />
         <div class="input-group me-4 my-4">
           <input type="file" class="form-control" id="inputGroupFile02" name="cover" accept=" image/png, image/jpg, image/jpeg" require>
           <label class=" input-group-text" for="inputGroupFile02">Cover</label>

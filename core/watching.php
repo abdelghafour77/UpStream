@@ -406,7 +406,7 @@ $duration = "$hours hr $minutes min";
           $time -= 3000; ?>
         document.querySelector("video").currentTime = <?php echo $time; ?>;
       <?php } ?>
-      var interval = 15000; // 1000 = 1 second, 3000 = 3 seconds
+      var interval = 15000; // 1000 = 1 second, 15000 = 15 seconds
       (function v() {
         var watchingTime = document.querySelector("video").currentTime;
         $.post(

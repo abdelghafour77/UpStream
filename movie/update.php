@@ -191,11 +191,11 @@ if (isset($_POST['submit-movie'])) {
                         <option value disabled selected>-- Quality --</option>
 
                     </select>
-                    <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="director" required disabled />
+                    <input class="form-control me-4 my-4" type="text" name="director" id="director" placeholder="Director" required disabled />
                     <select class="form-control actor me-4 my-4" name="actor[]" multiple="multiple" required disabled>
 
                     </select>
-                    <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="link of trailer" required disabled />
+                    <input class="form-control me-4 my-4" type="url" name="trailer" id="trailer" placeholder="Link of trailer" required disabled />
                 </div>
                 <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-movie">Update</button>
                 <br>

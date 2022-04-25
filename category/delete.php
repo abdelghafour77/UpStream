@@ -159,7 +159,7 @@ if (isset($_POST['submit-category'])) {
 
       <form method="post" action="" class="text-center" enctype="multipart/form-data">
         <select id="id_category" name="id_category" class="form-control me-4 my-4" required>
-          <option value disabled selected>-- category --</option>
+          <option value disabled selected>-- Category --</option>
           <?php
           foreach ($allCategory as $category) {
             echo '<option value="' . $category['id_category'] . '">' . $category['name'] . '</option>';

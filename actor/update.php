@@ -155,11 +155,11 @@ if (isset($_POST['submit-actor'])) {
     <!--========== CONTENTS ==========-->
     <main>
         <div class="container">
-            <h3>Update actor</h3>
+            <h3>Update Actor</h3>
 
             <form method="post" action="" class="text-center" enctype="multipart/form-data">
                 <select id="id_actor" name="id_actor" class="form-control me-4 my-4" required>
-                    <option value disabled selected>-- actor --</option>
+                    <option value disabled selected>-- Actor --</option>
                     <?php
                     foreach ($allActorName as $actor) {
                         echo '<option value="' . $actor['id_actor'] . '">' . $actor['first_name'] . ' ' . $actor['last_name'] . '</option>';
@@ -168,8 +168,8 @@ if (isset($_POST['submit-actor'])) {
                 </select>
                 <div id="actor">
 
-                    <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="first name" required disabled />
-                    <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="last name" required disabled />
+                    <input class="form-control me-4 my-4" type="text" name="first_name" id="first_name" placeholder="First name" required disabled />
+                    <input class="form-control me-4 my-4" type="text" name="last_name" id="last_name" placeholder="Last name" required disabled />
 
                 </div>
                 <button class="btn btn-bts text-center me-4 my-4" type="submit" name="submit-actor">Update</button>
