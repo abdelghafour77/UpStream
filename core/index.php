@@ -67,7 +67,7 @@ $someMovie = $getMovie->getSomeMovie();
 <html lang="en">
 
 <head>
-  <title>UpStream</title>
+  <title>UpStream - Stream for FREE</title>
   <?php
   require_once '../include/head.php';
   ?>
