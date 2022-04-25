@@ -236,8 +236,8 @@ $duration = "$hours hr $minutes min";
                     </div> -->
                     <!-- Col End -->
                     <div class="col-6 col-xl mb-xl-0 mb-3">
-                      <!-- <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true"> -->
-                      <i class="icofont-ui-movie mr-2" aria-hidden="true"></i>Trailer</a>
+                      <a href="<?php echo $trailer; ?>" id="trailer" class="btn d-block hvr-sweep-to-right" tabindex="0" data-toggle="modal" data-target="#trailer-modal" aria-hidden="true">
+                        <i class="icofont-ui-movie mr-2" aria-hidden="true"></i>Trailer</a>
                       <!-- Modal Trailer -->
                       <div class="modal fade" id="trailer-modal" tabindex="0" role="dialog" aria-labelledby="trailer-modal" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document" id="trailerModal">
@@ -252,7 +252,7 @@ $duration = "$hours hr $minutes min";
                             </div>
                             <!-- Modal Body -->
                             <div class="modal-body">
-                              <!-- <iframe width="100%" height="415" src="<?php echo str_replace("/watch?v=", "\/embed/",  $trailer); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                              <iframe width="100%" height="415" src="<?php echo str_replace("/watch?v=", "\/embed/",  $trailer); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               <!-- <source src="" type="video/mp4" /> -->
                             </div>
                             <!-- Modal Body -->
@@ -408,7 +408,7 @@ $duration = "$hours hr $minutes min";
           document.querySelector("video").currentTime = <?php echo $time; ?>;
       <?php }
       } ?>
-      var interval = 1000; // 1000 = 1 second, 15000 = 15 seconds
+      var interval = 15000; // 1000 = 1 second, 15000 = 15 seconds
       (function v() {
         var watchingTime = document.querySelector("video").currentTime;
         $.post(
